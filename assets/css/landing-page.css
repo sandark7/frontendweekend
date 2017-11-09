@@ -72,6 +72,8 @@ body {
     align-items: center;
 }
 
-footer {
-    margin: 1cm 0;
+footer,
+iframe {
+    text-align: center;
+    margin-top: .5cm;
 }
