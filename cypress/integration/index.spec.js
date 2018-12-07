@@ -1,27 +1,84 @@
-describe('Index page', () => {
+describe('index page', () => {
     beforeEach(() => {
         cy.visit('http://127.0.0.1:8080/')
     })
 
-    it('should have a yellow bg', () => {
-        cy.get('body')
-            .should('have.css', 'background-color')
-            .and('equal', 'rgb(247, 223, 29)')
+    describe('metadata', () => {
+        it('should have a favicon', () => {
+            cy.root()
+                .find('link[rel=icon]')
+        })
+
+        it('should have a valid title', () => {
+            cy.root()
+                .find('title')
+                    .should('contain', 'Frontend Weekend podcast')
+        })
     })
 
-    it('should have Soundcloud embedded player', () => {
-        cy.get('iframe.test--sc-embedded-player')
-            .should('have.attr', 'src')
-            .and('equal', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/306455261&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false')
+    describe('main content', () => {
+        it('should have a yellow bg', () => {
+            cy.get('body')
+                .should('have.css', 'background-color')
+                .and('equal', 'rgb(247, 223, 29)')
+        })
+
+        it('should have a wrapper', () => {
+            cy.get('.wrapper')
+                .should('have.css', 'display')
+                .and('equal', 'flex')
+
+            cy.get('.wrapper')
+                .should('have.css', 'flex-direction')
+                .and('equal', 'column')
+
+            cy.get('.wrapper')
+                .should('have.css', 'justify-content')
+                .and('equal', 'center')
+
+            cy.get('.wrapper')
+                .should('have.css', 'align-items')
+                .and('equal', 'center')
+        })
+    
+        it('should have Soundcloud embedded player', () => {
+            cy.get('iframe.test--sc-embedded-player')
+                .as('sc-embedded-player')
+            cy.get('@sc-embedded-player')
+                .should('have.attr', 'src')
+                .and('equal', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/306455261&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false')
+            cy.get('@sc-embedded-player')
+                .should('have.attr', 'width')
+                .and('equal', '450')
+            cy.get('@sc-embedded-player')
+                .should('have.attr', 'height')
+                .and('equal', '345')
+        })
+    
+        it('should have Yandex money embedded widget', () => {
+            cy.get('iframe.test--yandex-money-embed')
+                .as('yandex-money-embed')
+            cy.get('@yandex-money-embed')
+                .should('have.attr', 'src')
+                .and('equal', 'https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448')
+            cy.get('@yandex-money-embed')
+                .should('have.attr', 'width')
+                .and('equal', '450')
+            cy.get('@yandex-money-embed')
+                .should('have.attr', 'height')
+                .and('equal', '213')
+        })
+    
     })
 
-    it('should have Yandex money embedded widget', () => {
-        cy.get('iframe.test--yandex-money-embed')
-            .should('have.attr', 'src')
-            .and('equal', 'https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448')
-    })
+    
+    describe('footer', () => {
 
-    describe('index page footer', () => {
+        it('should have correct css', () => {
+            cy.get('footer')
+                .should('have.css', 'text-align')
+                .and('equal', 'center')
+        })
 
         it('should have patreon link', () => {
             cy.get('footer')
