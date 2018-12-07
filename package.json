@@ -6,7 +6,8 @@
   "scripts": {
     "start": "live-server",
     "deploy": "surge .",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "cypress-open": "cypress open"
   },
   "repository": {
     "type": "git",
