@@ -112,14 +112,15 @@ describe('index page', () => {
             cy.viewport('iphone-5')
             cy.get('iframe.test--sc-embedded-player')
                 .should('have.css', 'width')
-                .and('equal', '304px')
+                .and('lessThan', '321px')
             cy.get('iframe.test--yandex-money-embed')
                 .should('have.css', 'width')
-                .and('equal', '304px')
+                .and('lessThan', '321px')
             cy.get('footer.test--footer')
                 .should('have.css', 'width')
-                .and('equal', '304px')
+                .and('lessThan', '321px')
         })
 
     })
+    
 })
