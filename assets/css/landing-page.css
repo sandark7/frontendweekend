@@ -18,3 +18,10 @@ iframe {
     text-align: center;
     margin-top: .5cm;
 }
+
+@media all and (max-width: 481px) {
+    footer,
+    iframe {
+        width: 100%;
+    }
+  }
