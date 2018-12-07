@@ -1,67 +1,8 @@
-/*!
-
- =========================================================
- * Awesome Landing Page - v1.2.2
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/awesome-landing-page
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/awesome-landing-page/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
-/*           Font Smoothing      */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, a, .td-name, td {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    font-weight: 400;
-    margin: 30px 0 15px;
-}
-
-h1, .h1 {
-    font-size: 52px;
-}
-
-h2, .h2 {
-    font-size: 36px;
-}
-
-h3, .h3 {
-    font-size: 28px;
-    margin: 20px 0 10px;
-}
-
-h4, .h4 {
-    font-size: 22px;
-    line-height: 30px;
-}
-
-h5, .h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-h6, .h6 {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
 /*     General overwrite     */
 body {
     font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
     background-color: #f7df1d;
 }
 

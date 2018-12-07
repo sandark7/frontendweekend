@@ -17,26 +17,29 @@ describe('index page', () => {
     })
 
     describe('main content', () => {
-        it('should have a yellow bg', () => {
+        it('should have a correct body css', () => {
             cy.get('body')
                 .should('have.css', 'background-color')
                 .and('equal', 'rgb(247, 223, 29)')
+            cy.get('body')
+                .should('have.css', 'font-size')
+                .and('equal', '14px')
         })
 
         it('should have a wrapper', () => {
-            cy.get('.wrapper')
+            cy.get('.test--wrapper')
                 .should('have.css', 'display')
                 .and('equal', 'flex')
 
-            cy.get('.wrapper')
+            cy.get('.test--wrapper')
                 .should('have.css', 'flex-direction')
                 .and('equal', 'column')
 
-            cy.get('.wrapper')
+            cy.get('.test--wrapper')
                 .should('have.css', 'justify-content')
                 .and('equal', 'center')
 
-            cy.get('.wrapper')
+            cy.get('.test--wrapper')
                 .should('have.css', 'align-items')
                 .and('equal', 'center')
         })
@@ -75,13 +78,13 @@ describe('index page', () => {
     describe('footer', () => {
 
         it('should have correct css', () => {
-            cy.get('footer')
+            cy.get('footer.test--footer')
                 .should('have.css', 'text-align')
                 .and('equal', 'center')
         })
 
         it('should have patreon link', () => {
-            cy.get('footer')
+            cy.get('footer.test--footer')
                 .find('a.test--patreon-link')
                 .as('patreon-link')
             cy.get('@patreon-link')
@@ -92,7 +95,7 @@ describe('index page', () => {
         })
 
         it('should have contact email address', () => {
-            cy.get('footer')
+            cy.get('footer.test--footer')
                 .find('a.test--email-link')
                 .as('email-link')
             cy.get('@email-link')
