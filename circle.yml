@@ -44,7 +44,7 @@ jobs:
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
       - run:
-          command: cypress run --record --key 7368ff41-1746-43fd-acc5-f6aa54b67f97 --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
+          command: $(yarn bin)/cypress run --record --key 7368ff41-1746-43fd-acc5-f6aa54b67f97 --reporter junit --reporter-options "mochaFile=results/my-test-output.xml"
       - store_test_results:
           path: results
       - store_artifacts:
