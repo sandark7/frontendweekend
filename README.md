@@ -1,4 +1,4 @@
-![master build status](https://img.shields.io/circleci/project/github/nuxdie/frontendweekend/master.svg)
+[![CircleCI](https://circleci.com/gh/nuxdie/frontendweekend.svg?style=svg)](https://circleci.com/gh/nuxdie/frontendweekend)
 
 ![Frontend Weekend podcast logo 500x500](https://user-images.githubusercontent.com/3918844/48803509-7270f600-ed12-11e8-81e1-2e33d6e9b1c3.jpg)
 
