@@ -93,7 +93,8 @@ workflows:
       - build
       - test
       - test-e2e
-        requires: build
+          requires:
+            - build
       - deploy:
           requires:
             - build
