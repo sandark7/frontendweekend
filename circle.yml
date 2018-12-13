@@ -1,48 +1,71 @@
 # Javascript Node CircleCI 2.0 configuration file
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2
+
+executors:
+  node:
+    parameters:
+      image:
+        type: string
+        default: "10"
+    docker:
+      - image: circleci/node:<< parameters.image >>
+
+aliases:
+  restore_cache: &restore_cache
+    restore_cache:
+      name: Restore node_modules cache
+      keys:
+        - yarn-cypress-cache-{{ checksum "yarn.lock" }}
+        
+  install_node_modules: &install_node_modules
+    run:
+      name: Install node modules
+      command: yarn --frozen-lockfile
+      
+  persist_cache: &persist_cache
+    save_cache:
+      name: Save node modules cache
+      key: yarn-cypress-cache-{{ checksum "yarn.lock" }}
+      paths:
+        - ~/.cache
+        
+  attach_to_build: &attach_to_build
+    attach_workspace:
+      at: public
+
 jobs:
 
-  test:
-    docker:
-      - image: circleci/node:11
-    working_directory: ~/repo
+  build:
+    executor: node
     steps:
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run: yarn install
-      - save_cache:
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn gatsby-build
+      - persist_to_workspace:
+          root: public
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - "public"
+
+  test:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
       - run: yarn test
 
   test-e2e:
-    docker:
-      - image: cypress/base:8
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
+    executor: node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-            - v1-deps-{{ .Branch }}
-            - v1-deps
-      - run:
-          name: Install Dependencies
-          command: yarn install --frozen-lockfile
-      - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-          paths:
-            - ~/.cache  ## cache both yarn and Cypress!
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_build
       - run:
           command: yarn run e2e-test
       - store_test_results:
@@ -53,22 +76,13 @@ jobs:
           path: cypress/screenshots
 
   deploy:
-    docker:
-      - image: circleci/node:11
-    working_directory: ~/repo
+    executor: node
     steps:
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_build
       - run: yarn deploy
 
 workflows:
@@ -76,10 +90,13 @@ workflows:
 
   test-and-deploy:
     jobs:
+      - build
       - test
       - test-e2e
+        requires: build
       - deploy:
           requires:
+            - build
             - test
             - test-e2e
           filters:
