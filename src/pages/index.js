@@ -47,7 +47,7 @@ class Application extends React.Component {
                         Также вы можете поддержать нас постоянной подпиской на <a
                         className='test--patreon-link gtm--patreon-link'
                         href="https://www.patreon.com/frontendweekend">Patreon</a>.<br/>
-                        По вопросам сотрудничества пишите на
+                        По вопросам сотрудничества пишите на 
                         <a className='test--email-link gtm--email-link'
                            href="mailto:pr@frontendweekend.ml">pr@frontendweekend.ml</a>
                     </footer>
