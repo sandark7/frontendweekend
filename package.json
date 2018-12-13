@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "yarn gatsby-build",
+    "predeploy": "yarn gatsby-build",
     "start": "live-server public",
     "deploy": "surge public",
     "test": "echo \"Error: no test specified\" && exit 0",
