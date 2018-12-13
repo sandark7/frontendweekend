@@ -43,7 +43,7 @@ jobs:
       - persist_to_workspace:
           root: public
           paths:
-            - "public"
+            - "public/*"
 
   test:
     executor: node
