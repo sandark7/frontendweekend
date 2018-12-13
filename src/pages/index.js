@@ -39,7 +39,7 @@ class Application extends React.Component {
                         width="450"
                         height="213"
                         frameBorder="0"
-                        allowTransparency="true"
+                        allowtransparency="true"
                         scrolling="no"
                         src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448"
                     />
