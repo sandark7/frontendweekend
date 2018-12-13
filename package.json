@@ -4,8 +4,6 @@
   "description": "![alt text](https://s3.amazonaws.com/creativetim_bucket/products/27/original/opt_alp_thumbnail.jpg \"Awesome Landing Page\")",
   "main": "index.js",
   "scripts": {
-    "prestart": "yarn gatsby-build",
-    "predeploy": "yarn gatsby-build",
     "start": "live-server public",
     "deploy": "surge public",
     "test": "echo \"Error: no test specified\" && exit 0",
