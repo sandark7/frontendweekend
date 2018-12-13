@@ -92,7 +92,7 @@ workflows:
     jobs:
       - build
       - test
-      - test-e2e
+      - test-e2e:
           requires:
             - build
       - deploy:
