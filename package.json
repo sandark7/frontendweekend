@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server public",
-    "deploy": "surge public",
+    "deploy": "surge ./public frontendweekend.ml",
     "test": "echo \"Error: no test specified\" && exit 0",
     "e2e-test": "start-server-and-test start http://localhost:8080 cy:run",
     "cy:run": "cypress run --record --key 7368ff41-1746-43fd-acc5-f6aa54b67f97 --reporter junit --reporter-options \"mochaFile=results/my-test-output.xml\"",
