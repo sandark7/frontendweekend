@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-
+import IndexCSSModule from './index.module.css'
 
 class Application extends React.Component {
     render() {
@@ -8,7 +8,7 @@ class Application extends React.Component {
             <Layout>
                 <iframe
                     title="Sound cloud player - Frontend Weekend podcast"
-                    className="test--sc-embedded-player"
+                    className={IndexCSSModule.iframe + " test--sc-embedded-player"}
                     width="450"
                     height="345"
                     scrolling="no"
@@ -17,7 +17,7 @@ class Application extends React.Component {
                 />
                 <iframe
                     title="Yandex Money widget - Frontend Weekend podcast"
-                    className="test--yandex-money-embed"
+                    className={IndexCSSModule.iframe + " test--yandex-money-embed"}
                     width="450"
                     height="213"
                     frameBorder="0"
@@ -25,7 +25,7 @@ class Application extends React.Component {
                     scrolling="no"
                     src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448"
                 />
-                <footer className="test--footer">
+                <footer className={IndexCSSModule.footer + " test--footer"}>
                     Также вы можете поддержать нас постоянной подпиской на <a
                     className='test--patreon-link gtm--patreon-link'
                     href="https://www.patreon.com/frontendweekend">Patreon</a>.<br/>

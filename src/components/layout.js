@@ -1,5 +1,6 @@
 import React from "react"
 import {Helmet} from "react-helmet";
+import LayoutCSSModule from './layout.module.css'
 
 export default ({children}) => (
     <div className="application">
@@ -23,7 +24,7 @@ export default ({children}) => (
             <meta name="viewport" content="width=device-width"/>
             <link href={"css/landing-page.css"} rel="stylesheet"/>
         </Helmet>
-        <div className="wrapper test--wrapper">
+        <div className={LayoutCSSModule.wrapper + " test--wrapper"}>
             {children}
         </div>
     </div>

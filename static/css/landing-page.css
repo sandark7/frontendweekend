@@ -5,23 +5,3 @@ body {
     line-height: 1.42857143;
     background-color: #f7df1d;
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-footer,
-iframe {
-    text-align: center;
-    margin-top: .5cm;
-}
-
-@media all and (max-width: 481px) {
-    footer,
-    iframe {
-        width: 100%;
-    }
-  }
