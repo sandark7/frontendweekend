@@ -27,5 +27,12 @@ export default ({children}) => (
         <div className={LayoutCSSModule.wrapper + " test--wrapper"}>
             {children}
         </div>
+        <footer className={[LayoutCSSModule.footer, "test--footer"].join(' ')}>
+            <p className={'test--footer-email_text'}>
+                По вопросам сотрудничества пишите на <a
+                className={'test--email-link gtm--email-link'}
+                href="mailto:pr@frontendweekend.ml">pr@frontendweekend.ml</a>
+            </p>
+        </footer>
     </div>
 )

@@ -3,4 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: .5cm;
+}
+
+@media all and (max-width: 481px) {
+    .footer {
+        width: 100%;
+        text-align: left;
+        padding: 0 3px;
+    }
 }

@@ -1,12 +1,18 @@
-.footer,
-.iframe {
-    text-align: center;
-    margin-top: .5cm;
-}
+
 
 @media all and (max-width: 481px) {
-    .footer,
-    .iframe {
+    .iframe,
+    .donate {
         width: 100%;
+    }
+
+    .iframe_sc {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .donate_text {
+        text-align: left;
+        padding: 0 3px;
     }
 }
