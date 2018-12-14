@@ -17,7 +17,7 @@ class Application extends React.Component {
                     <meta name="theme-color" content="#ffee4e"/>
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
                     <title>Frontend Weekend podcast</title>
-                    <meta name="Description" content="Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только."/>
+                    <meta name="description" content="Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только."/>
                     <meta
                         content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
                         name='viewport'/>
