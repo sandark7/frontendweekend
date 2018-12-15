@@ -98,18 +98,15 @@ jobs:
       - run: yarn deploy-stage
 
   test-lh:
-    executor: node
+    docker:
+      - image: circleci/node:11-browsers
+    working_directory: ~/repo
     steps:
       - checkout
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
-      - run:
-          name: Lighthouse
-          when: on_success
-          command: |
-            yarn lh -- https://stage.frontendweekend.ml
-
+      - run: yarn test-lh
 
 workflows:
   version: 2
