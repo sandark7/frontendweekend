@@ -6,8 +6,10 @@
   "scripts": {
     "start": "live-server public",
     "deploy": "surge ./public https://frontendweekend.ml",
+    "deploy-stage": "surge ./public https://stage.frontendweekend.ml",
     "test": "echo \"Error: no test specified\" && exit 0",
     "e2e-test": "start-server-and-test start http://localhost:8080 cy:run",
+    "test-lh": "JEST_JUNIT_OUTPUT=./results/junit.xml jest --runInBand --ci --reporters=default --reporters=jest-junit",
     "cy:run": "cypress run --record --key 7368ff41-1746-43fd-acc5-f6aa54b67f97 --reporter junit --reporter-options \"mochaFile=results/my-test-output.xml\"",
     "cypress-open": "cypress open",
     "gatsby-develop": "gatsby develop",
@@ -31,11 +33,15 @@
     "react-dom": "16.6.3"
   },
   "devDependencies": {
+    "chrome-launcher": "0.10.5",
     "cypress": "3.1.3",
     "gatsby-cli": "2.4.6",
     "gatsby-plugin-google-tagmanager": "2.0.7",
     "gatsby-plugin-react-helmet": "3.0.4",
     "gatsby-plugin-typography": "2.2.2",
+    "jest": "23.6.0",
+    "jest-junit": "5.2.0",
+    "lighthouse": "4.0.0-alpha.2-3.2.1",
     "live-server": "1.2.1",
     "react-helmet": "5.2.0",
     "react-typography": "0.16.18",

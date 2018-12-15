@@ -87,21 +87,51 @@ jobs:
       - <<: *attach_to_build
       - run: yarn deploy
 
+  deploy-stage:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_build
+      - run: yarn deploy-stage
+
+  test-lh:
+    docker:
+      - image: circleci/node:11-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn test-lh
+      - store_test_results:
+          path: results
+
 workflows:
   version: 2
 
   test-and-deploy:
     jobs:
       - build
+      - deploy-stage:
+          requires:
+            - build
       - test
       - test-e2e:
           requires:
             - build
+      - test-lh:
+          requires:
+            - deploy-stage
       - deploy:
           requires:
             - build
             - test
             - test-e2e
+            - test-lh
           filters:
             branches:
               only: master
