@@ -1,0 +1,9 @@
+.content_wrapper {
+    max-width: 450px;
+}
+
+@media all and (max-width: 481px) {
+    .content_wrapper {
+        padding: 0 3px;
+    }
+}
