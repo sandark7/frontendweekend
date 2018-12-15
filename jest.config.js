@@ -1,7 +1,4 @@
 module.exports = {
     testEnvironment: "node",
-    reporters: [
-        "default",
-        ["jest-junit", {outputDirectory: "results"}]
-    ],
+    reporters: ["default", "jest-junit"],
 };
