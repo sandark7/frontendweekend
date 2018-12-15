@@ -107,6 +107,8 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - run: yarn test-lh
+      - store_test_results:
+          path: results
 
 workflows:
   version: 2
