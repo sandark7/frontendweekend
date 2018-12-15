@@ -87,21 +87,52 @@ jobs:
       - <<: *attach_to_build
       - run: yarn deploy
 
+  deploy-stage:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_build
+      - run: yarn deploy-stage
+
+  test-lh:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run:
+          name: Lighthouse
+          when: on_success
+          command: |
+            yarn lh -- https://stage.frontendweekend.ml
+
+
 workflows:
   version: 2
 
   test-and-deploy:
     jobs:
       - build
+      - deploy-stage:
+          requires:
+            - build
       - test
       - test-e2e:
           requires:
             - build
+      - test-lh:
+          requires:
+            - deploy-stage
       - deploy:
           requires:
             - build
             - test
             - test-e2e
+            - test-lh
           filters:
             branches:
               only: master
