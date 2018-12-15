@@ -1,6 +1,7 @@
 import React from "react"
 import {Helmet} from "react-helmet";
 import LayoutCSSModule from './layout.module.css'
+import {Link} from "gatsby"
 
 export default ({children}) => (
     <div className="application">
@@ -24,6 +25,13 @@ export default ({children}) => (
             <meta name="viewport" content="width=device-width"/>
             <link href={"css/landing-page.css"} rel="stylesheet"/>
         </Helmet>
+        <header className={LayoutCSSModule.nav}>
+            <Link to={`/`} className={LayoutCSSModule.logo}>
+            </Link>
+            <Link to={`/about/`}>
+                <span className={LayoutCSSModule.about_nav_item}>About</span>
+            </Link>
+        </header>
         <div className={LayoutCSSModule.wrapper + " test--wrapper"}>
             {children}
         </div>

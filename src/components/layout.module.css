@@ -3,7 +3,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+}
+
+.nav {
+    font-size: 200%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.logo {
+    display: block;
+    background-image: url("/img/safari-pinned-tab.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    width: 4em;
+    height: 2em;
+}
+
+.about_nav_item {
+    text-decoration: none;
+    color: black;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    padding: 0 3px;
+    display: inline-block;
+    height: 2em;
+    font-size: 80%;
 }
 
 .footer {
