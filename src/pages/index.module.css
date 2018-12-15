@@ -1,4 +1,10 @@
+.donate {
+    max-width: 450px;
+}
 
+.donate_text {
+    text-align: center;
+}
 
 @media all and (max-width: 481px) {
     .iframe,

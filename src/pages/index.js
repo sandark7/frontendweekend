@@ -27,7 +27,7 @@ class Application extends React.Component {
                         src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448"
                     />
                     <p className={[IndexCSSModule.donate_text, 'test--donate_text'].join(' ')}>
-                        Также вы можете поддержать нас постоянной подпиской на <a
+                        Также вы можете поддержать нас постоянной подпиской на&nbsp;<a
                         className={'test--patreon-link gtm--patreon-link'}
                         href="https://www.patreon.com/frontendweekend">Patreon</a>.
                     </p>
