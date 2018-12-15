@@ -15,8 +15,13 @@ const launchChromeAndRunLighthouse = (
         );
     });
 
-test("Meaningful first paint score", () =>
+test("All categories score", () =>
     launchChromeAndRunLighthouse(`https://stage.frontendweekend.ml`).then(
-        ({lhr: {audits}}) =>
-            expect(audits["first-meaningful-paint"].score).toBe(1)
+        ({lhr: {categories}}) => {
+            expect(categories["accessibility"].score).toBeGreaterThanOrEqual(0.6);
+            expect(categories["best-practices"].score).toBeGreaterThanOrEqual(1);
+            expect(categories["performance"].score).toBeGreaterThanOrEqual(0.8);
+            expect(categories["pwa"].score).toBeGreaterThanOrEqual(0.6);
+            expect(categories["seo"].score).toBeGreaterThanOrEqual(1);
+        }
     ));
