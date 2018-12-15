@@ -26,9 +26,9 @@ export default ({children}) => (
             <link href={"css/landing-page.css"} rel="stylesheet"/>
         </Helmet>
         <header className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
-            <Link to={`/`} className={LayoutCSSModule.logo}>
+            <Link to={`/`} className={[LayoutCSSModule.logo, 'test--header_nav-logo'].join(' ')}>
             </Link>
-            <Link to={`/about/`}>
+            <Link className={'test--header_nav-about'} to={`/about/`}>
                 <span className={LayoutCSSModule.about_nav_item}>About</span>
             </Link>
         </header>
