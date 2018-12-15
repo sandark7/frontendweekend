@@ -25,7 +25,7 @@ export default ({children}) => (
             <meta name="viewport" content="width=device-width"/>
             <link href={"css/landing-page.css"} rel="stylesheet"/>
         </Helmet>
-        <header className={LayoutCSSModule.nav}>
+        <header className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
             <Link to={`/`} className={LayoutCSSModule.logo}>
             </Link>
             <Link to={`/about/`}>
