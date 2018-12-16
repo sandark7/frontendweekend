@@ -110,3 +110,4 @@ fabric.properties
 cypress/videos/
 results/
 public/
+reports/

@@ -35,7 +35,7 @@ describe('main content', () => {
             .as('sc-embedded-player');
         cy.get('@sc-embedded-player')
             .should('have.attr', 'src')
-            .and('equal', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/306455261&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false');
+            .and('equal', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/306455261&amp;color=%23f7df1d&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false');
         cy.get('@sc-embedded-player')
             .should('have.attr', 'width')
             .and('equal', '450');
