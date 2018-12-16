@@ -4,6 +4,7 @@ const fs = require('fs')
 
 const FEED_URL = 'http://feeds.feedburner.com/frontendweekend'
 const TIMEOUT = 30
+const EPISODE_DIR = 'content/episode'
 
 feedRead.parseUrl(FEED_URL, TIMEOUT, function (err, feed) {
   if (err) {
@@ -25,7 +26,7 @@ function exist ({ filename }) {
 }
 
 function fullpath (filename) {
-  return path.join(__dirname, 'src/pages/episode', filename)
+  return path.join(__dirname, EPISODE_DIR, filename)
 }
 
 function save (item) {
