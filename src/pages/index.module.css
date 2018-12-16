@@ -9,6 +9,15 @@
 
 .iframe, .iframe_sc {}
 
+.archive_link {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    padding: 10px 40px;
+    color: black;
+}
+
 @media all and (max-width: 481px) {
     .iframe,
     .donate {
@@ -25,12 +34,4 @@
         padding: 0 3px;
     }
 
-    .archive_link {
-        text-decoration: none;
-        display: block;
-        margin-bottom: 20px;
-        border: 2px solid black;
-        padding: 10px 40px;
-        color: black;
-    }
 }
