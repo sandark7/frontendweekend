@@ -1,3 +1,7 @@
+body {
+    background-color: #f7df1d;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;

@@ -18,9 +18,9 @@ const launchChromeAndRunLighthouse = (
 test("All categories score", () =>
     launchChromeAndRunLighthouse(`https://stage.frontendweekend.ml`).then(
         ({lhr: {categories}}) => {
-            expect(categories["accessibility"].score).toBeGreaterThanOrEqual(0.6);
+            expect(categories["accessibility"].score).toBeGreaterThanOrEqual(1);
             expect(categories["best-practices"].score).toBeGreaterThanOrEqual(1);
-            expect(categories["performance"].score).toBeGreaterThanOrEqual(0.8);
+            expect(categories["performance"].score).toBeGreaterThanOrEqual(0.9);
             expect(categories["pwa"].score).toBeGreaterThanOrEqual(1);
             expect(categories["seo"].score).toBeGreaterThanOrEqual(1);
         }

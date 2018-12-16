@@ -16,6 +16,12 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-plugin-html-attributes',
+            options: {
+                lang: 'en'
+            }
+        },
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Frontend Weekend podcast`,
