@@ -1,4 +1,5 @@
-.donate {
+.donate,
+.main_wrapper {
     max-width: 450px;
 }
 
@@ -6,8 +7,9 @@
     text-align: center;
 }
 
-
-.iframe, .iframe_sc {}
+.main_wrapper {
+    margin-bottom: 20px;
+}
 
 .archive_link {
     text-decoration: none;
@@ -18,13 +20,20 @@
     color: black;
 }
 
+.show_more {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px dashed black;
+}
+
 @media all and (max-width: 481px) {
     .iframe,
+    .main_wrapper,
     .donate {
         width: 100%;
     }
 
-    .iframe_sc {
+    .main_wrapper {
         padding-left: 3px;
         padding-right: 3px;
     }

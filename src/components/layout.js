@@ -28,7 +28,7 @@ export default ({ children }) => (
           LayoutCSSModule.nav_item,
           'test--header_nav-about',
         ].join(' ')} to={`/about/`}>
-          <span >About</span>
+          <span >About podcast</span>
         </Link>
       </nav>
     </header>

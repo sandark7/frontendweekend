@@ -6,4 +6,7 @@
     .content_wrapper {
         padding: 0 3px;
     }
+    .podcast_description {
+        font-size: large;
+    }
 }

@@ -11,16 +11,16 @@ export default ({ data }) => {
         [AboutCSSModule.content_wrapper, 'test--content_wrapper'].join(' ')
       }>
         <h1>Frontend Weekend podcast archive</h1>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+        {data.allMarkdownRemark.edges.map(({ node: episode }) => (
+          <div key={episode.id}>
             <Link
-              to={node.fields.slug}
+              to={episode.fields.slug}
               className={
                 ArchiveCSSModule.podcast_link
               }
             >
               <h3>
-                {node.frontmatter.title}
+                {episode.frontmatter.title}
               </h3>
             </Link>
           </div>
