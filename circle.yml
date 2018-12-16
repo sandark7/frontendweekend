@@ -55,6 +55,21 @@ jobs:
       - <<: *persist_cache
       - run: yarn test
 
+  lint:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run:
+          name: "JavaScript Linter"
+          command: yarn lint
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
+
   test-e2e:
     docker:
       - image: cypress/base:8
@@ -119,6 +134,7 @@ workflows:
       - deploy-stage:
           requires:
             - build
+      - lint
       - test
       - test-e2e:
           requires:
@@ -130,6 +146,7 @@ workflows:
           requires:
             - build
             - test
+            - lint
             - test-e2e
             - test-lh
           filters:
