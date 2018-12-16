@@ -5,7 +5,7 @@ describe('metadata', () => {
 
     it('should have a favicon', () => {
         cy.root()
-            .find('link[rel=icon]')
+            .find('link[rel~=icon]')
     });
 
     it('should have a valid title', () => {
