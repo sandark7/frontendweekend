@@ -7,15 +7,24 @@ export default ({ data }) => {
   const episode = data.markdownRemark
   return (
     <Layout>
-      <div className={EpisodeCSSModule.wrapper}>
-        <h1>{episode.frontmatter.title}</h1>
+      <div className={[
+        EpisodeCSSModule.wrapper,
+        'test--wrapper'
+      ].join(' ')}>
+        <h1 className={'test--episode_title'}>{episode.frontmatter.title}</h1>
         <audio
-          className={EpisodeCSSModule.audio}
+          className={[
+            EpisodeCSSModule.audio,
+            'test--audio'
+          ].join(' ')}
           src={episode.frontmatter.podcastUrl}
           controls>
         </audio>
         <div
-          className={EpisodeCSSModule.text_wraper}
+          className={[
+            EpisodeCSSModule.text_wraper,
+            'test--text_wraper'
+          ].join(' ')}
           dangerouslySetInnerHTML={{ __html: episode.html }}
         />
       </div>

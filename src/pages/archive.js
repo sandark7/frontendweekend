@@ -15,9 +15,10 @@ export default ({ data }) => {
           <div key={episode.id}>
             <Link
               to={episode.fields.slug}
-              className={
-                ArchiveCSSModule.podcast_link
-              }
+              className={[
+                ArchiveCSSModule.podcast_link,
+                'test--podcast_link'
+              ].join(' ')}
             >
               <h3>
                 {episode.frontmatter.title}

@@ -9,11 +9,17 @@ export default ({ data }) => {
   const episode = data.allMarkdownRemark.edges[0].node
   return (
     <Layout>
-      <div className={IndexCSSModule.main_wrapper}>
+      <div className={[
+        IndexCSSModule.main_wrapper,
+        'test--main_wrapper'
+      ].join(' ')}>
         <h3>Latest episode</h3>
         <h2>{episode.frontmatter.title}</h2>
         <audio
-          className={EpisodeCSSModule.audio}
+          className={[
+            EpisodeCSSModule.audio,
+            'test--audio'
+          ].join(' ')}
           src={episode.frontmatter.podcastUrl}
           controls>
         </audio>
@@ -21,10 +27,16 @@ export default ({ data }) => {
           lines={4}
           more='Show more'
           less='Show less'
-          anchorClass={IndexCSSModule.show_more}
+          anchorClass={[
+            IndexCSSModule.show_more,
+            'test--show_more'
+          ].join(' ')}
         >
           <div
-            className={EpisodeCSSModule.text_wraper}
+            className={[
+              EpisodeCSSModule.text_wraper,
+              'test--text_wraper'
+            ].join(' ')}
             dangerouslySetInnerHTML={{ __html: episode.html }}
           />
         </ShowMoreText>
