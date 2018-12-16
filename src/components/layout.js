@@ -1,7 +1,7 @@
-import React from "react"
-import {Helmet} from "react-helmet";
+import React from 'react'
+import {Helmet} from 'react-helmet'
 import LayoutCSSModule from './layout.module.css'
-import {Link} from "gatsby"
+import {Link} from 'gatsby'
 
 export default ({children}) => (
     <div className="application">
@@ -26,10 +26,10 @@ export default ({children}) => (
                 </Link>
             </nav>
         </header>
-        <main className={LayoutCSSModule.wrapper + " test--wrapper"}>
+        <main className={LayoutCSSModule.wrapper + ' test--wrapper'}>
             {children}
         </main>
-        <footer className={[LayoutCSSModule.footer, "test--footer"].join(' ')}>
+        <footer className={[LayoutCSSModule.footer, 'test--footer'].join(' ')}>
             <p className={'test--footer-email_text'}>
                 По вопросам сотрудничества пишите на <a
                 className={'test--email-link gtm--email-link'}

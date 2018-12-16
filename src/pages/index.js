@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from 'react'
+import Layout from '../components/layout'
 import IndexCSSModule from './index.module.css'
 
 class Application extends React.Component {
@@ -8,7 +8,7 @@ class Application extends React.Component {
             <Layout>
                 <iframe
                     title="Sound cloud player - Frontend Weekend podcast"
-                    className={[IndexCSSModule.iframe, IndexCSSModule.iframe_sc, "test--sc-embedded-player"].join(' ')}
+                    className={[IndexCSSModule.iframe, IndexCSSModule.iframe_sc, 'test--sc-embedded-player'].join(' ')}
                     width="450"
                     height="345"
                     scrolling="no"
@@ -18,7 +18,7 @@ class Application extends React.Component {
                 <div className={[IndexCSSModule.donate, 'test--donate-wrapper'].join(' ')}>
                     <iframe
                         title="Yandex Money widget - Frontend Weekend podcast"
-                        className={IndexCSSModule.iframe + " test--yandex-money-embed"}
+                        className={IndexCSSModule.iframe + ' test--yandex-money-embed'}
                         width="450"
                         height="213"
                         frameBorder="0"
