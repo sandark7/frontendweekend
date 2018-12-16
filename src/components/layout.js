@@ -12,7 +12,7 @@ export default ({children}) => (
             <meta name="description"
                   content="Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только."/>
             <meta
-                content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+                content='width=device-width, initial-scale=1.0'
                 name='viewport'/>
             <meta name="viewport" content="width=device-width"/>
             <link href={"css/landing-page.css"} rel="stylesheet"/>
