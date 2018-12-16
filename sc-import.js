@@ -1,6 +1,7 @@
 const feedRead = require('davefeedread')
 const path = require('path')
 const fs = require('fs')
+const moment = require('moment')
 
 const FEED_URL = 'http://feeds.feedburner.com/frontendweekend'
 const TIMEOUT = 30
@@ -49,7 +50,7 @@ function template ({
   'itunes:subtitle': { '#': subtitle },
 }) {
   const { name, num } = parseSCLink(scLink)
-
+  date = parseDate(date);
   return {
     filename: `${ name }.md`,
     body: `---
@@ -57,7 +58,6 @@ title: ${ JSON.stringify(title) }
 name: "${ name }"
 num: "${ num }"
 date: "${ date }"
-pubdate: "${ pubdate }"
 scLink: "${ scLink }"
 guid: "${ guid }"
 author: "${ author }"
@@ -73,6 +73,9 @@ ${ description }`
   }
 }
 
+function parseDate(date) {
+  return moment(date).format()
+}
 function parseSCLink (link) {
   let name = ''
 

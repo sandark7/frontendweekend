@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import AboutCSSModule from './about.module.css'
 import ArchiveCSSModule from './archive.module.css'
@@ -13,13 +13,16 @@ export default ({ data }) => {
         <h1>Frontend Weekend podcast archive</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <a className={
-              ArchiveCSSModule.podcast_link
-            } href={node.frontmatter.scLink}>
+            <Link
+              to={node.fields.slug}
+              className={
+                ArchiveCSSModule.podcast_link
+              }
+            >
               <h3>
                 {node.frontmatter.title}
               </h3>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
@@ -28,7 +31,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
@@ -36,6 +39,9 @@ export const query = graphql`
           frontmatter {
             title
             scLink
+          }
+          fields {
+            slug
           }
         }
       }

@@ -1,0 +1,14 @@
+@media all and (max-width: 481px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 3px;
+    }
+
+    .audio {
+        margin-bottom: 20px;
+    }
+
+    .text_wraper>p {
+        font-size: large;
+    }
+}

@@ -60,6 +60,7 @@
     "jest-junit": "5.2.0",
     "lighthouse": "4.0.0-alpha.2-3.2.1",
     "live-server": "1.2.1",
+    "moment": "2.23.0",
     "react-helmet": "5.2.0",
     "react-typography": "0.16.18",
     "start-server-and-test": "1.7.11",
