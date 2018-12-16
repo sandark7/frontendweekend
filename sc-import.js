@@ -52,7 +52,7 @@ function template ({
   return {
     filename: `${ name }.md`,
     body: `---
-title: "${ title }"
+title: ${ JSON.stringify(title) }
 name: "${ name }"
 num: "${ num }"
 date: "${ date }"
@@ -66,7 +66,7 @@ podcastType: "${ podcastType }"
 podcastLength: "${ podcastLength }"
 duration: "${ duration }"
 explicit: "${ explicit }"
-subtitle: "${ subtitle }"
+subtitle: ${ JSON.stringify(subtitle) }
 ---
 ${ description }`
   }
