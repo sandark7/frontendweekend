@@ -10,7 +10,10 @@ class AboutPage extends React.Component {
           [AboutCSSModule.content_wrapper, 'test--content_wrapper'].join(' ')
         }>
           <h1>Frontend Weekend podcast</h1>
-          <p className={'test--podcast_description'}>
+          <p className={[
+            AboutCSSModule.podcast_description,
+            'test--podcast_description'
+          ].join(' ')}>
             Самые честные интервью с известными людьми из мира web-разработки.
             Впечатляющие истории успеха, забавные моменты из жизни и полезные
             советы – мы показываем человеческое лицо frontend’а и не только.

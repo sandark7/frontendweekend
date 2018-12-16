@@ -22,6 +22,14 @@ module.exports = {
             }
         },
         {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `content`,
+                path: `${__dirname}/content/`,
+            },
+        },
+        `gatsby-transformer-remark`,
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Frontend Weekend podcast`,
