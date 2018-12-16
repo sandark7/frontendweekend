@@ -6,6 +6,8 @@
     text-align: center;
 }
 
+.iframe, .iframe_sc {}
+
 @media all and (max-width: 481px) {
     .iframe,
     .donate {
