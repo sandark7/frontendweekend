@@ -6,6 +6,7 @@
     text-align: center;
 }
 
+
 .iframe, .iframe_sc {}
 
 @media all and (max-width: 481px) {
@@ -22,5 +23,14 @@
     .donate_text {
         text-align: left;
         padding: 0 3px;
+    }
+
+    .archive_link {
+        text-decoration: none;
+        display: block;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        padding: 10px 40px;
+        color: black;
     }
 }

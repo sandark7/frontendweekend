@@ -16,7 +16,6 @@ body {
 }
 
 .nav {
-    font-size: 200%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,19 +30,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: content-box;
-    width: 4em;
-    height: 2em;
+    width: 9em;
+    height: 4em;
 }
 
-.about_nav_item {
+.nav_item {
     text-decoration: none;
+    display: block;
+    border: 2px solid black;
     color: black;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    padding: 0 3px;
-    display: inline-block;
-    height: 2em;
-    font-size: 80%;
+    margin: 8px;
+    padding: 8px 20px;
 }
 
 .footer {

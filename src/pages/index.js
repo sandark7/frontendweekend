@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import IndexCSSModule from './index.module.css'
+import { Link } from 'gatsby'
 
 class Application extends React.Component {
   render () {
@@ -27,6 +28,12 @@ class Application extends React.Component {
           'show_reposts=false&amp;' +
           'show_teaser=false'}
         />
+        <Link className={[
+          IndexCSSModule.archive_link,
+          'test--header_nav-archive',
+        ].join(' ')} to={`/archive/`}>
+          <span>Archive</span>
+        </Link>
         <div className={[
           IndexCSSModule.donate,
           'test--donate-wrapper'

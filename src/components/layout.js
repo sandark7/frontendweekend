@@ -24,8 +24,11 @@ export default ({ children }) => (
         <Link aria-label={'Main page'} to={`/`}
           className={[LayoutCSSModule.logo, 'test--header_nav-logo'].join(' ')}>
         </Link>
-        <Link className={'test--header_nav-about'} to={`/about/`}>
-          <span className={LayoutCSSModule.about_nav_item}>About</span>
+        <Link className={[
+          LayoutCSSModule.nav_item,
+          'test--header_nav-about',
+        ].join(' ')} to={`/about/`}>
+          <span >About</span>
         </Link>
       </nav>
     </header>
