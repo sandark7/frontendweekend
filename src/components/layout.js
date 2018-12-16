@@ -15,7 +15,6 @@ export default ({children}) => (
                 content='width=device-width, initial-scale=1.0'
                 name='viewport'/>
             <meta name="viewport" content="width=device-width"/>
-            <link href={"css/landing-page.css"} rel="stylesheet"/>
         </Helmet>
         <header className={LayoutCSSModule.header}>
             <nav className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
