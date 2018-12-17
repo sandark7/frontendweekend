@@ -1,5 +1,5 @@
 describe('main content', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('http://127.0.0.1:8080/archive/')
     cy.get('.test--podcast_link')
       .first()
