@@ -11,21 +11,21 @@ describe('main content', () => {
   })
 
   it('should have wrapper', () => {
-    cy.get('.test--wrapper')
+    cy.get('.test--episode_wrapper')
   })
 
   it('should have title', () => {
-    cy.get('.test--wrapper')
+    cy.get('.test--episode_wrapper')
       .find('.test--episode_title')
   })
 
   it('should have audio', () => {
-    cy.get('.test--wrapper')
+    cy.get('.test--episode_wrapper')
       .find('.test--audio')
   })
 
   it('should have episode description', () => {
-    cy.get('.test--wrapper')
+    cy.get('.test--episode_wrapper')
       .find('.test--text_wraper')
   })
 
