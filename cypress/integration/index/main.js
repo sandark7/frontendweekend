@@ -43,10 +43,10 @@ describe('main content', () => {
       .find('.test--text_wraper')
   })
 
-  it('should have more episodes link', () => {
+  it('should have archive link', () => {
     cy.get('.test--header_nav-archive')
       .find('span')
-      .should('contain', 'More episodes')
+      .should('contain', 'All episodes')
   })
 
   it('should have Yandex money embedded widget', () => {
