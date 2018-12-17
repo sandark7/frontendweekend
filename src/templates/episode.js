@@ -9,7 +9,7 @@ export default ({ data }) => {
     <Layout>
       <div className={[
         EpisodeCSSModule.wrapper,
-        'test--wrapper'
+        'test--episode_wrapper'
       ].join(' ')}>
         <h1 className={'test--episode_title'}>{episode.frontmatter.title}</h1>
         <audio
