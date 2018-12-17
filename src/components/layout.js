@@ -36,6 +36,13 @@ export default ({ children }) => (
       {children}
     </main>
     <footer className={[LayoutCSSModule.footer, 'test--footer'].join(' ')}>
+      <p className={'test--footer-gh_text'}>
+        Нашли ошибку на сайте и нужно что-то исправить?
+        Пожалуйста, заведите issue на <a
+          className={'test--gh-link gtm--gh-link'}
+          href="https://github.com/nuxdie/frontendweekend/issues"
+        >frontendweekend/issues</a>.
+      </p>
       <p className={'test--footer-email_text'}>
                 По вопросам сотрудничества пишите на <a
           className={'test--email-link gtm--email-link'}
