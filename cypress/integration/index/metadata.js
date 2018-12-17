@@ -1,5 +1,5 @@
 describe('metadata', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('http://127.0.0.1:8080/')
   })
 
@@ -23,5 +23,11 @@ describe('metadata', () => {
     cy.request('http://127.0.0.1:8080/sitemap.xml')
       .its('body')
       .should('contain', 'schemas/sitemap')
+  })
+
+  it('should have https only resources', () => {
+    cy.get('[src]')
+      .should('have.attr', 'src')
+      .and('contain', 'https://')
   })
 })
