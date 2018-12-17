@@ -7,6 +7,18 @@ describe('footer', () => {
     cy.get('footer.test--footer')
       .should('have.css', 'text-align')
       .and('equal', 'center')
+    cy.get('footer.test--footer')
+      .should('have.css', 'max-width')
+      .and('equal', '450px')
+    cy.get('footer.test--footer')
+      .should('have.css', 'margin-left')
+      .and('equal', 'auto')
+    cy.get('footer.test--footer')
+      .should('have.css', 'margin-right')
+      .and('equal', 'auto')
+    cy.get('footer.test--footer')
+      .should('have.css', 'margin-bottom')
+      .and('equal', '20px')
   })
 
   it('should have contact email address', () => {
