@@ -24,4 +24,10 @@ describe('metadata', () => {
       .its('body')
       .should('contain', 'schemas/sitemap')
   })
+
+  it('should have https only resources', () => {
+    cy.get('[src]')
+      .should('have.attr', 'src')
+      .and('contain', 'https://')
+  })
 })
