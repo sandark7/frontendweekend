@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/nuxdie/frontendweekend.svg?style=svg)](https://circleci.com/gh/nuxdie/frontendweekend)
 
-![Frontend Weekend podcast logo 500x500](https://user-images.githubusercontent.com/3918844/48803509-7270f600-ed12-11e8-81e1-2e33d6e9b1c3.jpg)
+![Frontend Weekend podcast logo](https://user-images.githubusercontent.com/3918844/50121260-7f70fe80-0258-11e9-8050-a8dca666a34c.png)
 
 ## About
 [Frontend Weekend podcast](https://frontendweekend.ml/) -- Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только.
