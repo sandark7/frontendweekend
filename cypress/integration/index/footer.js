@@ -21,4 +21,15 @@ describe('footer', () => {
     cy.get('footer.test--footer')
       .find('a.gtm--email-link')
   })
+
+  it('should have gh issues address', () => {
+    cy.get('footer.test--footer')
+      .find('a.test--gh-link')
+      .as('gh-link')
+    cy.get('@gh-link')
+      .should('have.attr', 'href')
+      .and('contain', 'frontendweekend/issues')
+    cy.get('footer.test--footer')
+      .find('a.gtm--gh-link')
+  })
 })
