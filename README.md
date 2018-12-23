@@ -9,8 +9,10 @@
 The project builds automatically on each commit to `master` branch by circle.ci (see circle.yml and package.json for config)
 
 ## Contributions
+
 ### Non code
 You're very welcome to [support our project on Patreon](https://www.patreon.com/frontendweekend).
+
 ### Code related
 Pease see current issues and get into the code.
 
