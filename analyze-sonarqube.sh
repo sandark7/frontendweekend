@@ -1,26 +1,12 @@
 #!/usr/bin/env bash
 
 SONAR_VERSION="sonar-scanner-cli-3.2.0.1227-linux"
-SONAR_DIR="sonar-scanner-cli-3.2.0.1227-linux"
+SONAR_DIR="sonar-scanner-3.2.0.1227-linux"
 
 wget -P $HOME -N "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/${SONAR_VERSION}.zip"
 unzip -d $HOME $HOME/$SONAR_VERSION.zip
 
 PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
-
-#$HOME/$SONAR_DIR/bin/sonar-scanner \
-#  -Dmaven.test.skip=true \
-#  -Dclirr=true \
-#  -Dsonar.projectKey=nuxdie_frontendweekend \
-#  -Dsonar.organization=nuxdie-github \
-#  -Dsonar.sources=. \
-#  -Dsonar.host.url=https://sonarcloud.io \
-#  -Dsonar.analysis.mode=issues \
-#  -Dsonar.github.pullRequest="${PR_NUMBER}" \
-#  -Dsonar.github.oauth="${GITHUB_OAUTH}"    \
-#  -Dsonar.github.repository="nuxdie/frontendweekend"   \
-#  -Dsonar.login="${SONARQUBE_LOGIN}" \
-#  -B -e -V
 
 DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
                       -Dsonar.projectName=$CIRCLE_PROJECT_REPONAME \
