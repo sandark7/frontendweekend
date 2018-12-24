@@ -1,35 +1,36 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import LayoutCSSModule from './layout.module.css'
-import { Link } from 'gatsby'
+import { translate } from 'react-i18next'
+import { Head, Link } from 'gatsby-plugin-i18next'
+import Switcher from './switcher.js'
 
-export default ({ children }) => (
-  <div className="application">
-    <Helmet>
+const Layout = ({ children, data, t, title }) => (
+  <>
+    <Head hreflang>
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-      <title>Frontend Weekend podcast</title>
+      <title>{ title || t('site_title')}</title>
       <meta name="description"
-        content={'Самые честные интервью с известными людьми из мира ' +
-        'web-разработки. Впечатляющие истории успеха, забавные моменты ' +
-        'из жизни и полезные советы – мы показываем человеческое лицо ' +
-        'frontend’а и не только.'}/>
+        content={t('site_description')}/>
+      <meta name="keywords"
+        content={t('site_keywords')}/>
       <meta
         content='width=device-width, initial-scale=1.0'
         name='viewport'/>
       <meta name="viewport" content="width=device-width"/>
-    </Helmet>
+    </Head>
     <header className={LayoutCSSModule.header}>
       <nav className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
-        <Link aria-label={'Main page'} to={`/`}
+        <Link aria-label={t('main_page_logo_aria_label')} to={`/`}
           className={[LayoutCSSModule.logo, 'test--header_nav-logo'].join(' ')}>
         </Link>
         <Link className={[
           LayoutCSSModule.nav_item,
           'test--header_nav-about',
         ].join(' ')} to={`/about/`}>
-          <span >About podcast</span>
+          <span>{t('about_podcast_link_text')}</span>
         </Link>
+        <Switcher/>
       </nav>
     </header>
     <main className={LayoutCSSModule.wrapper + ' test--wrapper'}>
@@ -37,17 +38,18 @@ export default ({ children }) => (
     </main>
     <footer className={[LayoutCSSModule.footer, 'test--footer'].join(' ')}>
       <p className={'test--footer-gh_text'}>
-        Нашли ошибку на сайте и нужно что-то исправить?
-        Пожалуйста, заведите issue на <a
+        {t('gh_footer_text')}&nbsp;<a
           className={'test--gh-link gtm--gh-link'}
           href="https://github.com/nuxdie/frontendweekend/issues"
-        >frontendweekend/issues</a>.
+        >{t('gh_footer_link_text')}</a>.
       </p>
       <p className={'test--footer-email_text'}>
-                По вопросам сотрудничества пишите на <a
+        {t('email_footer_text')}&nbsp;<a
           className={'test--email-link gtm--email-link'}
-          href="mailto:pr@frontendweekend.ml">pr@frontendweekend.ml</a>
+          href="mailto:pr@frontendweekend.ml">{t('email_footer_link_text')}</a>
       </p>
     </footer>
-  </div>
+  </>
 )
+
+export default translate()(Layout)

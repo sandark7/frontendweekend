@@ -1,6 +1,8 @@
+import ENlang from '../../../locale/en/messages.json'
+
 describe('main content', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/')
+    cy.visit('http://127.0.0.1:8080/en/')
   })
 
   it('should have a correct body css', () => {
@@ -46,7 +48,7 @@ describe('main content', () => {
   it('should have archive link', () => {
     cy.get('.test--header_nav-archive')
       .find('span')
-      .should('contain', 'All episodes')
+      .should('contain', ENlang.archive_link_text)
   })
 
   it('should have Yandex money embedded widget', () => {
@@ -54,13 +56,16 @@ describe('main content', () => {
       .as('yandex-money-embed')
     cy.get('@yandex-money-embed')
       .should('have.attr', 'src')
-      .and('equal', 'https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Frontend%20Weekend&targets-hint=&default-sum=500&button-text=14&payment-type-choice=on&fio=on&hint=&successURL=&quickpay=shop&account=410015721260448')
+      .and('contain', 'https://money.yandex.ru/quickpay/shop-widget')
+    cy.get('@yandex-money-embed')
+      .should('have.attr', 'src')
+      .and('contain', 'account=410015721260448')
     cy.get('@yandex-money-embed')
       .should('have.attr', 'width')
       .and('equal', '450')
     cy.get('@yandex-money-embed')
       .should('have.attr', 'height')
-      .and('equal', '213')
+      .and('equal', '230')
   })
 
   it('should have patreon link', () => {
@@ -71,7 +76,7 @@ describe('main content', () => {
       .should('have.attr', 'href')
       .and('equal', 'https://www.patreon.com/frontendweekend')
     cy.get('@patreon-link')
-      .should('contain', 'Patreon')
+      .should('contain', ENlang.patreon_support_link)
     cy.get('.test--donate-wrapper')
       .find('a.gtm--patreon-link')
   })

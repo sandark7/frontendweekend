@@ -1,6 +1,8 @@
+import ENlang from '../../../locale/en/messages.json'
+
 describe('metadata', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/')
+    cy.visit('http://127.0.0.1:8080/en/')
   })
 
   it('should have a favicon', () => {
@@ -11,12 +13,17 @@ describe('metadata', () => {
   it('should have a valid title', () => {
     cy.root()
       .find('title')
-      .should('contain', 'Frontend Weekend podcast')
+      .should('contain', ENlang.site_title)
   })
 
   it('should have valid meta descr', () => {
     cy.get('head meta[name="description"]')
-      .should('have.attr', 'content', 'Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только.')
+      .should('have.attr', 'content', ENlang.site_description)
+  })
+
+  it('should have valid meta keywords', () => {
+    cy.get('head meta[name="keywords"]')
+      .should('have.attr', 'content', ENlang.site_keywords)
   })
 
   it('should have a sitemap', () => {
@@ -29,5 +36,11 @@ describe('metadata', () => {
     cy.get('[src]')
       .should('have.attr', 'src')
       .and('contain', 'https://')
+  })
+
+  it('should redirect to en lang by default', () => {
+    cy.visit('http://127.0.0.1:8080/')
+    cy.url()
+      .should('contain', '/en/')
   })
 })

@@ -26,10 +26,25 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-i18next`,
+      options: {
+        availableLngs: ['en', 'ru'],
+        fallbackLng: 'ru',
+        debug: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/locale`,
       },
     },
     `gatsby-transformer-remark`,

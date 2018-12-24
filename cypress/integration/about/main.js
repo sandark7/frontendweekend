@@ -1,6 +1,10 @@
+import ENlang from '../../../locale/en/messages.json'
+
 describe('main content', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/about/')
+    cy.visit('http://127.0.0.1:8080/en/')
+      .get('.test--header_nav-about')
+      .click()
   })
 
   it('should have header', () => {
@@ -15,7 +19,7 @@ describe('main content', () => {
 
   it('should have podcast description', () => {
     cy.get('.test--podcast_description')
-      .should('contain', 'Самые честные интервью с известными людьми из мира web-разработки.')
+      .should('contain', ENlang.site_description)
   })
 
   it('should have host info', () => {

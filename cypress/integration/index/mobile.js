@@ -1,6 +1,6 @@
 describe('mobile version', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/')
+    cy.visit('http://127.0.0.1:8080/en/')
   })
 
   it('should have all widgets at 100% width', () => {
