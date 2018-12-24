@@ -29,6 +29,11 @@ describe('main content', () => {
       .find('.test--text_wraper')
   })
 
+  it('should have share btns', () => {
+    cy.get('.test--episode_wrapper')
+      .find('.test--share_wrapper')
+  })
+
   it('should have footer', () => {
     cy.get('footer.test--footer')
   })

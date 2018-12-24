@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
+import Share from '../components/share'
 import IndexCSSModule from './index.module.css'
 import { graphql } from 'gatsby'
 import { I18n } from 'react-i18next'
@@ -20,6 +21,9 @@ class IndexPage extends Component {
 
   render () {
     const data = this.props.data
+    const { site: {
+      siteMetadata: { siteUrl },
+    } } = data
     const episode = data.allMarkdownRemark.edges[0].node
     return (
       <I18n>
@@ -39,18 +43,20 @@ class IndexPage extends Component {
                 src={ episode.frontmatter.podcastUrl }
                 controls>
               </audio>
-              <div
-                className={ [].join(' ') }
-              >
-                <div
-                  className={ [
-                    EpisodeCSSModule.text_wraper,
-                    IndexCSSModule.text_wraper,
-                    !this.state.shown ? IndexCSSModule.collapsed : '',
-                    'test--text_wraper'
-                  ].join(' ') }
-                  dangerouslySetInnerHTML={ { __html: episode.html } }
-                />
+              <div>
+                <div className={[
+                  IndexCSSModule.combine_wrapper,
+                  !this.state.shown ? IndexCSSModule.collapsed : '',
+                ].join(' ')}>
+                  <div
+                    className={ [
+                      EpisodeCSSModule.text_wraper,
+                      'test--text_wraper'
+                    ].join(' ') }
+                    dangerouslySetInnerHTML={ { __html: episode.html } }
+                  />
+                  <Share url={`${ siteUrl }${ episode.fields.slug }`} />
+                </div>
                 <div
                   onClick={ () => this.onShowMoreClick() }
                   className={ [
@@ -64,7 +70,8 @@ class IndexPage extends Component {
                       this.state.shown
                         ? t('show_less_btn_cta')
                         : t('show_more_btn_cta')
-                    }</span>
+                    }
+                  </span>
                 </div>
               </div>
             </div>
@@ -127,7 +134,12 @@ export const query = graphql`
             filter: { lng: { eq: $lng }, ns: { eq: "messages" } }
         ) {
             ...TranslationFragment
-        },
+        }
+        site {
+            siteMetadata {
+                siteUrl
+            }
+        }
         allMarkdownRemark(
             limit: 1,
             sort: { fields: [frontmatter___date], order: DESC }
