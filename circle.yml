@@ -142,6 +142,17 @@ jobs:
       - store_test_results:
           path: results
 
+  commit-to-master:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_content
+      - run: ./commit-to-master.sh
+
+
 workflows:
   version: 2
 
@@ -172,3 +183,17 @@ workflows:
           filters:
             branches:
               only: master
+
+  import-sc-and-publish-hourly:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - sc-import
+      - commit-to-master:
+          requires:
+            - sc-import
