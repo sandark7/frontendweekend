@@ -1,5 +1,3 @@
-# Javascript Node CircleCI 2.0 configuration file
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2.1
 
 executors:
@@ -152,6 +150,12 @@ jobs:
       - <<: *attach_to_content
       - run: ./commit-to-master.sh
 
+  sonarqube-code-analyze:
+    docker:
+      - image: circleci/openjdk:8
+    steps:
+      - checkout
+      - run: ./analyze-sonarqube.sh
 
 workflows:
   version: 2
@@ -167,6 +171,7 @@ workflows:
             - build
       - lint
       - test
+      - sonarqube-code-analyze
       - test-e2e:
           requires:
             - build
@@ -177,6 +182,7 @@ workflows:
           requires:
             - build
             - test
+            - sonarqube-code-analyze
             - lint
             - test-e2e
             - test-lh
