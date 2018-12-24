@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import AboutCSSModule from './about.module.css'
 import { I18n } from 'react-i18next'
 import { withI18next } from 'gatsby-plugin-i18next'
 
-class AboutPage extends React.Component {
+class AboutPage extends Component {
   render () {
     return (
       <I18n>

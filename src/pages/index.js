@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Layout from '../components/layout'
 import IndexCSSModule from './index.module.css'
 import { graphql } from 'gatsby'
@@ -6,7 +6,7 @@ import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import EpisodeCSSModule from '../templates/episode.module.css'
 
-class IndexPage extends React.Component {
+class IndexPage extends Component {
   constructor () {
     super()
     this.state = {
