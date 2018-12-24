@@ -142,6 +142,24 @@ jobs:
       - store_test_results:
           path: results
 
+  commit-to-master:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - <<: *attach_to_content
+      - run:
+        name: Make new episodes commit
+        command: |
+          git config credential.helper 'cache --timeout=120'
+          git config user.email "sc-import-bot@frontendweekend.ml"
+          git config user.name "SC Import Bot"
+          git add .
+          git commit -am "new episodes commit"
+          git push -q https://${SC_IMPORT_GITHUB_TOKEN}@github.com/nuxdie/frontendweekend.git master
+
 workflows:
   version: 2
 
@@ -173,30 +191,16 @@ workflows:
             branches:
               only: master
 
-  import-sc-and-publish-daily:
+  import-sc-and-publish-hourly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "0 * * * *"
           filters:
             branches:
               only:
                 - master
     jobs:
       - sc-import
-      - build:
+      - commit-to-master:
           requires:
             - sc-import
-      - deploy-stage:
-          requires:
-            - build
-      - test-e2e:
-          requires:
-            - build
-      - test-lh:
-          requires:
-            - deploy-stage
-      - deploy:
-          requires:
-            - build
-            - test-e2e
-            - test-lh
