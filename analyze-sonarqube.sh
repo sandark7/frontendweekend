@@ -9,8 +9,6 @@ unzip -d $HOME $HOME/$SONAR_VERSION.zip
 PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
 
 DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
-                      -Dsonar.projectName=$CIRCLE_PROJECT_REPONAME \
-                      -Dsonar.projectVersion=$CIRCLE_BUILD_NUM \
                       -Dsonar.projectKey=nuxdie_frontendweekend \
                       -Dsonar.organization=nuxdie-github \
                       -Dsonar.sources=. \
@@ -25,9 +23,7 @@ if [ -n "$CI_PULL_REQUEST" ]; then
     -Dsonar.pullrequest.branch=$CIRCLE_BRANCH \
     -Dsonar.pullrequest.key=$PR_NUMBER \
     -Dsonar.pullrequest.provider=GitHub \
-    -Dsonar.pullrequest.github.repository=$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME \
-    -Dsonar.github.oauth="${GITHUB_OAUTH}" \
-    -Dsonar.analysis.mode=preview;
+    -Dsonar.pullrequest.github.repository=nuxdie/frontendweekend;
 fi
 
 if [ "$CIRCLE_BRANCH" == "master" ]; then
