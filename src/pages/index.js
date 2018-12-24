@@ -23,66 +23,73 @@ class IndexPage extends React.Component {
     const episode = data.allMarkdownRemark.edges[0].node
     return (
       <I18n>
-        {t => (
-          <Layout>
-            <div className={[
+        { t => (
+          <Layout title={t('site_title')}>
+            <div className={ [
               IndexCSSModule.main_wrapper,
               'test--main_wrapper'
-            ].join(' ')}>
-              <h3>{t('latest_episode_title')}</h3>
-              <h2>{episode.frontmatter.title}</h2>
+            ].join(' ') }>
+              <h3>{ t('latest_episode_title') }</h3>
+              <h2>{ episode.frontmatter.title }</h2>
               <audio
-                className={[
+                className={ [
                   EpisodeCSSModule.audio,
                   'test--audio'
-                ].join(' ')}
-                src={episode.frontmatter.podcastUrl}
+                ].join(' ') }
+                src={ episode.frontmatter.podcastUrl }
                 controls>
               </audio>
               <div
-                className={[].join(' ')}
+                className={ [].join(' ') }
               >
                 <div
-                  className={[
+                  className={ [
                     EpisodeCSSModule.text_wraper,
                     IndexCSSModule.text_wraper,
                     !this.state.shown ? IndexCSSModule.collapsed : '',
                     'test--text_wraper'
-                  ].join(' ')}
-                  dangerouslySetInnerHTML={{ __html: episode.html }}
+                  ].join(' ') }
+                  dangerouslySetInnerHTML={ { __html: episode.html } }
                 />
                 <div
-                  onClick={() => this.onShowMoreClick()}
-                  className={[
+                  onClick={ () => this.onShowMoreClick() }
+                  className={ [
                     IndexCSSModule.show_more_wrapper,
                     'test--show_more'
-                  ].join(' ')}
+                  ].join(' ') }
                 >
                   <span
-                    className={IndexCSSModule.show_more}
-                  >{this.state.shown ? t('show_less_btn_cta') : t('show_more_btn_cta')}</span>
+                    className={ IndexCSSModule.show_more }
+                  >{
+                      this.state.shown
+                        ? t('show_less_btn_cta')
+                        : t('show_more_btn_cta')
+                    }</span>
                 </div>
               </div>
             </div>
-            <Link className={[
+            <Link className={ [
               IndexCSSModule.archive_link,
               'test--header_nav-archive',
-            ].join(' ')} to={`/archive/`}>
-              <span>{t('archive_link_text')}</span>
+            ].join(' ') } to={ `/archive/` }>
+              <span>{ t('archive_link_text') }</span>
             </Link>
-            <div className={[
+            <div className={ [
               IndexCSSModule.donate,
               'test--donate-wrapper'
-            ].join(' ')}>
+            ].join(' ') }>
               <iframe
-                title={t('ya_money_iframe_title')}
-                className={IndexCSSModule.iframe + ' test--yandex-money-embed'}
+                title={ t('ya_money_iframe_title') }
+                className={
+                  IndexCSSModule.iframe +
+                  ' test--yandex-money-embed'
+                }
                 width="450"
                 height="213"
                 frameBorder="0"
                 allowtransparency="true"
                 scrolling="no"
-                src={'https://money.yandex.ru/quickpay/shop-widget?' +
+                src={ 'https://money.yandex.ru/quickpay/shop-widget?' +
                 'writer=seller&' +
                 'targets=' + t('ya_money_payment_target_text') + '&' +
                 'targets-hint=&' +
@@ -93,20 +100,20 @@ class IndexPage extends React.Component {
                 'hint=&' +
                 'successURL=&' +
                 'quickpay=shop&' +
-                'account=410015721260448'}
+                'account=410015721260448' }
               />
-              <p className={[
+              <p className={ [
                 IndexCSSModule.donate_text,
                 'test--donate_text'
-              ].join(' ')}>
-                {t('patreon_support_text')}&nbsp;<a
-                  className={'test--patreon-link gtm--patreon-link'}
+              ].join(' ') }>
+                { t('patreon_support_text') }&nbsp;<a
+                  className={ 'test--patreon-link gtm--patreon-link' }
                   href="https://www.patreon.com/frontendweekend"
-                >{t('patreon_support_link')}</a>.
+                >{ t('patreon_support_link') }</a>.
               </p>
             </div>
           </Layout>
-        )}
+        ) }
       </I18n>
     )
   }
@@ -115,29 +122,31 @@ class IndexPage extends React.Component {
 export default withI18next()(IndexPage)
 
 export const query = graphql`
-  query($lng: String!) {
-  locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "messages" } }) {
-    ...TranslationFragment
-  },
-  allMarkdownRemark(
-    limit: 1,
-    sort: { fields: [frontmatter___date], order: DESC }
-  ){
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          subtitle
-          image
-          podcastUrl
+    query($lng: String!) {
+        locales: allLocale(
+            filter: { lng: { eq: $lng }, ns: { eq: "messages" } }
+        ) {
+            ...TranslationFragment
+        },
+        allMarkdownRemark(
+            limit: 1,
+            sort: { fields: [frontmatter___date], order: DESC }
+        ){
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        subtitle
+                        image
+                        podcastUrl
+                    }
+                    html
+                    fields {
+                        slug
+                    }
+                }
+            }
         }
-        html
-        fields {
-          slug
-        }
-      }
     }
-  }
-}
 `

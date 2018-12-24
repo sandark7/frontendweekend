@@ -3,12 +3,12 @@ import LayoutCSSModule from './layout.module.css'
 import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
 
-const Layout = ({ children, data, t }) => (
-  <div className="application">
+const Layout = ({ children, data, t, title }) => (
+  <>
     <Head hreflang>
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-      <title>{t('site_title')}</title>
+      <title>{ title || t('site_title')}</title>
       <meta name="description"
         content={t('site_description')}/>
       <meta
@@ -45,7 +45,7 @@ const Layout = ({ children, data, t }) => (
           href="mailto:pr@frontendweekend.ml">{t('email_footer_link_text')}</a>
       </p>
     </footer>
-  </div>
+  </>
 )
 
 export default translate()(Layout)
