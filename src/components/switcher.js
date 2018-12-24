@@ -17,7 +17,7 @@ const Switcher = ({ changeLng, lng, availableLngs }) => (
           'test--lang_btn'
         ].join(' ')}
         onClick={ () => changeLng(value) }
-        >
+        data-lang={value}>
           { value }
         </a>
       </li>

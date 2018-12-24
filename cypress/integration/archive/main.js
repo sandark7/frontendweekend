@@ -1,6 +1,8 @@
+import ENlang from '../../../locale/en/messages.json'
+
 describe('main content', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/archive/')
+    cy.visit('http://127.0.0.1:8080/en/archive/')
   })
 
   it('should have header', () => {
@@ -16,7 +18,7 @@ describe('main content', () => {
   it('should have title', () => {
     cy.get('.test--content_wrapper')
       .find('h1')
-      .should('contain', 'Frontend Weekend podcast archive')
+      .should('contain', ENlang.archive_page_title)
   })
 
   it('should have at least 1 podcast', () => {

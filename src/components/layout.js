@@ -2,7 +2,7 @@ import React from 'react'
 import LayoutCSSModule from './layout.module.css'
 import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
-import Switcher from './Switcher';
+import Switcher from './Switcher'
 
 const Layout = ({ children, data, t, title }) => (
   <>
