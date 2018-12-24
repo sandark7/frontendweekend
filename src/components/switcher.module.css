@@ -1,0 +1,22 @@
+.lang_list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 3px;
+}
+
+.lang_item {
+    margin: 0;
+    list-style: none;
+}
+
+.lang_item:first-child {
+    border-bottom: 2px solid black;
+}
+
+.lang_btn {
+    padding: 0;
+}
+
+@media all and (max-width: 481px) {
+}

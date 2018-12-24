@@ -1,6 +1,8 @@
+import ENlang from '../../../locale/en/messages.json'
+
 describe('footer', () => {
   before(() => {
-    cy.visit('http://127.0.0.1:8080/')
+    cy.visit('http://127.0.0.1:8080/en/')
   })
 
   it('should have correct css', () => {
@@ -23,7 +25,7 @@ describe('footer', () => {
       .should('have.attr', 'href')
       .and('equal', 'mailto:pr@frontendweekend.ml')
     cy.get('@email-link')
-      .should('contain', 'pr@frontendweekend.ml')
+      .should('contain', ENlang.email_footer_link_text)
     cy.get('footer.test--footer')
       .find('a.gtm--email-link')
   })

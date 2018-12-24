@@ -1,0 +1,22 @@
+{
+  "site_title": "Frontend Weekend podcast",
+  "site_description": "The most honest interviews with famous people from the web development community. Impressive success stories, funny life moments and useful tips - we show the human face of the frontend and more.",
+  "latest_episode_title": "Latest episode",
+  "main_page_logo_aria_label": "Main page",
+  "show_more_btn_cta": "Show more",
+  "show_less_btn_cta": "Show less",
+  "archive_link_text": "All episodes",
+  "archive_page_title": "Frontend Weekend podcast archives",
+  "about_podcast_link_text": "About podcast",
+  "podcast_host_title": "Host",
+  "podcast_host_full_name": "Andrew Smirnov",
+  "podcast_host_job_title": "UI Practice Lead, IPONWEB",
+  "ya_money_iframe_title": "Yandex Money widget - Frontend Weekend podcast",
+  "ya_money_payment_target_text": "Support Frontend Weekend podcast",
+  "patreon_support_text": "You can also support us with a permanent subscription on",
+  "patreon_support_link": "Patreon",
+  "gh_footer_text": "Found a mistake on the site and need to fix something? Please create a new issue on ",
+  "gh_footer_link_text": "frontendweekend/issues",
+  "email_footer_text": "For inquiries, write to",
+  "email_footer_link_text": "pr@frontendweekend.ml"
+}
