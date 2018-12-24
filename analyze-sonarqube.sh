@@ -21,8 +21,11 @@ if [ -n "$CI_PULL_REQUEST" ]; then
 
   echo "Preview analyzing ${CI_PULL_REQUEST} by SonarQube Github Plugin"
   $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS \
-    -Dsonar.github.repository=$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME \
-    -Dsonar.github.pullRequest="${PR_NUMBER}" \
+    -Dsonar.pullrequest.base=master \
+    -Dsonar.pullrequest.branch=$CIRCLE_BRANCH \
+    -Dsonar.pullrequest.key=$PR_NUMBER \
+    -Dsonar.pullrequest.provider=GitHub \
+    -Dsonar.pullrequest.github.repository=$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME \
     -Dsonar.github.oauth="${GITHUB_OAUTH}" \
     -Dsonar.analysis.mode=preview;
 fi
