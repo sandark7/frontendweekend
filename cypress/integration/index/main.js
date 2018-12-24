@@ -43,6 +43,8 @@ describe('main content', () => {
       .click()
     cy.get('@main_wrapper')
       .find('.test--text_wraper')
+    cy.get('@main_wrapper')
+      .find('.test--share_wrapper')
   })
 
   it('should have archive link', () => {
