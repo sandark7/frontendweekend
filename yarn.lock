@@ -984,6 +984,11 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.2.tgz#5dc0a7f76809b7518c0df58689cd16a19bd751c6"
   integrity sha512-iHI60IbyfQilNubmxsq4zqSjdynlmc2Q/QvH9kjzg9+CCYVVzq1O6tc7VBzSygIwnmOt07w80IG6HDQvjv3Liw==
 
+"@wapps/langtag-utils@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wapps/langtag-utils/-/langtag-utils-1.0.2.tgz#e763c21d4e47a8f12a6f7e86169968ea4b12d080"
+  integrity sha512-BzFvu4olCPfmXkoADMdLVW10n43MNBQ/Ruq3OBMce7Yu4NYyx+cQhL28OMivbrOxyWyX7lnhm+OBUK7vUX1aLQ==
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
@@ -5472,6 +5477,15 @@ gatsby-cli@2.4.6, gatsby-cli@^2.4.6:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
+gatsby-i18n@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-i18n/-/gatsby-i18n-1.1.5.tgz#0287d23e8288caa5f35ccf76419be579a64144e0"
+  integrity sha512-Sxu7HkfTQigyGjbVmsl+zchbR0sylIG3NehrA4jWp4w9z1DbG3uvxRNpZcf2MIouDA8e9EqtwehOa89tWFyYNw==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "@wapps/langtag-utils" "^1.0.2"
+    react-helmet "^5.2.0"
+
 gatsby-link@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.7.tgz#b25b75c9d2dd34cfee4fa629019f8c6b0da719c9"
@@ -5495,6 +5509,17 @@ gatsby-plugin-html-attributes@1.0.5:
   integrity sha512-5u9AHfwxYuhl/QT+cI/r0+1oCKba/LPB6PHUaJN65swPOPrsAiNAj++hTSCs3CG3fITcR8Oorcn6hm6rN+uVAg==
   dependencies:
     babel-runtime "^6.26.0"
+
+gatsby-plugin-i18next@1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-i18next/-/gatsby-plugin-i18next-1.1.6.tgz#8419e0305d5cc4427a4f3c08e579996e35724f2c"
+  integrity sha512-5VwvtIxmJrKwwDyltWTEs1/MABkifuO0bfk5pMx2T92F1hdxYX0NFnMjtK6JutEnjZKBrydlH8EDKqcMWQUfNA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    gatsby-i18n "^1.1.5"
+    i18next "11.6.0"
+    i18next-xhr-backend "1.5.1"
+    react-i18next "7.10.1"
 
 gatsby-plugin-manifest@2.0.12:
   version "2.0.12"
@@ -6331,7 +6356,7 @@ hoek@6.x.x:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.1.2.tgz#99e6d070561839de74ee427b61aa476bd6bddfd6"
 
-hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
@@ -6391,6 +6416,13 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
   integrity sha1-DfKTUfByEWNRXfueVUPl9u7VFi8=
+
+html-parse-stringify2@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/html-parse-stringify2/-/html-parse-stringify2-2.0.1.tgz#dc5670b7292ca158b7bc916c9a6735ac8872834a"
+  integrity sha1-3FZwtyksoVi3vJFsmmc1rIhyg0o=
+  dependencies:
+    void-elements "^2.0.1"
 
 html-void-elements@^1.0.0, html-void-elements@^1.0.1:
   version "1.0.3"
@@ -6514,6 +6546,16 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+i18next-xhr-backend@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/i18next-xhr-backend/-/i18next-xhr-backend-1.5.1.tgz#50282610780c6a696d880dfa7f4ac1d01e8c3ad5"
+  integrity sha512-9OLdC/9YxDvTFcgsH5t2BHCODHEotHCa6h7Ly0EUlUC7Y2GS09UeoHOGj3gWKQ3HCqXz8NlH4gOrK3NNc9vPuw==
+
+i18next@11.6.0:
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-11.6.0.tgz#e0047aa3e3a0080f6f318426f90597cbb0d6ddd5"
+  integrity sha512-+eOdu1laoPX8l3zuaEFpf0MPYqAyKeX46WEjRkpPLp0TcijP3ww6NrDCPcRwX3yKB69R+ggiLvLGzCm8ALaVXQ==
 
 i@0.3.x:
   version "0.3.5"
@@ -10455,7 +10497,7 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
 
-react-helmet@5.2.0:
+react-helmet@5.2.0, react-helmet@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
   integrity sha1-qBgR3yExOm1VxfBYxK66XW89l6c=
@@ -10480,18 +10522,19 @@ react-hot-loader@^4.5.1:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
+react-i18next@7.10.1:
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-7.10.1.tgz#9e119c15970eb401b9ef178336a2e09dd120bb15"
+  integrity sha512-Kk3fXyjmZa0JXsDRDsyCSDVnjW2L2rDP+PDaTbmxdIwa8M6Yr4A33HHrdCBUyTK0LDZUYm47aRR9iRmWlT9xDQ==
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+    html-parse-stringify2 "2.0.1"
+    prop-types "^15.6.0"
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react-show-more-text@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-show-more-text/-/react-show-more-text-1.0.4.tgz#c1d5b7e5fc220fadc5026aa9fb41c25396012ffe"
-  integrity sha512-/RrkqBNym+WQQt/TTc4w++77ghkv6hjcDxKmuFqE6/DNPNriB8evYYqxuD9mLUJWfwQxwECMZ6DGNPW2NdLmXg==
-  dependencies:
-    prop-types "^15.6.0"
-    react-truncate "^2.1.5"
 
 react-side-effect@^1.1.0:
   version "1.1.5"
@@ -10500,11 +10543,6 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
-
-react-truncate@^2.1.5:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-truncate/-/react-truncate-2.4.0.tgz#3cf5ff09ab86f93e3c078d359f4de6d75aa60510"
-  integrity sha512-3QW11/COYwi6iPUaunUhl06DW5NJBJD1WkmxW5YxqqUu6kvP+msB3jfoLg8WRbu57JqgebjVW8Lknw6T5/QZdA==
 
 react-typography@0.16.18:
   version "0.16.18"
@@ -13031,6 +13069,11 @@ vm-browserify@0.0.4:
   integrity sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   dependencies:
     indexof "0.0.1"
+
+void-elements@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+  integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
