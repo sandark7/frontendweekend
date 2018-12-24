@@ -54,8 +54,8 @@ function template({
   image = https(image)
   podcastUrl = https(podcastUrl)
   date = parseDate(date)
-  subtitle = constructSubtitle(description, subtitle)
   description = sanitizeDescr(description)
+  subtitle = constructSubtitle(description, subtitle)
   return {
     filename: `${name}.md`,
     body: `---
@@ -85,7 +85,7 @@ function sanitizeDescr(description) {
 function constructSubtitle(description, subtitle) {
   var matched
   try {
-    matched = description.match(/(.+\. )/)[1]
+    matched = description.match(/(.+)\r/)[1]
   } catch (e) {
     matched = subtitle
   }

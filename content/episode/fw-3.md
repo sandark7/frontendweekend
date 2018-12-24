@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "74397342"
 duration: "01:27:58"
 explicit: "no"
-subtitle: "Сергей Попов, frontend-разработчик в Setka, основ…"
+subtitle: "Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
