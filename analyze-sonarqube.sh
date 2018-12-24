@@ -11,6 +11,8 @@ PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
 DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
                       -Dsonar.projectName=$CIRCLE_PROJECT_REPONAME \
                       -Dsonar.projectVersion=$CIRCLE_BUILD_NUM \
+                      -Dsonar.projectKey=nuxdie_frontendweekend \
+                      -Dsonar.organization=nuxdie-github \
                       -Dsonar.sources=. \
                       -Dsonar.host.url=https://sonarcloud.io"
 
@@ -19,7 +21,6 @@ if [ -n "$CI_PULL_REQUEST" ]; then
 
   echo "Preview analyzing ${CI_PULL_REQUEST} by SonarQube Github Plugin"
   $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS \
-    -Dsonar.projectKey=$SONAR_PROJECT_KEY \
     -Dsonar.github.repository=$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME \
     -Dsonar.github.pullRequest="${PR_NUMBER}" \
     -Dsonar.github.oauth="${GITHUB_OAUTH}" \
@@ -28,6 +29,5 @@ fi
 
 if [ "$CIRCLE_BRANCH" == "master" ]; then
     echo "Analyzing ${CIRCLE_BRANCH} branch to push issues to SonarQube server"
-    $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS \
-    -Dsonar.projectKey=$CIRCLE_PROJECT_USERNAME:$CIRCLE_PROJECT_REPONAME;
+    $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS;
 fi
