@@ -152,7 +152,7 @@ jobs:
 
   sonarqube-code-analyze:
     docker:
-      - image: emundo/docker-compose-openjdk-node-sonarqube-scanner:latest
+      - image: djdapz/openjdk-node-cf:latest
     steps:
       - checkout
       - run: ./analyze-sonarqube.sh
