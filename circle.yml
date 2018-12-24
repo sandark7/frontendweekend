@@ -172,3 +172,31 @@ workflows:
           filters:
             branches:
               only: master
+
+  import-sc-and-publish-daily:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - sc-import
+      - build:
+          requires:
+            - sc-import
+      - deploy-stage:
+          requires:
+            - build
+      - test-e2e:
+          requires:
+            - build
+      - test-lh:
+          requires:
+            - deploy-stage
+      - deploy:
+          requires:
+            - build
+            - test-e2e
+            - test-lh
