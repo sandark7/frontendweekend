@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "55296924"
 duration: "01:01:32"
 explicit: "no"
-subtitle: "Артем Цацин, мой соведущий и руководитель группы …"
+subtitle: "Артем Цацин, мой соведущий и руководитель группы frontend-разработки в Rambler Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend."
 ---
 Артем Цацин, мой соведущий и руководитель группы frontend-разработки в Rambler Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend.
 

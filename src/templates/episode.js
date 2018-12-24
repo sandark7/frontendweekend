@@ -18,7 +18,9 @@ class Episode extends Component {
             episode.frontmatter.title,
             '–',
             t('site_title'),
-          ].join(' ') }>
+          ].join(' ') }
+          description={episode.frontmatter.subtitle}
+          >
             <div className={ [
               EpisodeCSSModule.wrapper,
               'test--episode_wrapper'
@@ -70,6 +72,7 @@ export const query = graphql`
             frontmatter {
                 title
                 podcastUrl
+                subtitle
             }
             fields {
                 slug

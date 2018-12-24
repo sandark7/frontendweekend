@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "65394196"
 duration: "01:14:28"
 explicit: "no"
-subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff …"
+subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 

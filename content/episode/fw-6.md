@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "53884321"
 duration: "00:56:23"
 explicit: "no"
-subtitle: "Андрей Яманов, fullstack-разработчик в компании S…"
+subtitle: "Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 

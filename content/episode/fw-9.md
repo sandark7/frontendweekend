@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "30351818"
 duration: "00:34:15"
 explicit: "no"
-subtitle: "Денис Иогансен, ведущий frontend-разработчик в Li…"
+subtitle: "Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
