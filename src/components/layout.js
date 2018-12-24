@@ -4,14 +4,14 @@ import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
 import Switcher from './switcher.js'
 
-const Layout = ({ children, data, t, title }) => (
+const Layout = ({ children, data, t, title, description }) => (
   <>
     <Head hreflang>
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
       <title>{ title || t('site_title')}</title>
       <meta name="description"
-        content={t('site_description')}/>
+        content={description || t('site_description')}/>
       <meta name="keywords"
         content={t('site_keywords')}/>
       <meta

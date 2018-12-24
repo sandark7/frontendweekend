@@ -12,7 +12,7 @@ podcastType: "audio/x-m4a"
 podcastLength: "40156918"
 duration: "00:41:27"
 explicit: "no"
-subtitle: "Павел Кондратенко, руководитель группы клиентской…"
+subtitle: "- Prepack - A tool for making JavaScript code run faster. "
 ---
 Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital Solutions и организатор внутренних и внешних митапов RDSFront&, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 

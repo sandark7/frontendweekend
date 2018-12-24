@@ -54,6 +54,8 @@ function template({
   image = https(image)
   podcastUrl = https(podcastUrl)
   date = parseDate(date)
+  subtitle = constructSubtitle(description, subtitle)
+  description = sanitizeDescr(description)
   return {
     filename: `${name}.md`,
     body: `---
@@ -74,6 +76,20 @@ subtitle: ${JSON.stringify(subtitle)}
 ---
 ${description}`
   }
+}
+
+function sanitizeDescr(description) {
+  return description.replace('Хочешь поддержать Frontend Weekend, переходи на http://frontendweekend.ml ;)', '')
+}
+
+function constructSubtitle(description, subtitle) {
+  var matched
+  try {
+    matched = description.match(/(.+\. )/)[1]
+  } catch (e) {
+    matched = subtitle
+  }
+  return matched
 }
 
 function https(link) {
