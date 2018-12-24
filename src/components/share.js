@@ -17,9 +17,12 @@ import {
 } from 'react-share'
 import ShareCSSModule from './share.module.css'
 
-const Share = ({ url }) => {
+const Share = ({ url, t }) => {
   const logoFillColor = 'white'
   const size = 32
+  const additionalProps = {
+    'aria-label': t('share_btn_aria_label')
+  }
   return (
     <div className={[
       ShareCSSModule.share_wrapper,
@@ -27,6 +30,7 @@ const Share = ({ url }) => {
     ].join(' ')}>
       <FacebookShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <FacebookIcon
           size={size}
@@ -36,6 +40,7 @@ const Share = ({ url }) => {
       </FacebookShareButton>
       <TelegramShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <TelegramIcon
           size={size}
@@ -45,6 +50,7 @@ const Share = ({ url }) => {
       </TelegramShareButton>
       <VKShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <VKIcon
           size={size}
@@ -54,6 +60,7 @@ const Share = ({ url }) => {
       </VKShareButton>
       <TwitterShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <TwitterIcon
           size={size}
@@ -63,6 +70,7 @@ const Share = ({ url }) => {
       </TwitterShareButton>
       <WhatsappShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <WhatsappIcon
           size={size}
@@ -72,6 +80,7 @@ const Share = ({ url }) => {
       </WhatsappShareButton>
       <RedditShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <RedditIcon
           size={size}
@@ -81,6 +90,7 @@ const Share = ({ url }) => {
       </RedditShareButton>
       <EmailShareButton
         className={'gtm--share_btn'}
+        additionalProps={additionalProps}
         url={url}>
         <EmailIcon
           size={size}

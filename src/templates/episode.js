@@ -42,7 +42,7 @@ class Episode extends Component {
                 ].join(' ') }
                 dangerouslySetInnerHTML={ { __html: episode.html } }
               />
-              <Share url={`${ siteUrl }${ episode.fields.slug }`} />
+              <Share t={t} url={`${ siteUrl }${ episode.fields.slug }`} />
             </div>
           </Layout>
         ) }
