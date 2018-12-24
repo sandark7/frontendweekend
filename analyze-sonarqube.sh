@@ -18,19 +18,6 @@ if [ -n "$CI_PULL_REQUEST" ]; then
   SONAR_PROJECT_KEY=$CIRCLE_PROJECT_USERNAME:$CIRCLE_PROJECT_REPONAME
 
   echo "Preview analyzing ${CI_PULL_REQUEST} by SonarQube Github Plugin"
-
-    # to get real target branch use
-    # https://discuss.circleci.com/t/create-a-circle-target-branch-envar/10022/4
-    #  if [[ -n ${CIRCLE_PR_NUMBER} ]]
-    #    then
-    #    curl -L "https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64" \
-    #      -o jq
-    #    chmod +x jq
-    #    url="https://api.github.com/repos/org/repo/pulls/$CIRCLE_PR_NUMBER?access_token=$GITHUB_TOKEN"
-    #    target_branch=$(
-    #      curl "$url" | ./jq '.base.ref' | tr -d '"'
-    #    )
-
   $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS \
     -Dsonar.pullrequest.base=master \
     -Dsonar.pullrequest.branch=$CIRCLE_BRANCH \
