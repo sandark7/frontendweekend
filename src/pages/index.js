@@ -85,7 +85,7 @@ class IndexPage extends Component {
                   ' test--yandex-money-embed'
                 }
                 width="450"
-                height="213"
+                height="230"
                 frameBorder="0"
                 allowtransparency="true"
                 scrolling="no"

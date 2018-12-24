@@ -2,6 +2,7 @@ import React from 'react'
 import LayoutCSSModule from './layout.module.css'
 import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
+import Switcher from './Switcher';
 
 const Layout = ({ children, data, t, title }) => (
   <>
@@ -27,6 +28,7 @@ const Layout = ({ children, data, t, title }) => (
         ].join(' ')} to={`/about/`}>
           <span>{t('about_podcast_link_text')}</span>
         </Link>
+        <Switcher/>
       </nav>
     </header>
     <main className={LayoutCSSModule.wrapper + ' test--wrapper'}>
