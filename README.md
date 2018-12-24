@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/nuxdie/frontendweekend.svg?style=svg)](https://circleci.com/gh/nuxdie/frontendweekend)
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=nuxdie_frontendweekend&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxdie_frontendweekend)
 
 ![Frontend Weekend podcast logo](https://user-images.githubusercontent.com/3918844/50121260-7f70fe80-0258-11e9-8050-a8dca666a34c.png)
 
