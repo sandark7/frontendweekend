@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 git config credential.helper 'cache --timeout=120'
 git config user.email "sc-import-bot@frontendweekend.ml"
