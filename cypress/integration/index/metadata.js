@@ -21,6 +21,11 @@ describe('metadata', () => {
       .should('have.attr', 'content', ENlang.site_description)
   })
 
+  it('should have valid meta keywords', () => {
+    cy.get('head meta[name="keywords"]')
+      .should('have.attr', 'content', ENlang.site_keywords)
+  })
+
   it('should have a sitemap', () => {
     cy.request('http://127.0.0.1:8080/sitemap.xml')
       .its('body')

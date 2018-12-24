@@ -12,6 +12,8 @@ const Layout = ({ children, data, t, title }) => (
       <title>{ title || t('site_title')}</title>
       <meta name="description"
         content={t('site_description')}/>
+      <meta name="keywords"
+        content={t('site_keywords')}/>
       <meta
         content='width=device-width, initial-scale=1.0'
         name='viewport'/>
