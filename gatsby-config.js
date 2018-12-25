@@ -47,7 +47,12 @@ module.exports = {
         path: `${__dirname}/locale`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-component`]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
