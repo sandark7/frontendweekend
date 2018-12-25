@@ -1,22 +1,30 @@
 import React, { Component } from 'react'
 import TimecodeCSSModule from './timecode.module.css'
+import { AudioContext } from '../templates/episode'
+import moment from 'moment'
 
 class Timecode extends Component {
-  seek (time) {
-    // TODO
+  seek (getAudioRef, time) {
+    const audio = getAudioRef().current
+    audio.currentTime = time
   }
 
   render () {
     const { children } = this.props
-    const [time] = children
-    // TODO convert time to sec
+    let [time] = children
+    let [, hours, minutes, seconds] = time.match(/(\d?\d?):?(\d\d):(\d\d)/)
+    time = moment.duration({ hours, minutes, seconds }).asSeconds()
     return (
-      <div className={[
-        TimecodeCSSModule.timecode,
-      ].join(' ')}
-      onClick={() => this.seek(time)}>
-        {children}
-      </div>
+      <AudioContext.Consumer>
+        {getAudioRef => (
+          <div className={[
+            TimecodeCSSModule.timecode,
+          ].join(' ')}
+          onClick={() => this.seek(getAudioRef, time)}>
+            {children}
+          </div>
+        )}
+      </AudioContext.Consumer>
     )
   }
 }

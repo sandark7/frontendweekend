@@ -6,54 +6,70 @@ import Timecode from '../components/timecode'
 import EpisodeCSSModule from './episode.module.css'
 import { I18n } from 'react-i18next'
 import { withI18next } from 'gatsby-plugin-i18next'
-import rehypeReact from 'rehype-react'
+import RehypeReact from 'rehype-react'
 
-const renderAst = new rehypeReact({
+const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: { 'timecode': Timecode }
 }).Compiler
 
+export const AudioContext = React.createContext()
+
 class Episode extends Component {
+  constructor () {
+    super()
+    this.audioRef = React.createRef()
+  }
+  getAudioRef () {
+    return this.audioRef
+  }
   render () {
-    const { data: { markdownRemark: episode, site: {
-      siteMetadata: { siteUrl },
-    } } } = this.props
+    const {
+      data: {
+        markdownRemark: episode, site: {
+          siteMetadata: { siteUrl },
+        }
+      }
+    } = this.props
     return (
       <I18n>
-        { t => (
-          <Layout title={ [
+        {t => (
+          <Layout title={[
             episode.frontmatter.title,
             '–',
             t('site_title'),
-          ].join(' ') }
+          ].join(' ')}
           description={episode.frontmatter.subtitle}
           >
-            <div className={ [
+            <div className={[
               EpisodeCSSModule.wrapper,
               'test--episode_wrapper'
-            ].join(' ') }>
+            ].join(' ')}>
               <h1
                 className={
                   'test--episode_title'
-                }>{ episode.frontmatter.title }</h1>
-              <audio
-                className={ [
-                  EpisodeCSSModule.audio,
-                  'test--audio'
-                ].join(' ') }
-                src={ episode.frontmatter.podcastUrl }
-                controls>
-              </audio>
-              <div
-                className={ [
-                  EpisodeCSSModule.text_wraper,
-                  'test--text_wraper'
-                ].join(' ') }
-              >{renderAst(episode.htmlAst)}</div>
-              <Share t={t} url={`${ siteUrl }${ episode.fields.slug }`} />
+                }>{episode.frontmatter.title}</h1>
+              <AudioContext.Provider value={this.getAudioRef.bind(this)}>
+                <audio
+                  ref={this.audioRef}
+                  className={[
+                    EpisodeCSSModule.audio,
+                    'test--audio'
+                  ].join(' ')}
+                  src={episode.frontmatter.podcastUrl}
+                  controls>
+                </audio>
+                <div
+                  className={[
+                    EpisodeCSSModule.text_wraper,
+                    'test--text_wraper'
+                  ].join(' ')}
+                >{renderAst(episode.htmlAst)}</div>
+              </AudioContext.Provider>
+              <Share t={t} url={`${ siteUrl }${ episode.fields.slug }`}/>
             </div>
           </Layout>
-        ) }
+        )}
       </I18n>
     )
   }
