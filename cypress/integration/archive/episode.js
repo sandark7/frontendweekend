@@ -29,6 +29,12 @@ describe('main content', () => {
       .find('.test--text_wraper')
   })
 
+  it('should have timecodes in description', () => {
+    cy.get('.test--episode_wrapper')
+      .find('.test--text_wraper')
+      .find('.test--timecode')
+  })
+
   it('should have share btns', () => {
     cy.get('.test--episode_wrapper')
       .find('.test--share_wrapper')

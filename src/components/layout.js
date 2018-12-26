@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import LayoutCSSModule from './layout.module.css'
 import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
@@ -6,23 +7,39 @@ import Switcher from './switcher.js'
 
 const Layout = ({ children, data, t, title, description }) => (
   <>
-    <Head hreflang>
-      <meta charSet="utf-8"/>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-      <title>{ title || t('site_title')}</title>
-      <meta name="description"
-        content={description || t('site_description')}/>
-      <meta name="keywords"
-        content={t('site_keywords')}/>
-      <meta
-        content='width=device-width, initial-scale=1.0'
-        name='viewport'/>
-      <meta name="viewport" content="width=device-width"/>
-    </Head>
+    <StaticQuery
+      query={query}
+      render={({
+        site: {
+          siteMetadata: {
+            siteUrl,
+          },
+        },
+      }) => {
+        return (
+          <Head siteUrl={siteUrl + '/'} hreflang>
+            <meta charSet="utf-8"/>
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <title>{title || t('site_title')}</title>
+            <meta name="description"
+              content={description || t('site_description')}/>
+            <meta name="keywords"
+              content={t('site_keywords')}/>
+            <meta
+              content='width=device-width, initial-scale=1.0'
+              name='viewport'/>
+            <meta name="viewport" content="width=device-width"/>
+          </Head>)
+      }}
+    />
     <header className={LayoutCSSModule.header}>
       <nav className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
-        <Link aria-label={t('main_page_logo_aria_label')} to={`/`}
-          className={[LayoutCSSModule.logo, 'test--header_nav-logo'].join(' ')}>
+        <Link to={`/`}>
+          <div aria-label={t('main_page_logo_aria_label')}
+            className={[
+              LayoutCSSModule.logo,
+              'test--header_nav-logo'
+            ].join(' ')}></div>
         </Link>
         <Link className={[
           LayoutCSSModule.nav_item,
@@ -53,3 +70,13 @@ const Layout = ({ children, data, t, title, description }) => (
 )
 
 export default translate()(Layout)
+
+const query = graphql`
+    query Layout {
+        site {
+            siteMetadata {
+                siteUrl
+            }
+        }
+    }
+`

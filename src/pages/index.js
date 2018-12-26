@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import Share from '../components/share'
 import IndexCSSModule from './index.module.css'
 import { graphql } from 'gatsby'
 import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
-import EpisodeCSSModule from '../templates/episode.module.css'
+import Episode from '../components/episode'
 
 class IndexPage extends Component {
   constructor () {
@@ -19,53 +18,56 @@ class IndexPage extends Component {
     this.setState({ shown: !this.state.shown })
   }
 
+  expandDescription () {
+    this.setState({ shown: true })
+  }
+
   render () {
-    const data = this.props.data
-    const { site: {
-      siteMetadata: { siteUrl },
-    } } = data
-    const episode = data.allMarkdownRemark.edges[0].node
+    const {
+      lng,
+      data: {
+        site: {
+          siteMetadata: { siteUrl },
+        },
+        allMarkdownRemark: {
+          edges: [
+            { node: episode }
+          ]
+        }
+      }
+    } = this.props
     return (
       <I18n>
-        { t => (
+        {t => (
           <Layout title={t('site_title')}>
-            <div className={ [
+            <div className={[
               IndexCSSModule.main_wrapper,
               'test--main_wrapper'
-            ].join(' ') }>
-              <h3>{ t('latest_episode_title') }</h3>
-              <h2>{ episode.frontmatter.title }</h2>
-              <audio
-                className={ [
-                  EpisodeCSSModule.audio,
-                  'test--audio'
-                ].join(' ') }
-                src={ episode.frontmatter.podcastUrl }
-                controls>
-              </audio>
+            ].join(' ')}>
+              <h3>{t('latest_episode_title')}</h3>
               <div>
                 <div className={[
                   IndexCSSModule.combine_wrapper,
                   !this.state.shown ? IndexCSSModule.collapsed : '',
                 ].join(' ')}>
-                  <div
-                    className={ [
-                      EpisodeCSSModule.text_wraper,
-                      'test--text_wraper'
-                    ].join(' ') }
-                    dangerouslySetInnerHTML={ { __html: episode.html } }
-                  />
-                  <Share t={t} url={`${ siteUrl }${ episode.fields.slug }`} />
+                  <Episode
+                    episode={episode}
+                    siteUrl={siteUrl}
+                    t={t}
+                    lng={'/' + lng}
+                    onTimecodeClick={() => this.expandDescription()}
+                    onDescriptionClick={() => this.expandDescription()}
+                  ></Episode>
                 </div>
                 <div
-                  onClick={ () => this.onShowMoreClick() }
-                  className={ [
+                  onClick={() => this.onShowMoreClick()}
+                  className={[
                     IndexCSSModule.show_more_wrapper,
                     'test--show_more'
-                  ].join(' ') }
+                  ].join(' ')}
                 >
                   <span
-                    className={ IndexCSSModule.show_more }
+                    className={IndexCSSModule.show_more}
                   >{
                       this.state.shown
                         ? t('show_less_btn_cta')
@@ -75,18 +77,18 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
-            <Link className={ [
+            <Link className={[
               IndexCSSModule.archive_link,
               'test--header_nav-archive',
-            ].join(' ') } to={ `/archive/` }>
-              <span>{ t('archive_link_text') }</span>
+            ].join(' ')} to={`/archive/`}>
+              <span>{t('archive_link_text')}</span>
             </Link>
-            <div className={ [
+            <div className={[
               IndexCSSModule.donate,
               'test--donate-wrapper'
-            ].join(' ') }>
+            ].join(' ')}>
               <iframe
-                title={ t('ya_money_iframe_title') }
+                title={t('ya_money_iframe_title')}
                 className={
                   IndexCSSModule.iframe +
                   ' test--yandex-money-embed'
@@ -96,7 +98,7 @@ class IndexPage extends Component {
                 frameBorder="0"
                 allowtransparency="true"
                 scrolling="no"
-                src={ 'https://money.yandex.ru/quickpay/shop-widget?' +
+                src={'https://money.yandex.ru/quickpay/shop-widget?' +
                 'writer=seller&' +
                 'targets=' + t('ya_money_payment_target_text') + '&' +
                 'targets-hint=&' +
@@ -107,20 +109,20 @@ class IndexPage extends Component {
                 'hint=&' +
                 'successURL=&' +
                 'quickpay=shop&' +
-                'account=410015721260448' }
+                'account=410015721260448'}
               />
-              <p className={ [
+              <p className={[
                 IndexCSSModule.donate_text,
                 'test--donate_text'
-              ].join(' ') }>
-                { t('patreon_support_text') }&nbsp;<a
-                  className={ 'test--patreon-link gtm--patreon-link' }
+              ].join(' ')}>
+                {t('patreon_support_text')}&nbsp;<a
+                  className={'test--patreon-link gtm--patreon-link'}
                   href="https://www.patreon.com/frontendweekend"
-                >{ t('patreon_support_link') }</a>.
+                >{t('patreon_support_link')}</a>.
               </p>
             </div>
           </Layout>
-        ) }
+        )}
       </I18n>
     )
   }
@@ -131,7 +133,7 @@ export default withI18next()(IndexPage)
 export const query = graphql`
     query($lng: String!) {
         locales: allLocale(
-            filter: { lng: { eq: $lng }, ns: { eq: "messages" } }
+            filter: {lng: {eq: $lng}, ns: {eq: "messages"}}
         ) {
             ...TranslationFragment
         }
@@ -142,7 +144,7 @@ export const query = graphql`
         }
         allMarkdownRemark(
             limit: 1,
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: {fields: [frontmatter___date], order: DESC}
         ){
             edges {
                 node {
@@ -153,7 +155,7 @@ export const query = graphql`
                         image
                         podcastUrl
                     }
-                    html
+                    htmlAst
                     fields {
                         slug
                     }

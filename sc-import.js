@@ -79,7 +79,9 @@ ${description}`
 }
 
 function sanitizeDescr(description) {
-  return description.replace('Хочешь поддержать Frontend Weekend, переходи на http://frontendweekend.ml ;)', '')
+  return description
+    .replace('Хочешь поддержать Frontend Weekend, переходи на http://frontendweekend.ml ;)', '')
+    .replace(/\d*:?\d\d:\d\d/gm, match => {return `<timecode>${match}</timecode>`})
 }
 
 function constructSubtitle(description, subtitle) {
