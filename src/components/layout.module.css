@@ -37,10 +37,9 @@ body {
 .nav_item {
     text-decoration: none;
     display: block;
-    border: 2px solid black;
     color: black;
     margin: 8px;
-    padding: 8px 20px;
+    padding: 10px 20px;
 }
 
 .footer {
