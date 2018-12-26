@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import Episode from '../components/episode'
+import LayoutCSSModule from '../components/layout.module.css'
 
 class IndexPage extends Component {
   constructor () {
@@ -44,7 +45,19 @@ class IndexPage extends Component {
               IndexCSSModule.main_wrapper,
               'test--main_wrapper'
             ].join(' ')}>
-              <h3>{t('latest_episode_title')}</h3>
+              <div className={[
+                IndexCSSModule.title_wrapper,
+                'test--title_wrapper'
+              ].join(' ')}>
+                <h3>{t('latest_episode_title')}</h3>
+                <Link className={[
+                  LayoutCSSModule.nav_item,
+                  LayoutCSSModule.nav_item_subscribe,
+                  'test--header_nav-subscribe',
+                ].join(' ')} to={`/subscribe/`}>
+                  <span>{t('subscribe_podcast_link_text')}</span>
+                </Link>
+              </div>
               <div>
                 <div className={[
                   IndexCSSModule.combine_wrapper,
@@ -117,7 +130,7 @@ class IndexPage extends Component {
               ].join(' ')}>
                 {t('patreon_support_text')}&nbsp;<a
                   className={'test--patreon-link gtm--patreon-link'}
-                  href="https://www.patreon.com/frontendweekend"
+                  href={t('patreon_link')}
                 >{t('patreon_support_link')}</a>.
               </p>
             </div>

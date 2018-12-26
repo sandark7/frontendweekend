@@ -42,6 +42,11 @@ body {
     padding: 10px 20px;
 }
 
+.nav_item_subscribe {
+    border: 2px solid black;
+    padding: 8px 20px;
+}
+
 .footer {
     text-align: center;
     max-width: 450px;
