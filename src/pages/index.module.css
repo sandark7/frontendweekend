@@ -42,9 +42,6 @@
     overflow-y: hidden;
 }
 
-.combine_wrapper {
-
-}
 
 @media all and (max-width: 481px) {
     .iframe,
