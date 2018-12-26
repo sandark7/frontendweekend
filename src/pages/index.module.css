@@ -38,7 +38,7 @@
 }
 
 .collapsed {
-    max-height: 190px;
+    max-height: 450px;
     overflow-y: hidden;
 }
 

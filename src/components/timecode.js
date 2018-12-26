@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import TimecodeCSSModule from './timecode.module.css'
-import { AudioContext } from '../templates/episode'
+import { AudioContext } from './episode'
 import moment from 'moment'
 
 class Timecode extends Component {
-  seek (getAudioRef, time) {
-    const audio = getAudioRef().current
+  seek (context, time) {
+    const audio = context.getAudioRef().current
     audio.currentTime = time
+    audio.play()
+    context.onTimecodeClick && context.onTimecodeClick()
   }
 
   render () {
