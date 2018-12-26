@@ -9,7 +9,7 @@ const Layout = ({ children, data, t, title, description }) => (
     <Head hreflang>
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-      <title>{ title || t('site_title')}</title>
+      <title>{title || t('site_title')}</title>
       <meta name="description"
         content={description || t('site_description')}/>
       <meta name="keywords"
@@ -21,8 +21,12 @@ const Layout = ({ children, data, t, title, description }) => (
     </Head>
     <header className={LayoutCSSModule.header}>
       <nav className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
-        <Link aria-label={t('main_page_logo_aria_label')} to={`/`}
-          className={[LayoutCSSModule.logo, 'test--header_nav-logo'].join(' ')}>
+        <Link to={`/`}>
+          <div aria-label={t('main_page_logo_aria_label')}
+            className={[
+              LayoutCSSModule.logo,
+              'test--header_nav-logo'
+            ].join(' ')}></div>
         </Link>
         <Link className={[
           LayoutCSSModule.nav_item,
