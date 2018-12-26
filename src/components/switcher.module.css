@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
     margin: 0;
+    margin-right: 10px;
     padding-top: 3px;
 }
 
 .lang_item {
     margin: 0;
     list-style: none;
+    font-size: larger;
 }
 
 .lang_item:first-child {

@@ -1,0 +1,21 @@
+.content_wrapper {
+    max-width: 450px;
+}
+
+.list {
+    margin-bottom: 20px;
+}
+
+.link {
+    color: black;
+    font-size: large;
+}
+
+@media all and (max-width: 481px) {
+    .content_wrapper {
+        padding: 0 3px;
+    }
+    .podcast_description {
+        font-size: large;
+    }
+}

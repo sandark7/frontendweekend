@@ -3,6 +3,13 @@
     max-width: 450px;
 }
 
+.title_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .donate_text {
     text-align: center;
 }
