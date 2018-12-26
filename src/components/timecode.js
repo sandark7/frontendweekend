@@ -21,6 +21,7 @@ class Timecode extends Component {
         {getAudioRef => (
           <div className={[
             TimecodeCSSModule.timecode,
+            'test--timecode'
           ].join(' ')}
           onClick={() => this.seek(getAudioRef, time)}>
             {children}
