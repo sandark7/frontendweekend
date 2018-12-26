@@ -54,6 +54,7 @@ class IndexPage extends Component {
                   LayoutCSSModule.nav_item,
                   LayoutCSSModule.nav_item_subscribe,
                   'test--header_nav-subscribe',
+                  'gtm--subscribe_link',
                 ].join(' ')} to={`/subscribe/`}>
                   <span>{t('subscribe_podcast_link_text')}</span>
                 </Link>
