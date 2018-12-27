@@ -53,6 +53,7 @@ function template({
   const {name, num} = parseSCLink(scLink)
   image = https(image)
   podcastUrl = https(podcastUrl)
+  explicit = explicit === 'no' ? 'false' : 'true'
   date = parseDate(date)
   description = sanitizeDescr(description)
   subtitle = constructSubtitle(description, subtitle)
@@ -60,18 +61,14 @@ function template({
     filename: `${name}.md`,
     body: `---
 title: ${JSON.stringify(title)}
-name: "${name}"
-num: "${num}"
-date: "${date}"
-scLink: "${scLink}"
-guid: "${guid}"
-author: "${author}"
-image: "${image}"
-podcastUrl: "${podcastUrl}"
-podcastType: "${podcastType}"
-podcastLength: "${podcastLength}"
-duration: "${duration}"
-explicit: "${explicit}"
+name: '${name}'
+num: '${num}'
+date: '${date}'
+scLink: '${scLink}'
+author: '${author}'
+image: '${image}'
+podcastUrl: '${podcastUrl}'
+explicit: ${explicit}
 subtitle: ${JSON.stringify(subtitle)}
 ---
 ${description}`

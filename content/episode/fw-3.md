@@ -1,17 +1,13 @@
 ---
 title: "#3 – Сергей Попов про стоимость организации митапов и преподавание"
-name: "fw-3"
-num: "3"
-date: "2017-05-22T08:58:59+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-3"
-guid: "tag:soundcloud,2010:tracks/323850168"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/323850168-frontend-weekend-fw-3.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "74397342"
-duration: "01:27:58"
-explicit: "no"
+name: 'fw-3'
+num: '3'
+date: '2017-05-22T08:58:59+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-3'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/323850168-frontend-weekend-fw-3.m4a'
+explicit: false
 subtitle: "Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
