@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: nuxdie/frontendweekend
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: episode
+    label: Episode
+    folder: content/episode
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title,        label: title,               widget: string    }
+      - { name: name,         label: slug,                widget: string    }
+      - { name: num,          label: "episode number",    widget: number    }
+      - { name: date,         label: date,                widget: datetime  }
+      - { name: scLink,       label: "soundcloud url",    widget: string    }
+      - { name: guid,         label: guid,                widget: hidden    }
+      - { name: author,       label: author,              widget: string    }
+      - { name: podcastUrl,   label: "podcast file Url",  widget: string    }
+      - { name: podcastType,  label: podcastType,         widget: hidden    }
+      - { name: podcastLength,label: podcastLength,       widget: hidden    }
+      - { name: duration,     label: duration,            widget: hidden    }
+      - { name: explicit,     label: explicit,            widget: boolean   }
+      - { name: subtitle,     label: intro,               widget: text      }
+      - { name: body,         label: body,                widget: markdown  }
+      - { name: image,        label: image,               widget: image     }

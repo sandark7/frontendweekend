@@ -47,6 +47,7 @@ module.exports = {
         path: `${__dirname}/locale`,
       },
     },
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
