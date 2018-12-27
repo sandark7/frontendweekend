@@ -1,17 +1,13 @@
 ---
 title: "#2 – Зарплаты и первые шаги frontend-разработчика"
-name: "fw-2"
-num: "2"
-date: "2017-05-15T12:32:34+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-2"
-guid: "tag:soundcloud,2010:tracks/322703093"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000222635482-yy16i6-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/322703093-frontend-weekend-fw-2.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "48821890"
-duration: "01:00:14"
-explicit: "no"
+name: 'fw-2'
+num: '2'
+date: '2017-05-15T12:32:34+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-2'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000222635482-yy16i6-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/322703093-frontend-weekend-fw-2.m4a'
+explicit: false
 subtitle: "На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:"
 ---
 На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:

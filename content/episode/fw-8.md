@@ -1,17 +1,13 @@
 ---
 title: "#8 - Почему нужно учить JavaScript и переезжать за границу"
-name: "fw-8"
-num: "8"
-date: "2017-06-26T02:23:16+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-8"
-guid: "tag:soundcloud,2010:tracks/330104327"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000230575663-32jj9m-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/330104327-frontend-weekend-fw-8.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "55296924"
-duration: "01:01:32"
-explicit: "no"
+name: 'fw-8'
+num: '8'
+date: '2017-06-26T02:23:16+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-8'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000230575663-32jj9m-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/330104327-frontend-weekend-fw-8.m4a'
+explicit: false
 subtitle: "Артем Цацин, мой соведущий и руководитель группы frontend-разработки в Rambler Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend."
 ---
 Артем Цацин, мой соведущий и руководитель группы frontend-разработки в Rambler Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend.

@@ -1,17 +1,13 @@
 ---
 title: "#9 – Денис Иогансен учит как стать крутым разработчиком без профильного образования"
-name: "fw-9"
-num: "9"
-date: "2017-07-02T18:07:38+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-9"
-guid: "tag:soundcloud,2010:tracks/331102863"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "30351818"
-duration: "00:34:15"
-explicit: "no"
+name: 'fw-9'
+num: '9'
+date: '2017-07-02T18:07:38+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-9'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a'
+explicit: false
 subtitle: "Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.

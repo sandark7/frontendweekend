@@ -1,17 +1,13 @@
 ---
 title: "#4 – Дарья Пушкарская учит как стать звездой frontend'а за год"
-name: "fw-4"
-num: "4"
-date: "2017-05-28T11:39:57+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-4"
-guid: "tag:soundcloud,2010:tracks/324812846"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "65394196"
-duration: "01:14:28"
-explicit: "no"
+name: 'fw-4'
+num: '4'
+date: '2017-05-28T11:39:57+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-4'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a'
+explicit: false
 subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.

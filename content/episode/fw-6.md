@@ -1,17 +1,13 @@
 ---
 title: "#6 – Андрей Яманов про организацию MoscowJS, зарплаты и DevConf"
-name: "fw-6"
-num: "6"
-date: "2017-06-11T11:18:43+02:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-6"
-guid: "tag:soundcloud,2010:tracks/327444300"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a"
-podcastType: "audio/x-m4a"
-podcastLength: "53884321"
-duration: "00:56:23"
-explicit: "no"
+name: 'fw-6'
+num: '6'
+date: '2017-06-11T11:18:43+02:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-6'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a'
+explicit: false
 subtitle: "Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
