@@ -178,17 +178,6 @@ workflows:
       - test-lh:
           requires:
             - deploy-stage
-      - deploy:
-          requires:
-            - build
-            - test
-            - sonarqube-code-analyze
-            - lint
-            - test-e2e
-            - test-lh
-          filters:
-            branches:
-              only: master
 
   import-sc-and-publish-hourly:
     triggers:
