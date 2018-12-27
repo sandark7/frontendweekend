@@ -4,12 +4,9 @@ name: fw-1
 num: '1'
 date: '2017-05-12T14:59:59+02:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-1'
-guid: 'tag:soundcloud,2010:tracks/322263705'
 author: Андрей Смирнов
 podcastUrl: 'https://feeds.soundcloud.com/stream/322263705-frontend-weekend-fw-1.m4a'
-podcastType: audio/x-m4a
-podcastLength: '40156918'
-duration: '00:41:27'
+podcastFile: /assets/frontend-weekend-1-remastered.m4a
 explicit: false
 subtitle: >-
   Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital
