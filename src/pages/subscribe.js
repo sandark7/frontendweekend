@@ -7,6 +7,17 @@ import { withI18next } from 'gatsby-plugin-i18next'
 
 class SubscribePage extends Component {
   render () {
+    const networks = [
+      'soundcloud',
+      'itunes',
+      'rss',
+      'vk',
+      'fb',
+      'twitter',
+      'telegram',
+      'instagram',
+      'patreon',
+    ]
     return (
       <I18n>
         {t => (
@@ -34,114 +45,23 @@ class SubscribePage extends Component {
                 SubscribeCSSModule.list,
                 'test--list'
               ].join(' ')}>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('soundcloud_link')}>
-                    {t('subscribe_link_soundcloud')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('itunes_link')}>
-                    {t('subscribe_link_itunes')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('rss_link')}>
-                    {t('subscribe_link_rss')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('vk_link')}>
-                    {t('subscribe_link_vk')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('fb_link')}>
-                    {t('subscribe_link_fb')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('twitter_link')}>
-                    {t('subscribe_link_twitter')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('telegram_link')}>
-                    {t('subscribe_link_telegram')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('instagram_link')}>
-                    {t('subscribe_link_instagram')}
-                  </a>
-                </li>
-                <li className={[
-                  SubscribeCSSModule.list_item,
-                  'test--list_item'
-                ].join(' ')}>
-                  <a className={[
-                    SubscribeCSSModule.link,
-                    'test--link'
-                  ].join(' ')}
-                  href={t('patreon_link')}>
-                    {t('subscribe_link_patreon')}
-                  </a>
-                </li>
+                {networks.map(network => (
+                  <li className={[
+                    SubscribeCSSModule.list_item,
+                    'list_item-' + network,
+                    'test--list_item'
+                  ].join(' ')}>
+                    <a className={[
+                      SubscribeCSSModule.link,
+                      'gtm--subscribe_link',
+                      'gtm--subscribe_link-' + network,
+                      'test--link'
+                    ].join(' ')}
+                    href={t(network + '_link')}>
+                      {t('subscribe_link_' + network)}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </Layout>
