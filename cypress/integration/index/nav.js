@@ -19,6 +19,8 @@ describe('nav', () => {
 
   it('should have lang switcher', () => {
     cy.get('.test--lang_list')
+      .should('have.css', 'cursor')
+      .and('equal', 'pointer')
     cy.get('.test--lang_item')
     cy.get('.test--lang_btn')
   })
