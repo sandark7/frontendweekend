@@ -14,6 +14,5 @@ collections:
     fields:
       - { name: title,        label: title,                 widget: string    }
       - { name: explicit,     label: explicit,              widget: boolean,  default: false }
-      - { name: subtitle,     label: intro,                 widget: text,     hint: "Short description introduction" }
       - { name: body,         label: body,                  widget: markdown  }
       - { name: image,        label: image,                 widget: image,    allow_multiple: false}
