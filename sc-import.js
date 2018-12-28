@@ -78,7 +78,11 @@ ${description}`
 function sanitizeDescr(description) {
   return description
     .replace('Хочешь поддержать Frontend Weekend, переходи на http://frontendweekend.ml ;)', '')
-    .replace(/\d*:?\d\d:\d\d/gm, match => {return `<timecode>${match}</timecode>`})
+    .replace(/\d*:?\d\d:\d\d/gm, time => {
+      let [, hours, minutes, seconds] = time.match(/(\d?\d?):?(\d\d):(\d\d)/)
+      let sec = moment.duration({ hours, minutes, seconds }).asSeconds()
+      return `<timecode sec="${sec}">${time}</timecode>`
+    })
 }
 
 function constructSubtitle(description, subtitle) {

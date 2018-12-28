@@ -12,23 +12,23 @@ subtitle: "Андрей Яманов, fullstack-разработчик в ком
 ---
 Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
-- Каково организовывать Frontend Conf? <timecode>01:32</timecode>
-- Зовут ли на конференции в качестве рок-звезды? <timecode>03:32</timecode>
-- Программа frontend-секции DevConf 2017 <timecode>05:40</timecode>
-- Как считается и контролируется тайминг докладов? <timecode>08:56</timecode>
-- Отношение к React Native <timecode>11:46</timecode>
-- С чем связан хайп frontend'а и мог ли закрыться MoscowJS? <timecode>14:13</timecode>
-- Есть ли что-то полезное в BeerJS? <timecode>18:30</timecode>
-- В чем идея angular-bem и почему такое название? <timecode>20:28</timecode>
-- Зарабатывает ли MoscowJS и как изначально задумывалась монетизация? <timecode>24:24</timecode>
-- Есть ли идея сделать платную конференцию? <timecode>28:23</timecode>
-- Какие есть активности помимо организации MoscowJS? <timecode>30:17</timecode>
-- Оправдала ли себя презентация Apple WWDC? <timecode>35:34</timecode>
-- В каком состоянии проекты, сделанные на freelance? <timecode>38:10</timecode>
-- Неудобный блиц-опрос (волосы, никнейм, ритм-игры, зарплата, React или Angular) <timecode>39:38</timecode>
-- Готовим вместе с frontend-разработчиком (добавьте слой сыра) <timecode>48:03</timecode>
+- Каково организовывать Frontend Conf? <timecode sec="92">01:32</timecode>
+- Зовут ли на конференции в качестве рок-звезды? <timecode sec="212">03:32</timecode>
+- Программа frontend-секции DevConf 2017 <timecode sec="340">05:40</timecode>
+- Как считается и контролируется тайминг докладов? <timecode sec="536">08:56</timecode>
+- Отношение к React Native <timecode sec="706">11:46</timecode>
+- С чем связан хайп frontend'а и мог ли закрыться MoscowJS? <timecode sec="853">14:13</timecode>
+- Есть ли что-то полезное в BeerJS? <timecode sec="1110">18:30</timecode>
+- В чем идея angular-bem и почему такое название? <timecode sec="1228">20:28</timecode>
+- Зарабатывает ли MoscowJS и как изначально задумывалась монетизация? <timecode sec="1464">24:24</timecode>
+- Есть ли идея сделать платную конференцию? <timecode sec="1703">28:23</timecode>
+- Какие есть активности помимо организации MoscowJS? <timecode sec="1817">30:17</timecode>
+- Оправдала ли себя презентация Apple WWDC? <timecode sec="2134">35:34</timecode>
+- В каком состоянии проекты, сделанные на freelance? <timecode sec="2290">38:10</timecode>
+- Неудобный блиц-опрос (волосы, никнейм, ритм-игры, зарплата, React или Angular) <timecode sec="2378">39:38</timecode>
+- Готовим вместе с frontend-разработчиком (добавьте слой сыра) <timecode sec="2883">48:03</timecode>
 
-Пики <timecode>51:36</timecode>
+Пики <timecode sec="3096">51:36</timecode>
 - Как правильно дышать http://health4ever.org/ozdorovitelnye-praktiki/kak-pravilno-dyshat
 - Доступен npm canary http://blog.npmjs.org/post/161370331310/v502-2017-06-02
 

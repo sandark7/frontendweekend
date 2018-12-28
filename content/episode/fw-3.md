@@ -15,22 +15,22 @@ subtitle: "Сергей Попов, frontend-разработчик в Setka, о
 - Как организовывается MoscowCSS? 0:36
 - Откуда появилась идея сделать meetup? 4:20
 - Как появился логотип и когда ждать обновления сайта? 7:36
-- Как подбираются площадки для проведения? <timecode>11:11</timecode>
-- В чем различия между аудиторией MoscowJS и MoscowCSS? <timecode>16:56</timecode>
-- Есть ли смысл делать платный вход? <timecode>19:22</timecode>
-- Вкладывают ли организаторы собственные средства? <timecode>28:52</timecode>
-- Увеличивается ли аудитория от митапа к митапу? <timecode>36:23</timecode>
-- Каков рецепт идеального frontend-доклада? <timecode>41:30</timecode>
-- В чем причина казуса с аплодисментами на MoscowCSS №2? <timecode>53:50</timecode>
-- Как Сергей пришел в Moscow Coding School? <timecode>55:38</timecode>
-- Что входит в абстрактный курс? <timecode>1:01:09</timecode>
-- Какого уровня люди приходят обучаться и в чем их цель? <timecode>1:06:50</timecode>
-- Гордится ли Сергей своими выпускниками? <timecode>1:10:16</timecode>
-- Прибыльно ли заниматься обучением? <timecode>1:12:15</timecode>
-- Почему Сергей перестал заниматься фрилансом? <timecode>1:16:05</timecode>
-- Готовим вместе с frontend-разработчиком <timecode>1:20:42</timecode>
+- Как подбираются площадки для проведения? <timecode sec="671">11:11</timecode>
+- В чем различия между аудиторией MoscowJS и MoscowCSS? <timecode sec="1016">16:56</timecode>
+- Есть ли смысл делать платный вход? <timecode sec="1162">19:22</timecode>
+- Вкладывают ли организаторы собственные средства? <timecode sec="1732">28:52</timecode>
+- Увеличивается ли аудитория от митапа к митапу? <timecode sec="2183">36:23</timecode>
+- Каков рецепт идеального frontend-доклада? <timecode sec="2490">41:30</timecode>
+- В чем причина казуса с аплодисментами на MoscowCSS №2? <timecode sec="3230">53:50</timecode>
+- Как Сергей пришел в Moscow Coding School? <timecode sec="3338">55:38</timecode>
+- Что входит в абстрактный курс? <timecode sec="3669">1:01:09</timecode>
+- Какого уровня люди приходят обучаться и в чем их цель? <timecode sec="4010">1:06:50</timecode>
+- Гордится ли Сергей своими выпускниками? <timecode sec="4216">1:10:16</timecode>
+- Прибыльно ли заниматься обучением? <timecode sec="4335">1:12:15</timecode>
+- Почему Сергей перестал заниматься фрилансом? <timecode sec="4565">1:16:05</timecode>
+- Готовим вместе с frontend-разработчиком <timecode sec="4842">1:20:42</timecode>
 
-Пики <timecode>1:23:30</timecode>
+Пики <timecode sec="5010">1:23:30</timecode>
 - Visual Studio Code https://code.visualstudio.com
 - Записи докладов с JSConf EU 2017 https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_
 - FONTend Optimization http://telegra.ph/fontend-optimization-05-16
