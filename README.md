@@ -4,7 +4,7 @@
 ![Frontend Weekend podcast logo](https://user-images.githubusercontent.com/3918844/50121260-7f70fe80-0258-11e9-8050-a8dca666a34c.png)
 
 ## About
-[Frontend Weekend podcast](https://frontendweekend.ml/) -- Самые честные интервью с известными людьми из мира web-разработки. Впечатляющие истории успеха, забавные моменты из жизни и полезные советы – мы показываем человеческое лицо frontend’а и не только.
+[Frontend Weekend podcast](https://frontendweekend.ml/) -- The most honest interviews with famous people from the web development community. Impressive success stories, funny life moments and useful tips - we show the human face of the frontend and more.
 
 ## Tech details
 The project builds automatically on each commit to `master` branch by circle.ci (see circle.yml and package.json for config)
