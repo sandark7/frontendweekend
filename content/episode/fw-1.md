@@ -1,18 +1,14 @@
 ---
-title: '#1 – Павел Кондратенко о том, как стать frontend-разработчиком'
-name: fw-1
+title: "#1 – Павел Кондратенко о том, как стать frontend-разработчиком"
+name: 'fw-1'
 num: '1'
-podcastFile: /assets/322263705-frontend-weekend-fw-1.m4a
 date: '2017-05-12T14:59:59+02:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-1'
-author: Андрей Смирнов
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000349294878-wg8bx0-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/322263705-frontend-weekend-fw-1.m4a'
 explicit: false
-subtitle: >-
-  Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital
-  Solutions и организатор внутренних и внешних митапов RDSFront&, в гостях у
-  Андрея Смирнова и Артема Цацина из Frontend Weekend.
-image: 'https://i1.sndcdn.com/artworks-000349294878-wg8bx0-original.jpg'
+subtitle: "Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital Solutions и организатор внутренних и внешних митапов RDSFront&, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital Solutions и организатор внутренних и внешних митапов RDSFront&, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
