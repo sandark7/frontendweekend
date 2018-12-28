@@ -12,19 +12,19 @@ aliases:
       name: Restore node_modules cache
       keys:
         - yarn-cypress-cache-{{ checksum "yarn.lock" }}
-        
+
   install_node_modules: &install_node_modules
     run:
       name: Install node modules
       command: yarn --frozen-lockfile
-      
+
   persist_cache: &persist_cache
     save_cache:
       name: Save node modules cache
       key: yarn-cypress-cache-{{ checksum "yarn.lock" }}
       paths:
         - ~/.cache
-        
+
   attach_to_build: &attach_to_build
     attach_workspace:
       at: public
@@ -155,7 +155,7 @@ jobs:
       - image: djdapz/openjdk-node-cf:latest
     steps:
       - checkout
-      - run: ./analyze-sonarqube.sh
+      - run: ./sonarqube/analyze-sonarqube.sh
 
 workflows:
   version: 2

@@ -11,7 +11,7 @@ PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
 DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
                       -Dsonar.projectKey=nuxdie_frontendweekend \
                       -Dsonar.organization=nuxdie-github \
-                      -Dsonar.sources=./src \
+                      -Dsonar.sources=../src \
                       -Dsonar.host.url=https://sonarcloud.io"
 
 if [ -n "$CI_PULL_REQUEST" ]; then

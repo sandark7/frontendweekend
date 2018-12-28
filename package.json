@@ -17,8 +17,8 @@
     "gatsby-develop": "gatsby develop",
     "gatsby-build": "gatsby build",
     "gatsby-serve": "gatsby serve",
-    "sc-import": "node ./sc-import.js",
-    "sc-file-import": "node ./sc-file-import.js"
+    "sc-import": "node ./importer/sc-import.js",
+    "sc-file-import": "node ./importer/sc-file-import.js"
   },
   "repository": {
     "type": "git",
