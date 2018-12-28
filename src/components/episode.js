@@ -49,7 +49,7 @@ class Episode extends Component {
               EpisodeCSSModule.audio,
               'test--audio'
             ].join(' ')}
-            src={episode.frontmatter.podcastUrl}
+            src={ episode.frontmatter.podcastUrl }
             controls>
           </audio>
           <div

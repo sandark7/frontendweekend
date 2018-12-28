@@ -17,7 +17,8 @@
     "gatsby-develop": "gatsby develop",
     "gatsby-build": "gatsby build",
     "gatsby-serve": "gatsby serve",
-    "sc-import": "node ./sc-import.js"
+    "sc-import": "node ./sc-import.js",
+    "sc-file-import": "node ./sc-file-import.js"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,7 @@
     "rehype-react": "3.1.0",
     "start-server-and-test": "1.7.11",
     "surge": "0.20.1",
-    "typography": "0.16.18"
+    "typography": "0.16.18",
+    "wget": "0.0.1"
   }
 }

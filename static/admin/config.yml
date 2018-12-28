@@ -10,18 +10,9 @@ collections:
   - name: episode
     label: Episode
     folder: content/episode
-    create: true
-    slug: "{{slug}}"
+    create: false
     fields:
       - { name: title,        label: title,                 widget: string    }
-      - { name: name,         label: slug,                  widget: string,   hint: "Must be something like: fw-123" }
-      - { name: num,          label: "episode number",      widget: number,   hint: "Must be same as in slug above", required: false, valueType: int}
-      - { name: date,         label: date,                  widget: datetime  }
-      - { name: scLink,       label: "soundcloud url",      widget: string,   hint: "SoundCloud episode URL", required: false }
-      - { name: author,       label: author,                widget: string    }
-      - { name: podcastUrl,   label: "podcast file Url",    widget: string,   hint: "DEPRECATED: m4a file URL" }
-      - { name: podcastFile,  label: "podcast file upload", widget: file,     hint: "MP3 file", allow_multiple: false }
       - { name: explicit,     label: explicit,              widget: boolean,  default: false }
-      - { name: subtitle,     label: intro,                 widget: text,     hint: "Short description introduction" }
       - { name: body,         label: body,                  widget: markdown  }
       - { name: image,        label: image,                 widget: image,    allow_multiple: false}
