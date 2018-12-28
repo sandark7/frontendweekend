@@ -3,6 +3,11 @@ const chromeLauncher = require("chrome-launcher"); // Launch Chrome from node
 
 jest.setTimeout(60000);
 
+//PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
+const PR_NUMBER = process.env['CIRCLE_PULL_REQUEST']
+conole.log(PR_NUMBER)
+const STAGE_URL = `https://deploy-preview-${PR_NUMBER}--frontendweekend.netlify.com`
+
 const launchChromeAndRunLighthouse = (
     url,
     opts = {chromeFlags: []},
@@ -16,7 +21,7 @@ const launchChromeAndRunLighthouse = (
     });
 
 test("All categories score", () =>
-    launchChromeAndRunLighthouse(`https://stage.frontendweekend.ml`).then(
+    launchChromeAndRunLighthouse(STAGE_URL).then(
         ({lhr: {categories}}) => {
             expect(categories["accessibility"].score).toBeGreaterThanOrEqual(1);
             expect(categories["best-practices"].score).toBeGreaterThanOrEqual(1);
