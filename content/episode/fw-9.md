@@ -2,6 +2,7 @@
 title: "#9 – Денис Иогансен учит как стать крутым разработчиком без профильного образования"
 name: 'fw-9'
 num: '9'
+podcastFile: /assets/331102863-frontend-weekend-fw-9.m4a
 date: '2017-07-02T18:07:38+02:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-9'
 author: 'Андрей Смирнов'

@@ -2,6 +2,7 @@
 title: "#5 – Алексей Охрименко о секретах докладов для frontend-конференций"
 name: 'fw-5'
 num: '5'
+podcastFile: /assets/325878838-frontend-weekend-fw-5.m4a
 date: '2017-06-03T19:26:30+02:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-5'
 author: 'Андрей Смирнов'

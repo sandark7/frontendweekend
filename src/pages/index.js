@@ -168,6 +168,7 @@ export const query = graphql`
                         subtitle
                         image
                         podcastUrl
+                        podcastFile
                     }
                     htmlAst
                     fields {

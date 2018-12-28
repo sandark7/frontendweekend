@@ -2,6 +2,7 @@
 title: "#8 - Почему нужно учить JavaScript и переезжать за границу"
 name: 'fw-8'
 num: '8'
+podcastFile: /assets/330104327-frontend-weekend-fw-8.m4a
 date: '2017-06-26T02:23:16+02:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-8'
 author: 'Андрей Смирнов'
