@@ -12,25 +12,25 @@ subtitle: "Денис Иогансен, ведущий frontend-разработ
 ---
 Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
-- Почему LiveJournal такой сложный и комплексный проект? <timecode>00:15</timecode>
-- Как технолог машиностроения стал frontend-разработчиком? <timecode>02:41</timecode>
-- Могут ли разработчику помочь навыки, полученные в полиграфии? <timecode>06:52</timecode>
-- Как попасть в оргкомитет MoscowJS и что полезного есть на afterparty? <timecode>08:15</timecode>
-- Как появился BeerJS и обязательно ли любить пиво, чтобы на них приходить? <timecode>09:44</timecode>
-- Что полезного можно почерпнуть в работе на freelance? <timecode>11:18</timecode>
-- Как создавался анонимный чат AnonymClub? <timecode>14:51</timecode>
-- Какой опыт можно получить от выступления на MoscowJS? <timecode>16:41</timecode>
-- Как стать разбирающимся во всём разработчиком? <timecode>19:45</timecode>
-- Что означает никнейм pofigizm? <timecode>20:27</timecode>
-- Есть ли польза от миллиона telegram-чатиков? <timecode>21:24</timecode>
-- Почему все печатают наклейки через Дениса? <timecode>22:33</timecode>
-- React или Angular? <timecode>23:45</timecode>
-- Какое отношение к TypeScript? <timecode>24:48</timecode>
-- Какими социальными сетями пользоваться для потребления информации? <timecode>26:28</timecode>
-- Как разработчик LiveJournal может не пользоваться своим сервисом? <timecode>27:40</timecode>
- - Готовим вместе с frontend-разработчиком (омлет) <timecode>29:06</timecode>
+- Почему LiveJournal такой сложный и комплексный проект? <timecode sec="15">00:15</timecode>
+- Как технолог машиностроения стал frontend-разработчиком? <timecode sec="161">02:41</timecode>
+- Могут ли разработчику помочь навыки, полученные в полиграфии? <timecode sec="412">06:52</timecode>
+- Как попасть в оргкомитет MoscowJS и что полезного есть на afterparty? <timecode sec="495">08:15</timecode>
+- Как появился BeerJS и обязательно ли любить пиво, чтобы на них приходить? <timecode sec="584">09:44</timecode>
+- Что полезного можно почерпнуть в работе на freelance? <timecode sec="678">11:18</timecode>
+- Как создавался анонимный чат AnonymClub? <timecode sec="891">14:51</timecode>
+- Какой опыт можно получить от выступления на MoscowJS? <timecode sec="1001">16:41</timecode>
+- Как стать разбирающимся во всём разработчиком? <timecode sec="1185">19:45</timecode>
+- Что означает никнейм pofigizm? <timecode sec="1227">20:27</timecode>
+- Есть ли польза от миллиона telegram-чатиков? <timecode sec="1284">21:24</timecode>
+- Почему все печатают наклейки через Дениса? <timecode sec="1353">22:33</timecode>
+- React или Angular? <timecode sec="1425">23:45</timecode>
+- Какое отношение к TypeScript? <timecode sec="1488">24:48</timecode>
+- Какими социальными сетями пользоваться для потребления информации? <timecode sec="1588">26:28</timecode>
+- Как разработчик LiveJournal может не пользоваться своим сервисом? <timecode sec="1660">27:40</timecode>
+ - Готовим вместе с frontend-разработчиком (омлет) <timecode sec="1746">29:06</timecode>
 
-Пики <timecode>30:51</timecode>
+Пики <timecode sec="1851">30:51</timecode>
 - Service Workers https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
 - Курсы по Machine Learning http://course.fast.ai
 

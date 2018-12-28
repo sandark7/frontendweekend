@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
 import TimecodeCSSModule from './timecode.module.css'
 import { AudioContext } from './episode'
-import moment from 'moment'
 
 class Timecode extends Component {
-  seek (context, time) {
+  seek (context, sec) {
     const audio = context.getAudioRef().current
-    audio.currentTime = time
+    audio.currentTime = sec
     audio.play()
     context.onTimecodeClick && context.onTimecodeClick()
   }
 
   render () {
-    const { children } = this.props
-    let [time] = children
-    let [, hours, minutes, seconds] = time.match(/(\d?\d?):?(\d\d):(\d\d)/)
-    time = moment.duration({ hours, minutes, seconds }).asSeconds()
+    const { children, sec } = this.props
     return (
       <AudioContext.Consumer>
         {getAudioRef => (
@@ -23,7 +19,7 @@ class Timecode extends Component {
             TimecodeCSSModule.timecode,
             'test--timecode'
           ].join(' ')}
-          onClick={() => this.seek(getAudioRef, time)}>
+          onClick={() => this.seek(getAudioRef, sec)}>
             {children}
           </div>
         )}
