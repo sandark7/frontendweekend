@@ -3,9 +3,7 @@ const chromeLauncher = require("chrome-launcher"); // Launch Chrome from node
 
 jest.setTimeout(60000);
 
-//PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
-const PR_NUMBER = process.env['CIRCLE_PULL_REQUEST']
-conole.log(PR_NUMBER)
+const PR_NUMBER = (process.env['CIRCLE_PULL_REQUEST']).match(/(\d+)$/)[1]
 const STAGE_URL = `https://deploy-preview-${PR_NUMBER}--frontendweekend.netlify.com`
 
 const launchChromeAndRunLighthouse = (
