@@ -21,7 +21,7 @@ class Archive extends Component {
             }>
               <h1>{t('archive_page_title')}</h1>
               { data.allMarkdownRemark.edges.map(({ node: episode }) => (
-                <div key={ episode.id }>
+                <div id={episode.frontmatter.name} key={ episode.id }>
                   <Link
                     to={ episode.fields.slug }
                     className={ [
@@ -29,9 +29,15 @@ class Archive extends Component {
                       'test--podcast_link'
                     ].join(' ') }
                   >
-                    <h3>
+                    <h3 className={ [
+                      ArchiveCSSModule.podcast_title,
+                      'test--podcast_link'
+                    ].join(' ') }>
                       { episode.frontmatter.title }
                     </h3>
+                    <p>
+                      { episode.frontmatter.subtitle }
+                    </p>
                   </Link>
                 </div>
               )) }
@@ -60,7 +66,9 @@ export const query = graphql`
                 node {
                     id
                     frontmatter {
+                        name
                         title
+                        subtitle
                         scLink
                     }
                     fields {

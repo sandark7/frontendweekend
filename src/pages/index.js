@@ -5,7 +5,10 @@ import { graphql } from 'gatsby'
 import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import Episode from '../components/episode'
+import RandomEpisodes from '../components/randomEpisodes'
+import Support from '../components/support'
 import LayoutCSSModule from '../components/layout.module.css'
+import uniqueRandomArray from 'unique-random-array'
 
 class IndexPage extends Component {
   constructor () {
@@ -30,13 +33,22 @@ class IndexPage extends Component {
         site: {
           siteMetadata: { siteUrl },
         },
-        allMarkdownRemark: {
+        latestEpisode: {
           edges: [
             { node: episode }
           ]
+        },
+        allEpisodes: {
+          edges: allEpisodes
         }
       }
     } = this.props
+    allEpisodes.pop()
+    const getRandomEpisode = uniqueRandomArray(allEpisodes)
+    const randomEpisodes = [
+      getRandomEpisode(),
+      getRandomEpisode()
+    ]
     return (
       <I18n>
         {t => (
@@ -91,54 +103,21 @@ class IndexPage extends Component {
                 </div>
               </div>
             </div>
+            <RandomEpisodes
+              t={t}
+              randomEpisodes={randomEpisodes}
+            />
             <Link className={[
               IndexCSSModule.archive_link,
               'test--header_nav-archive',
             ].join(' ')} to={`/archive/`}>
               <span>{t('archive_link_text')}</span>
             </Link>
-            <div className={[
-              IndexCSSModule.donate,
-              'test--donate-wrapper'
-            ].join(' ')}>
-              <iframe
-                title={t('ya_money_iframe_title')}
-                className={
-                  IndexCSSModule.iframe +
-                  ' test--yandex-money-embed'
-                }
-                width="450"
-                height="230"
-                frameBorder="0"
-                allowtransparency="true"
-                scrolling="no"
-                src={'https://money.yandex.ru/quickpay/shop-widget?' +
-                'writer=seller&' +
-                'targets=' + t('ya_money_payment_target_text') + '&' +
-                'targets-hint=&' +
-                'default-sum=500&' +
-                'button-text=14&' +
-                'payment-type-choice=on&' +
-                'fio=on&' +
-                'hint=&' +
-                'successURL=&' +
-                'quickpay=shop&' +
-                'account=410015721260448'}
-              />
-              <p className={[
-                IndexCSSModule.donate_text,
-                'test--donate_text'
-              ].join(' ')}>
-                {t('patreon_support_text')}&nbsp;<a
-                  className={'test--patreon-link gtm--patreon-link'}
-                  href={t('patreon_link')}
-                >{t('patreon_support_link')}</a>.
-              </p>
-            </div>
-            <div
-            >
-              {Random Episode}
-            </div>
+            <Support
+              t={t}
+              siteUrl={siteUrl}
+              lng={lng}
+            />
           </Layout>
         )}
       </I18n>
@@ -160,7 +139,7 @@ export const query = graphql`
                 siteUrl
             }
         }
-        allMarkdownRemark(
+        latestEpisode: allMarkdownRemark(
             limit: 1,
             sort: {fields: [frontmatter___date], order: DESC}
         ){
@@ -174,6 +153,21 @@ export const query = graphql`
                         podcastUrl
                     }
                     htmlAst
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+        allEpisodes: allMarkdownRemark{
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        subtitle
+                        image
+                    }
                     fields {
                         slug
                     }

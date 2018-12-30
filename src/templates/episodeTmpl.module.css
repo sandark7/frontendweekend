@@ -1,0 +1,20 @@
+.wrapper {
+    max-width: 450px;
+}
+
+.archive_link {
+    display: inline-block;
+    margin: 3px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.archive_link:before {
+    content: '<- ';
+}
+
+@media all and (max-width: 481px) {
+    .wrapper {
+        width: 100%;
+    }
+}
