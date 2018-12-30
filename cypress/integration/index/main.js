@@ -71,7 +71,7 @@ describe('main content', () => {
   })
 
   it('should have patreon link', () => {
-    cy.get('.test--donate-wrapper')
+    cy.get('.test--donate_wrapper')
       .find('a.test--patreon-link')
       .as('patreon-link')
     cy.get('@patreon-link')
@@ -79,7 +79,17 @@ describe('main content', () => {
       .and('equal', 'https://www.patreon.com/frontendweekend')
     cy.get('@patreon-link')
       .should('contain', ENlang.patreon_support_link)
-    cy.get('.test--donate-wrapper')
+    cy.get('.test--donate_wrapper')
       .find('a.gtm--patreon-link')
+  })
+
+  it('should have random episodes', () => {
+    cy.get('.test--random_episode_wrapper')
+      .find('.test--podcast_link')
+  })
+
+  it('should have share links', () => {
+    cy.get('.test--donate_wrapper')
+      .find('.test--share_wrapper')
   })
 })
