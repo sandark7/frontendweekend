@@ -1,4 +1,5 @@
 .timecode {
     display: inline;
     border-bottom: 1px dotted black;
+    cursor: pointer;
 }

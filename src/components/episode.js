@@ -21,6 +21,11 @@ class Episode extends Component {
     return this.audioRef
   }
 
+  setSpeed (speed) {
+    const audio = this.getAudioRef().current
+    audio.playbackRate = speed
+  }
+
   render () {
     const {
       episode,
@@ -52,6 +57,46 @@ class Episode extends Component {
             src={ episode.frontmatter.podcastUrl }
             controls>
           </audio>
+          <div
+            className={[
+              EpisodeCSSModule.controls_wrapper,
+              'test--controls_wrapper',
+            ].join(' ')}>
+            <h4
+              className={[
+                EpisodeCSSModule.controls_title,
+                'test--controls_title',
+              ].join(' ')}>
+              {t('controls_title_speed')}
+            </h4>
+            <span
+              onClick={e => this.setSpeed(0.5)}
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'gtm--x05speed',
+                'test--x05speed',
+              ].join(' ')}>
+              {t('x05speed')}
+            </span>
+            <span
+              onClick={e => this.setSpeed(1)}
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'gtm--x1speed',
+                'test--x1speed',
+              ].join(' ')}>
+              {t('x1speed')}
+            </span>
+            <span
+              onClick={e => this.setSpeed(2)}
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'gtm--x2speed',
+                'test--x2speed',
+              ].join(' ')}>
+              {t('x2speed')}
+            </span>
+          </div>
           <div
             onClick={() => onDescriptionClick()}
             className={[
