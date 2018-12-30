@@ -58,39 +58,39 @@ class Episode extends Component {
             controls>
           </audio>
           <div
-          className={[
-            EpisodeCSSModule.controls_wrapper,
-            'test--controls_wrapper',
-          ].join(' ')}>
-            <h4
             className={[
-              EpisodeCSSModule.controls_title,
-              'test--controls_title',
+              EpisodeCSSModule.controls_wrapper,
+              'test--controls_wrapper',
             ].join(' ')}>
+            <h4
+              className={[
+                EpisodeCSSModule.controls_title,
+                'test--controls_title',
+              ].join(' ')}>
               {t('controls_title_speed')}
             </h4>
             <span
               onClick={e => this.setSpeed(0.5)}
-            className={[
-              EpisodeCSSModule.x_speed_control,
-              'test--x05speed',
-            ].join(' ')}>
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'test--x05speed',
+              ].join(' ')}>
               {t('x05speed')}
             </span>
             <span
               onClick={e => this.setSpeed(1)}
-            className={[
-              EpisodeCSSModule.x_speed_control,
-              'test--x1speed',
-            ].join(' ')}>
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'test--x1speed',
+              ].join(' ')}>
               {t('x1speed')}
             </span>
             <span
               onClick={e => this.setSpeed(2)}
-            className={[
-              EpisodeCSSModule.x_speed_control,
-              'test--x2speed',
-            ].join(' ')}>
+              className={[
+                EpisodeCSSModule.x_speed_control,
+                'test--x2speed',
+              ].join(' ')}>
               {t('x2speed')}
             </span>
           </div>
