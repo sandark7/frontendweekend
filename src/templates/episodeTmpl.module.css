@@ -2,6 +2,13 @@
     max-width: 450px;
 }
 
+.header_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .archive_link {
     display: inline-block;
     margin: 3px;
