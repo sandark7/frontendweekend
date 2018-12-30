@@ -25,6 +25,6 @@ test("All categories score", () =>
             expect(categories["best-practices"].score).toBeGreaterThanOrEqual(1);
             expect(categories["performance"].score).toBeGreaterThanOrEqual(0.9);
             expect(categories["pwa"].score).toBeGreaterThanOrEqual(1);
-            expect(categories["seo"].score).toBeGreaterThanOrEqual(1);
+            expect(categories["seo"].score).toBeGreaterThanOrEqual(0.8);
         }
     ));
