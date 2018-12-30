@@ -135,6 +135,10 @@ class IndexPage extends Component {
                 >{t('patreon_support_link')}</a>.
               </p>
             </div>
+            <div
+            >
+              {Random Episode}
+            </div>
           </Layout>
         )}
       </I18n>
