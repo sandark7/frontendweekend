@@ -12,19 +12,19 @@ aliases:
       name: Restore node_modules cache
       keys:
         - yarn-cypress-cache-{{ checksum "yarn.lock" }}
-        
+
   install_node_modules: &install_node_modules
     run:
       name: Install node modules
       command: yarn --frozen-lockfile
-      
+
   persist_cache: &persist_cache
     save_cache:
       name: Save node modules cache
       key: yarn-cypress-cache-{{ checksum "yarn.lock" }}
       paths:
         - ~/.cache
-        
+
   attach_to_build: &attach_to_build
     attach_workspace:
       at: public
@@ -150,6 +150,15 @@ jobs:
       - <<: *attach_to_content
       - run: ./commit-to-master.sh
 
+  wait-for-netlify-build:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: ./wait-for-netlify-build.sh
+
   sonarqube-code-analyze:
     docker:
       - image: djdapz/openjdk-node-cf:latest
@@ -166,18 +175,16 @@ workflows:
       - build:
           requires:
             - sc-import
-      - deploy-stage:
-          requires:
-            - build
       - lint
       - test
       - sonarqube-code-analyze
+      - wait-for-netlify-build
       - test-e2e:
           requires:
             - build
       - test-lh:
           requires:
-            - deploy-stage
+            - wait-for-netlify-build
 
   import-sc-and-publish-hourly:
     triggers:
