@@ -1,3 +1,9 @@
 .podcast_link {
     color: black;
+    text-decoration: none;
+}
+
+.podcast_title {
+    margin-bottom: 10px;
+    text-decoration: underline;
 }

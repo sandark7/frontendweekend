@@ -1,5 +1,15 @@
 .share_wrapper {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.share_title {
+
+}
+
+.share_btn_wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 20px;

@@ -51,13 +51,16 @@ body {
     text-align: center;
     max-width: 450px;
     margin: 0 auto 20px;
+    border-top: 2px solid black;
+    padding-top: 20px;
 }
 
 @media all and (max-width: 481px) {
     .footer {
         width: 100%;
         text-align: left;
-        padding: 0 3px;
+        padding-left: 3px;
+        padding-right: 3px;
     }
 
     .nav {
