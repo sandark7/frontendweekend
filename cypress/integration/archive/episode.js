@@ -24,6 +24,19 @@ describe('main content', () => {
       .find('.test--audio')
   })
 
+  it('should have audio speed controls', () => {
+    cy.get('.test--episode_wrapper')
+      .find('.test--controls_wrapper')
+    cy.get('.test--episode_wrapper')
+      .find('.test--controls_title')
+    cy.get('.test--episode_wrapper')
+      .find('.test--x05speed')
+    cy.get('.test--episode_wrapper')
+      .find('.test--x1speed')
+    cy.get('.test--episode_wrapper')
+      .find('.test--x2speed')
+  })
+
   it('should have episode description', () => {
     cy.get('.test--episode_wrapper')
       .find('.test--text_wraper')
