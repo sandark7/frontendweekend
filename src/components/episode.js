@@ -73,6 +73,7 @@ class Episode extends Component {
               onClick={e => this.setSpeed(0.5)}
               className={[
                 EpisodeCSSModule.x_speed_control,
+                'gtm--x05speed',
                 'test--x05speed',
               ].join(' ')}>
               {t('x05speed')}
@@ -81,6 +82,7 @@ class Episode extends Component {
               onClick={e => this.setSpeed(1)}
               className={[
                 EpisodeCSSModule.x_speed_control,
+                'gtm--x1speed',
                 'test--x1speed',
               ].join(' ')}>
               {t('x1speed')}
@@ -89,6 +91,7 @@ class Episode extends Component {
               onClick={e => this.setSpeed(2)}
               className={[
                 EpisodeCSSModule.x_speed_control,
+                'gtm--x2speed',
                 'test--x2speed',
               ].join(' ')}>
               {t('x2speed')}
