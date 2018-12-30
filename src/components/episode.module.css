@@ -11,9 +11,38 @@
     font-size: large;
 }
 
+.controls_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.controls_title {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.x_speed_control {
+    line-height: 1;
+    cursor: pointer;
+    margin-left: 10px;
+    border-bottom: 1px dotted black;
+}
+
 @media all and (max-width: 481px) {
     .wrapper {
         width: 100%;
         padding: 0 3px;
+    }
+
+    .x_speed_control {
+        margin: 0;
+    }
+
+    .controls_wrapper {
+        justify-content: space-evenly;
     }
 }
