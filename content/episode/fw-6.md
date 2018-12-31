@@ -7,6 +7,7 @@ scLink: 'https://soundcloud.com/frontend-weekend/fw-6'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a'
+scTrackId: '327444300'
 explicit: false
 subtitle: "Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---

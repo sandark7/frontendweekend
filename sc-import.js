@@ -57,6 +57,7 @@ function template({
   date = parseDate(date)
   description = sanitizeDescr(description)
   subtitle = constructSubtitle(description, subtitle)
+  const scTrackId = getScTrackId(podcastUrl)
   return {
     filename: `${name}.md`,
     body: `---
@@ -68,11 +69,16 @@ scLink: '${scLink}'
 author: '${author}'
 image: '${image}'
 podcastUrl: '${podcastUrl}'
+scTrackId: '${scTrackId}'
 explicit: ${explicit}
 subtitle: ${JSON.stringify(subtitle)}
 ---
 ${description}`
   }
+}
+
+function getScTrackId (link) {
+  return link.match(/stream\/(\d+)-/)[1]
 }
 
 function sanitizeDescr(description) {

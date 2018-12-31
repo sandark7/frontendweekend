@@ -7,6 +7,7 @@ scLink: 'https://soundcloud.com/frontend-weekend/fw-4'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a'
+scTrackId: '324812846'
 explicit: false
 subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
