@@ -106,33 +106,59 @@ class Episode extends Component {
               'test--text_wraper'
             ].join(' ')}
           >{renderAst(episode.htmlAst)}</div>
-        </AudioContext.Provider>
-        <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
-        <h3 className={[
-          EpisodeCSSModule.comment_block_title,
-          'test--comment_block_title',
-        ].join(' ')}>
-          {comments.length ? t('comment_block_title') : t('no_comments_title')}
-        </h3>
-        {comments.map(({ node: comment }) => (
-          <div className={[
-            EpisodeCSSModule.comment_wrapper,
-            'test--comment_wrapper',
+          <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
+          <h3 className={[
+            EpisodeCSSModule.comment_block_title,
+            'test--comment_block_title',
           ].join(' ')}>
-            <span className={[
-              EpisodeCSSModule.comment_date,
-              'test--comment_date',
+            {comments.length ? t('comment_block_title') : t('no_comments_title')}
+          </h3>
+          {comments.map(({ node: comment }) => (
+            <div className={[
+              EpisodeCSSModule.comment_wrapper,
+              'test--comment_wrapper',
             ].join(' ')}>
-              {moment.unix(comment.date).fromNow()}
-            </span>
-            <p className={[
-              EpisodeCSSModule.comment_text,
-              'test--comment_text',
-            ].join(' ')}>
-              {comment.message}
-            </p>
-          </div>
-        ))}
+              <div className={[
+                EpisodeCSSModule.meta_wrapper,
+                'test--meta_wrapper',
+              ].join(' ')}>
+                {comment.username && (<span className={[
+                  EpisodeCSSModule.comment_user,
+                  'test--comment_user',
+                ].join(' ')}>
+                  {comment.username}
+                </span>)}
+                {!!comment.timestamp && (
+                  <Timecode
+                    className={[
+                      EpisodeCSSModule.comment_timestamp,
+                      'test--comment_user',
+                    ].join(' ')}
+                    sec={comment.timestamp}
+                  >
+                    @ {
+                      moment.duration({ seconds: comment.timestamp })
+                        .locale('ru')
+                        .humanize()
+                    }
+                  </Timecode>
+                )}
+                <span className={[
+                  EpisodeCSSModule.comment_date,
+                  'test--comment_date',
+                ].join(' ')}>
+                  {moment.unix(comment.date).fromNow()}
+                </span>
+              </div>
+              <p className={[
+                EpisodeCSSModule.comment_text,
+                'test--comment_text',
+              ].join(' ')}>
+                {comment.message}
+              </p>
+            </div>
+          ))}
+        </AudioContext.Provider>
         <form
           className={[
             EpisodeCSSModule.comment_form,
@@ -154,6 +180,15 @@ class Episode extends Component {
             name="fields[slug]"
             type="hidden"
             value={episode.frontmatter.name}></input>
+          <input
+            name="fields[name]"
+            className={[
+              EpisodeCSSModule.comment_form_name_input,
+              'test--comment_form_name_input',
+            ].join(' ')}
+            aria-label={t('comment_form_name')}
+            placeholder={t('comment_form_name')}
+            ></input>
           <textarea
             aria-label={t('comment_form_message')}
             className={[
