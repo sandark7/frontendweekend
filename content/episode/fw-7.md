@@ -9,6 +9,14 @@ image: 'https://i1.sndcdn.com/artworks-000229338392-w2f5dt-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/328898232-frontend-weekend-fw-7.m4a'
 scTrackId: '328898232'
 explicit: false
+tag_list: 'podcast frontend javascript react'
+license: 'cc-by-nc-nd'
+playback_count: '8388'
+download_count: '147'
+favoritings_count: '86'
+reposts_count: '5'
+comment_count: '6'
+waveform_url: 'https://w1.sndcdn.com/GGfmvAfLl9eQ_m.png'
 subtitle: "Григорий Петров, технический евангелист компании Voximplant, в гостях у Андрея Смирнова из Frontend Weekend. Мой соведущий Артем приболел, его подменяет гость пилотного выпуска Павел Кондратенко."
 ---
 Григорий Петров, технический евангелист компании Voximplant, в гостях у Андрея Смирнова из Frontend Weekend. Мой соведущий Артем приболел, его подменяет гость пилотного выпуска Павел Кондратенко.

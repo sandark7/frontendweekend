@@ -9,6 +9,14 @@ image: 'https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/323850168-frontend-weekend-fw-3.m4a'
 scTrackId: '323850168'
 explicit: false
+tag_list: 'podcast frontend javascript moscowcss'
+license: 'all-rights-reserved'
+playback_count: '9090'
+download_count: '148'
+favoritings_count: '83'
+reposts_count: '6'
+comment_count: '4'
+waveform_url: 'https://w1.sndcdn.com/XrPkInnEUx0h_m.png'
 subtitle: "Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
