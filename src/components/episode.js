@@ -3,6 +3,7 @@ import EpisodeCSSModule from './episode.module.css'
 import Share from './share'
 import RehypeReact from 'rehype-react'
 import Timecode from './timecode'
+import moment from 'moment'
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -32,6 +33,7 @@ class Episode extends Component {
       siteUrl,
       t,
       lng,
+      comments,
       onTimecodeClick = () => {},
       onDescriptionClick = () => {},
     } = this.props
@@ -105,6 +107,32 @@ class Episode extends Component {
             ].join(' ')}
           >{renderAst(episode.htmlAst)}</div>
         </AudioContext.Provider>
+        <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
+        <h3 className={[
+          EpisodeCSSModule.comment_block_title,
+          'test--comment_block_title',
+        ].join(' ')}>
+          {comments.length ? t('comment_block_title') : t('no_comments_title')}
+        </h3>
+        {comments.map(({ node: comment }) => (
+          <div className={[
+            EpisodeCSSModule.comment_wrapper,
+            'test--comment_wrapper',
+          ].join(' ')}>
+            <span className={[
+              EpisodeCSSModule.comment_date,
+              'test--comment_date',
+            ].join(' ')}>
+              {moment.unix(comment.date).fromNow()}
+            </span>
+            <p className={[
+              EpisodeCSSModule.comment_text,
+              'test--comment_text',
+            ].join(' ')}>
+              {comment.message}
+            </p>
+          </div>
+        ))}
         <form
           className={[
             EpisodeCSSModule.comment_form,
@@ -126,15 +154,24 @@ class Episode extends Component {
             name="fields[slug]"
             type="hidden"
             value={episode.frontmatter.name}></input>
-          <label>
-            {t('comment_form_message')}
-            <textarea name="fields[message]"></textarea>
-          </label>
-          <button type="submit">
+          <textarea
+            aria-label={t('comment_form_message')}
+            className={[
+              EpisodeCSSModule.comment_form_message_input,
+              'test--comment_form_message_input',
+            ].join(' ')}
+            placeholder={t('comment_form_message')}
+            required={true}
+            name="fields[message]"></textarea>
+          <button
+            className={[
+              EpisodeCSSModule.comment_form_submit_btn,
+              'test--comment_form_submit_btn',
+            ].join(' ')}
+            type="submit">
             {t('comment_form_submit_btn_cta')}
           </button>
         </form>
-        <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
       </div>
     )
   }

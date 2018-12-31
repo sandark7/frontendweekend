@@ -27,7 +27,7 @@ class IndexPage extends Component {
   }
 
   render () {
-    const {
+    let {
       lng,
       data: {
         site: {
@@ -40,9 +40,13 @@ class IndexPage extends Component {
         },
         allEpisodes: {
           edges: allEpisodes
-        }
+        },
+        allCommentYaml: { edges: comments },
       }
     } = this.props
+    comments = comments.filter(
+      ({ node: comment }) => (comment.slug === episode.frontmatter.name)
+    )
     allEpisodes.pop()
     const getRandomEpisode = uniqueRandomArray(allEpisodes)
     const randomEpisodes = [
@@ -80,6 +84,7 @@ class IndexPage extends Component {
                     episode={episode}
                     siteUrl={siteUrl}
                     t={t}
+                    comments={comments}
                     lng={'/' + lng}
                     onTimecodeClick={() => this.expandDescription()}
                     onDescriptionClick={() => this.expandDescription()}
@@ -137,6 +142,15 @@ export const query = graphql`
         site {
             siteMetadata {
                 siteUrl
+            }
+        }
+        allCommentYaml {
+            edges {
+                node {
+                    slug
+                    message
+                    date
+                }
             }
         }
         latestEpisode: allMarkdownRemark(
