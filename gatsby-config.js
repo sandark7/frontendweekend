@@ -57,7 +57,7 @@ module.exports = {
     {
       resolve: `@debiki/gatsby-plugin-talkyard`,
       options: {
-        talkyardServerUrl: 'https://frontendweekend.talkyard.net'
+        talkyardServerUrl: 'https://comments-for-frontendweekend-ml.talkyard.net'
       }
     },
     {
