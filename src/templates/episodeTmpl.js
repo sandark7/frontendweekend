@@ -19,9 +19,13 @@ class EpisodeTmpl extends Component {
         site: {
           siteMetadata: { siteUrl },
         },
-        allEpisodes: { edges: allEpisodes }
+        allEpisodes: { edges: allEpisodes },
+        allCommentYaml: { edges: comments },
       }
     } = this.props
+    comments = comments.filter(
+      ({ node: comment }) => (comment.slug === episode.frontmatter.name)
+    )
     allEpisodes = allEpisodes.filter(({ node }) => (node.id !== episode.id))
     const getRandomEpisode = uniqueRandomArray(allEpisodes)
     const randomEpisodes = [
@@ -68,6 +72,7 @@ class EpisodeTmpl extends Component {
                 t={t}
                 lng={'/' + lng}
                 siteUrl={siteUrl}
+                comments={comments}
               />
               <RandomEpisodes
                 t={t}
@@ -98,6 +103,15 @@ export const query = graphql`
         site {
             siteMetadata {
                 siteUrl
+            }
+        }
+        allCommentYaml {
+            edges {
+                node {
+                    slug
+                    message
+                    date
+                }
             }
         }
         currentEpisode: markdownRemark(fields: { slug: { eq: $slug } }) {
