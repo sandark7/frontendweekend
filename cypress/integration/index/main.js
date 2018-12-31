@@ -45,6 +45,8 @@ describe('main content', () => {
       .find('.test--text_wraper')
     cy.get('@main_wrapper')
       .find('.test--share_wrapper')
+    cy.get('@main_wrapper')
+      .find('.test--comment_block_title')
   })
 
   it('should have archive link', () => {
