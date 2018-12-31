@@ -790,6 +790,13 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
+"@debiki/gatsby-plugin-talkyard@0.5.8":
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/@debiki/gatsby-plugin-talkyard/-/gatsby-plugin-talkyard-0.5.8.tgz#414398909a03b7792e3ee61f25bb71b383555e05"
+  integrity sha512-IOzmARaD3gFk70h4vzJA4FilHxenFhG4AX3RCW/Ihuw2jkybGOMc/fBh8uEaM32g2WRYDDI9Fhrahib0XIbqJA==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 "@emotion/babel-utils@^0.6.4":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.10.tgz#83dbf3dfa933fae9fc566e54fbb45f14674c6ccc"

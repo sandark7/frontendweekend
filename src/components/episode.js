@@ -3,6 +3,7 @@ import EpisodeCSSModule from './episode.module.css'
 import Share from './share'
 import RehypeReact from 'rehype-react'
 import Timecode from './timecode'
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -105,6 +106,7 @@ class Episode extends Component {
             ].join(' ')}
           >{renderAst(episode.htmlAst)}</div>
         </AudioContext.Provider>
+        <TalkyardCommentsIframe discussionId={episode.frontmatter.name} />
         <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
       </div>
     )

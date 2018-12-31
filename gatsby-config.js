@@ -55,6 +55,12 @@ module.exports = {
       }
     },
     {
+      resolve: `@debiki/gatsby-plugin-talkyard`,
+      options: {
+        talkyardServerUrl: 'https://frontendweekend.talkyard.net'
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Frontend Weekend podcast`,
