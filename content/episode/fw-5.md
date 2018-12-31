@@ -9,6 +9,14 @@ image: 'https://i1.sndcdn.com/artworks-000225988180-01bv2p-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/325878838-frontend-weekend-fw-5.m4a'
 scTrackId: '325878838'
 explicit: false
+tag_list: 'podcast frontend conference javascript'
+license: 'all-rights-reserved'
+playback_count: '7945'
+download_count: '120'
+favoritings_count: '78'
+reposts_count: '5'
+comment_count: '2'
+waveform_url: 'https://w1.sndcdn.com/INJ60XbYSIaP_m.png'
 subtitle: "Алексей Охрименко, frontend-разработчик в компании IPONWEB и популярный докладчик на многочисленных конференциях, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Алексей Охрименко, frontend-разработчик в компании IPONWEB и популярный докладчик на многочисленных конференциях, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.

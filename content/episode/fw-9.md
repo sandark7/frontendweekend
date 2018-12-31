@@ -9,6 +9,14 @@ image: 'https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a'
 scTrackId: '331102863'
 explicit: false
+tag_list: 'podcast frontend javascript'
+license: 'cc-by-nc-nd'
+playback_count: '10744'
+download_count: '204'
+favoritings_count: '112'
+reposts_count: '10'
+comment_count: '6'
+waveform_url: 'https://w1.sndcdn.com/gFNbpTjNB426_m.png'
 subtitle: "Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
 Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.

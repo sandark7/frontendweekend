@@ -9,6 +9,14 @@ image: 'https://i1.sndcdn.com/artworks-000222635482-yy16i6-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/322703093-frontend-weekend-fw-2.m4a'
 scTrackId: '322703093'
 explicit: false
+tag_list: 'podcast frontend javascript'
+license: 'all-rights-reserved'
+playback_count: '13197'
+download_count: '279'
+favoritings_count: '172'
+reposts_count: '7'
+comment_count: '3'
+waveform_url: 'https://w1.sndcdn.com/EbjdgNKSsjYR_m.png'
 subtitle: "На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:"
 ---
 На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:
