@@ -114,7 +114,7 @@ class Episode extends Component {
         ].join(' ')}>
           {comments.length ? t('comment_block_title') : t('no_comments_title')}
         </h3>
-        {comments.map(({node: comment}) => (
+        {comments.map(({ node: comment }) => (
           <div className={[
             EpisodeCSSModule.comment_wrapper,
             'test--comment_wrapper',
