@@ -155,6 +155,7 @@ class Episode extends Component {
             type="hidden"
             value={episode.frontmatter.name}></input>
           <textarea
+            aria-label={t('comment_form_message')}
             className={[
               EpisodeCSSModule.comment_form_message_input,
               'test--comment_form_message_input',
