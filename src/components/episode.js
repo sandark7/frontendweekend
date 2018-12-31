@@ -105,6 +105,39 @@ class Episode extends Component {
             ].join(' ')}
           >{renderAst(episode.htmlAst)}</div>
         </AudioContext.Provider>
+        <form
+          className={[
+            EpisodeCSSModule.comment_form,
+            'test--comment_form',
+          ].join(' ')}
+          method="POST"
+          action={'https://staticman-fw.herokuapp.com/v2/entry/' +
+          'nuxdie/frontendweekend/master/comment'}
+        >
+          <input
+            name="options[redirect]"
+            type="hidden"
+            value="https://frontendweekend.ml"></input>
+          <input
+            name="options[slug]"
+            type="hidden"
+            value={episode.frontmatter.name}></input>
+          <label>
+            {t('comment_form_name')}
+            <input name="fields[name]" type="text"></input>
+          </label>
+          <label>
+            {t('comment_form_email')}
+            <input name="fields[email]" type="email"></input>
+          </label>
+          <label>
+            {t('comment_form_message')}
+            <textarea name="fields[message]"></textarea>
+          </label>
+          <button type="submit">
+            {t('comment_form_submit_btn_cta')}
+          </button>
+        </form>
         <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
       </div>
     )

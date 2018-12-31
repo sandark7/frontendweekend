@@ -32,6 +32,10 @@
     border-bottom: 1px dotted black;
 }
 
+.comment_form {
+    display: none; /* TODO remove this once fully integrated w/ staticman */
+}
+
 @media all and (max-width: 481px) {
     .wrapper {
         width: 100%;
