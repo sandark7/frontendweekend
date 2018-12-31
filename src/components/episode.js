@@ -122,14 +122,10 @@ class Episode extends Component {
             name="options[slug]"
             type="hidden"
             value={episode.frontmatter.name}></input>
-          <label>
-            {t('comment_form_name')}
-            <input name="fields[name]" type="text"></input>
-          </label>
-          <label>
-            {t('comment_form_email')}
-            <input name="fields[email]" type="email"></input>
-          </label>
+          <input
+            name="fields[slug]"
+            type="hidden"
+            value={episode.frontmatter.name}></input>
           <label>
             {t('comment_form_message')}
             <textarea name="fields[message]"></textarea>
