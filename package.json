@@ -19,7 +19,8 @@
     "gatsby-build": "gatsby build",
     "gatsby-serve": "gatsby serve",
     "sc-import": "node ./sc-import.js",
-    "sc-file-import": "node ./sc-file-import.js"
+    "sc-file-import": "node ./sc-file-import.js",
+    "sc-comment-import": "node ./sc-comment-import.js"
   },
   "repository": {
     "type": "git",
@@ -69,6 +70,7 @@
     "live-server": "1.2.1",
     "moment": "2.23.0",
     "netlify-cms": "2.3.2",
+    "node-fetch": "2.3.0",
     "react-helmet": "5.2.0",
     "react-share": "2.4.0",
     "react-typography": "0.16.18",

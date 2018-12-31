@@ -7,6 +7,7 @@ scLink: 'https://soundcloud.com/frontend-weekend/fw-8'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000230575663-32jj9m-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/330104327-frontend-weekend-fw-8.m4a'
+scTrackId: '330104327'
 explicit: false
 subtitle: "Артем Цацин, мой соведущий и руководитель группы frontend-разработки в Rambler Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend."
 ---

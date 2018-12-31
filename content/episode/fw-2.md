@@ -7,6 +7,7 @@ scLink: 'https://soundcloud.com/frontend-weekend/fw-2'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000222635482-yy16i6-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/322703093-frontend-weekend-fw-2.m4a'
+scTrackId: '322703093'
 explicit: false
 subtitle: "На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:"
 ---

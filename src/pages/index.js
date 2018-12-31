@@ -144,12 +144,14 @@ export const query = graphql`
                 siteUrl
             }
         }
-        allCommentYaml {
+        allCommentYaml(sort: {fields: [date], order: ASC}) {
             edges {
                 node {
                     slug
                     message
                     date
+                    username
+                    timestamp
                 }
             }
         }

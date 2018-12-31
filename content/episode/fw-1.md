@@ -7,6 +7,7 @@ scLink: 'https://soundcloud.com/frontend-weekend/fw-1'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000349294878-wg8bx0-original.jpg'
 podcastUrl: 'https://feeds.soundcloud.com/stream/322263705-frontend-weekend-fw-1.m4a'
+scTrackId: '322263705'
 explicit: false
 subtitle: "Павел Кондратенко, руководитель группы клиентской разработки в Rambler Digital Solutions и организатор внутренних и внешних митапов RDSFront&, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
