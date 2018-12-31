@@ -47,6 +47,20 @@ jobs:
           root: content
           paths:
             - "*"
+
+  sc-comment-import:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn sc-comment-import
+      - persist_to_workspace:
+          root: content
+          paths:
+            - "*"
+
   build:
     executor: node
     steps:
@@ -196,6 +210,8 @@ workflows:
                 - master
     jobs:
       - sc-import
+      - sc-comment-import
       - commit-to-master:
           requires:
             - sc-import
+            - sc-comment-import
