@@ -111,7 +111,8 @@ class Episode extends Component {
             'test--comment_form',
           ].join(' ')}
           method="POST"
-          action="https://staticman-fw.herokuapp.com/v2/entry/nuxdie/frontendweekend/master/comment"
+          action={'https://staticman-fw.herokuapp.com/v2/entry/' +
+          'nuxdie/frontendweekend/master/comment'}
         >
           <input
             name="options[redirect]"
