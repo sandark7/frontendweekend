@@ -111,7 +111,11 @@ class Episode extends Component {
             EpisodeCSSModule.comment_block_title,
             'test--comment_block_title',
           ].join(' ')}>
-            {comments.length ? t('comment_block_title') : t('no_comments_title')}
+            {
+              comments.length
+                ? t('comment_block_title')
+                : t('no_comments_title')
+            }
           </h3>
           {comments.map(({ node: comment }) => (
             <div className={[
@@ -188,7 +192,7 @@ class Episode extends Component {
             ].join(' ')}
             aria-label={t('comment_form_name')}
             placeholder={t('comment_form_name')}
-            ></input>
+          ></input>
           <textarea
             aria-label={t('comment_form_message')}
             className={[
