@@ -9,6 +9,7 @@ import RandomEpisodes from '../components/randomEpisodes'
 import Support from '../components/support'
 import LayoutCSSModule from '../components/layout.module.css'
 import uniqueRandomArray from 'unique-random-array'
+import {FiRss} from 'react-icons/fi'
 
 class IndexPage extends Component {
   constructor () {
@@ -72,7 +73,14 @@ class IndexPage extends Component {
                   'test--header_nav-subscribe',
                   'gtm--subscribe_link',
                 ].join(' ')} to={`/subscribe/`}>
-                  <span>{t('subscribe_podcast_link_text')}</span>
+                  <FiRss className={[
+                    IndexCSSModule.nav_item_subscribe_icon,
+                    'test--nav_item_subscribe_icon',
+                  ].join(' ')}/>
+                  <span className={[
+                    IndexCSSModule.nav_item_subscribe_text,
+                    'test--header_nav_subscribe_text',
+                  ].join(' ')}>{t('subscribe_podcast_link_text')}</span>
                 </Link>
               </div>
               <div>
