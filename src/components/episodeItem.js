@@ -51,7 +51,7 @@ export default class EpisodeItem extends Component {
               {t('episode_listen_cta')}
             </span>
             <EpisodeStats
-              {...episode.frontmatter}
+              episode={episode}
             />
           </div>
         </Link>
