@@ -13,11 +13,11 @@ async function init () {
       .map(readEpisodeFile)
   )
 
-  contents.map((f) => {
+  contents.map(f => {
     f.contents += ''
     return f
   })
-    .filter(({file, contents}) => {
+    .filter(({ file, contents }) => {
       let podcastFile
       try {
         podcastFile = contents.match(/podcastFile: (.+)/)[1]
@@ -26,7 +26,7 @@ async function init () {
       }
       return !podcastFile || !podcastFile.length
     })
-    .map( ({file, contents}) => {
+    .map(({ file, contents }) => {
       const podcastUrl = contents.match(/podcastUrl: '(.+)'/)[1]
       try {
         downloadFile(podcastUrl, ASSET_FILE_DIR)
@@ -41,24 +41,24 @@ async function init () {
     })
 }
 
-function downloadFile(url, dest) {
+function downloadFile (url, dest) {
   try {
-    console.log(`downloading ${url}`)
-    cp.execSync(`cd ${dest} && wget --no-check-certificate ${url}`)
+    console.log(`downloading ${ url }`)
+    cp.execSync(`cd ${ dest } && wget --no-check-certificate ${ url }`)
   } catch (e) {
     console.error(e)
   }
 }
 
-function writeToFile(file, originalContents, downloadedPath) {
-  console.log(`file ${file} downloaded to ${downloadedPath}`)
-  const array = originalContents.toString().split("\n")
-  array.splice(4, 0, `podcastFile: ${downloadedPath}`)
+function writeToFile (file, originalContents, downloadedPath) {
+  console.log(`file ${ file } downloaded to ${ downloadedPath }`)
+  const array = originalContents.toString().split('\n')
+  array.splice(4, 0, `podcastFile: ${ downloadedPath }`)
   fs.writeFileSync(file, array.join('\n'))
 }
 
 try {
   init()
 } catch (e) {
-  console.log(e);
+  console.log(e)
 }

@@ -3,7 +3,7 @@ describe('main content', () => {
     cy.visit('http://127.0.0.1:8080/en/archive/')
     cy.get('.test--episode_link')
       .first()
-      .click({force: true})
+      .click({ force: true })
   })
 
   it('should have header', () => {
@@ -18,7 +18,6 @@ describe('main content', () => {
     cy.get('.test--episode_wrapper')
       .find('.test--episode_title')
   })
-
 
   it('should have stats', () => {
     cy.get('.test--episode_wrapper')

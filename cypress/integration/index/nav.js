@@ -28,7 +28,7 @@ describe('nav', () => {
   it('should have lang switcher working', () => {
     cy.get('.test--lang_list')
       .find('.test--lang_btn[data-lang="ru"]')
-      .click({force: true})
+      .click({ force: true })
     cy.url()
       .should('contain', '/ru/')
   })
