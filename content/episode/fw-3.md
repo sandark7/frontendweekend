@@ -2,7 +2,7 @@
 title: "#3 – Сергей Попов про стоимость организации митапов и преподавание"
 name: 'fw-3'
 num: '3'
-date: '2017-05-22T08:58:59+02:00'
+date: '2017-05-22T06:58:59+00:00'
 scLink: 'https://soundcloud.com/frontend-weekend/fw-3'
 author: 'Андрей Смирнов'
 image: 'https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg'
