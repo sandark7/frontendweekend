@@ -4,6 +4,7 @@ import Share from './share'
 import RehypeReact from 'rehype-react'
 import Timecode from './timecode'
 import moment from 'moment'
+import EpisodeStats from './episodeStats'
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -46,6 +47,11 @@ class Episode extends Component {
           className={
             'test--episode_title'
           }>{episode.frontmatter.title}</h1>
+        <div className={[
+          EpisodeCSSModule.stats_wrapper
+        ].join(' ')}><EpisodeStats
+            {...episode.frontmatter}
+          /></div>
         <AudioContext.Provider value={{
           getAudioRef: this.getAudioRef.bind(this),
           onTimecodeClick

@@ -22,9 +22,17 @@
     margin-bottom: 10px;
 }
 
+.random_episode_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: baseline;
+    margin-bottom: 20px;
+}
+
+
 .random_episode_btn {
     text-decoration: underline;
-    margin-bottom: 20px;
     display: inline-block;
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby-plugin-i18next'
 import RandomEpisodesCSSModule from './randomEpisodes.module.css'
 import ArchiveCSSModule from '../pages/archive.module.css'
+import EpisodeStats from './episodeStats'
 
 class RandomEpisodes extends Component {
   render () {
@@ -48,13 +49,21 @@ class RandomEpisodes extends Component {
                   RandomEpisodesCSSModule.random_episode_subtitle
                 ].join(' ')}
               >{episode.frontmatter.subtitle}</p>
-              <span
-                className={[
-                  RandomEpisodesCSSModule.random_episode_btn
-                ].join(' ')}
-              >
-                {t('random_episode_listen_cta')}
-              </span>
+              <div className={ [
+                RandomEpisodesCSSModule.random_episode_footer,
+                'test--podcast_link'
+              ].join(' ') }>
+                <span
+                  className={[
+                    RandomEpisodesCSSModule.random_episode_btn
+                  ].join(' ')}
+                >
+                  {t('random_episode_listen_cta')}
+                </span>
+                <EpisodeStats
+                  {...episode.frontmatter}
+                />
+              </div>
             </Link>
           </div>
         ))}

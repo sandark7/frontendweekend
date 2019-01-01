@@ -168,6 +168,11 @@ export const query = graphql`
                         subtitle
                         image
                         podcastUrl
+                        playback_count
+                        download_count
+                        favoritings_count
+                        reposts_count
+                        comment_count
                     }
                     htmlAst
                     fields {
@@ -184,6 +189,11 @@ export const query = graphql`
                         title
                         subtitle
                         image
+                        playback_count
+                        download_count
+                        favoritings_count
+                        reposts_count
+                        comment_count
                     }
                     fields {
                         slug

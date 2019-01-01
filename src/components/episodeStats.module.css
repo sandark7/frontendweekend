@@ -1,0 +1,10 @@
+.stats_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stats_wrapper>* {
+    margin: 0 1px 0 7px;
+}

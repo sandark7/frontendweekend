@@ -5,6 +5,8 @@ import AboutCSSModule from './about.module.css'
 import ArchiveCSSModule from './archive.module.css'
 import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
+import RandomEpisodesCSSModule from '../components/randomEpisodes.module.css'
+import EpisodeStats from '../components/episodeStats'
 
 class Archive extends Component {
   render () {
@@ -38,6 +40,14 @@ class Archive extends Component {
                     <p>
                       { episode.frontmatter.subtitle }
                     </p>
+                    <div className={ [
+                      RandomEpisodesCSSModule.random_episode_footer,
+                      'test--podcast_link'
+                    ].join(' ') }>
+                      <EpisodeStats
+                        {...episode.frontmatter}
+                      />
+                    </div>
                   </Link>
                 </div>
               )) }
@@ -70,6 +80,11 @@ export const query = graphql`
                         title
                         subtitle
                         scLink
+                        playback_count
+                        download_count
+                        favoritings_count
+                        reposts_count
+                        comment_count
                     }
                     fields {
                         slug
