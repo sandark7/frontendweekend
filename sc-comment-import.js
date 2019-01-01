@@ -2,21 +2,17 @@ const path = require('path')
 const fetch = require('node-fetch')
 const fs = require('fs-extra')
 const moment = require('moment')
+const { readEpisodeFile } = require('./import/helpers')
 
 const EPISODE_MD_DIR = path.join(__dirname, './content/episode')
 const COMMENT_DIR = path.join(__dirname, './content/comment')
 const CLIENT_ID = process.env['SOUNDCLOUD_CLIENT_ID']
 
-async function init() {
+async function init () {
   const episodes = await fs.readdir(EPISODE_MD_DIR)
   const contents = await Promise.all(
     episodes
-      .map(async file => {
-        return {
-          contents: await fs.readFile(path.join(EPISODE_MD_DIR, file)),
-          file
-        }
-      })
+      .map(readEpisodeFile)
   )
 
   await Promise.all(contents.map((f) => {

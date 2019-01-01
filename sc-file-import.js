@@ -1,20 +1,16 @@
 const path = require('path')
 const fs = require('fs-extra')
 const cp = require('child_process')
+const { readEpisodeFile } = require('./import/helpers')
 
 const EPISODE_MD_DIR = path.join(__dirname, './content/episode')
 const ASSET_FILE_DIR = path.join(__dirname, './static/assets')
 
-async function init() {
+async function init () {
   const episodes = await fs.readdir(EPISODE_MD_DIR)
   const contents = await Promise.all(
     episodes
-      .map(async file => {
-        return {
-          contents: await fs.readFile(path.join(EPISODE_MD_DIR, file)),
-          file
-        }
-      })
+      .map(readEpisodeFile)
   )
 
   contents.map((f) => {
