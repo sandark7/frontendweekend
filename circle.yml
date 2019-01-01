@@ -42,20 +42,7 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
-      - run: yarn sc-import
-      - persist_to_workspace:
-          root: content
-          paths:
-            - "*"
-
-  sc-comment-import:
-    executor: node
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *persist_cache
-      - run: yarn sc-comment-import
+      - run: yarn sc-import && yarn sc-comment-import
       - persist_to_workspace:
           root: content
           paths:
@@ -210,10 +197,6 @@ workflows:
                 - master
     jobs:
       - sc-import
-      - sc-comment-import:
-          requires:
-            - sc-import
       - commit-to-master:
           requires:
             - sc-import
-            - sc-comment-import
