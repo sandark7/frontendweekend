@@ -54,7 +54,7 @@
   "patreon_support_text": "You can also support us with a permanent subscription on",
   "patreon_support_link": "Patreon",
   "random_episode_title": "Two more episodes:",
-  "random_episode_listen_cta": "Listen",
+  "episode_listen_cta": "Listen",
   "gh_footer_text": "Found a mistake on the site and need to fix something? Please create a new issue on ",
   "gh_footer_link_text": "frontendweekend/issues",
   "email_footer_text": "For inquiries, write to",

@@ -123,6 +123,11 @@ export const query = graphql`
                 name
                 podcastUrl
                 subtitle
+                playback_count
+                download_count
+                favoritings_count
+                reposts_count
+                comment_count
             }
             fields {
                 slug
@@ -136,6 +141,11 @@ export const query = graphql`
                         title
                         subtitle
                         image
+                        playback_count
+                        download_count
+                        favoritings_count
+                        reposts_count
+                        comment_count
                     }
                     fields {
                         slug

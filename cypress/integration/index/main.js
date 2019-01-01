@@ -86,8 +86,8 @@ describe('main content', () => {
   })
 
   it('should have random episodes', () => {
-    cy.get('.test--random_episode_wrapper')
-      .find('.test--podcast_link')
+    cy.get('.test--random_episode_main_wrapper')
+      .find('.test--episode_link')
   })
 
   it('should have share links', () => {

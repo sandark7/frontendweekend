@@ -22,7 +22,7 @@ describe('main content', () => {
   })
 
   it('should have at least 1 podcast', () => {
-    cy.get('.test--podcast_link')
+    cy.get('.test--episode_link')
       .should('have.attr', 'href')
       .and('contain', 'episode')
   })

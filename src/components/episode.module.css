@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.stats_wrapper {
+    margin-bottom: 20px;
+}
+
 .text_wraper div>p {
     font-size: large;
 }
