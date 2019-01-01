@@ -25,19 +25,7 @@ async function init () {
   ).catch(console.error.bind(console))
   fullFeedInfo
     .map(template)
-    .filter(exist)
     .map(save)
-}
-
-function exist ({ filename }) {
-  let file = fullpath(filename)
-  let exists = false
-  try {
-    fs.accessSync(file, fs.constants.F_OK)
-    exists = true
-  } catch (e) {
-  }
-  return !exists
 }
 
 function fullpath (filename) {
