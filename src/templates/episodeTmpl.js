@@ -6,7 +6,7 @@ import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import RandomEpisodes from '../components/randomEpisodes'
 import uniqueRandomArray from 'unique-random-array'
-import LayoutCSSModule from '../components/layout.module.css'
+import SubscribeBtn from '../components/subscribeBtn'
 import Support from '../components/support'
 import EpisodeTmplCSSModule from './episodeTmpl.module.css'
 
@@ -58,14 +58,7 @@ class EpisodeTmpl extends Component {
                 ].join(' ')} to={`/archive/#${ episode.frontmatter.name }`}>
                   <span>{t('archive_link_text_back')}</span>
                 </Link>
-                <Link className={[
-                  LayoutCSSModule.nav_item,
-                  LayoutCSSModule.nav_item_subscribe,
-                  'test--header_nav-subscribe',
-                  'gtm--subscribe_link',
-                ].join(' ')} to={`/subscribe/`}>
-                  <span>{t('subscribe_podcast_link_text')}</span>
-                </Link>
+                <SubscribeBtn t={t} />
               </div>
               <Episode
                 episode={episode}

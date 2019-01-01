@@ -32,15 +32,6 @@
     top: -21px;
 }
 
-.nav_item_subscribe_icon {
-    position: relative;
-    top: 1px;
-}
-
-.nav_item_subscribe_text {
-    margin-left: 3px;
-}
-
 .show_more {
     position: relative;
     text-decoration: none;
