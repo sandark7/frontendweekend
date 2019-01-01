@@ -7,24 +7,99 @@ import {
   FiDownload
 } from 'react-icons/fi'
 import EpisodeStatsCSSModule from './episodeStats.module.css'
+import { Link } from 'gatsby-plugin-i18next'
 
-const EpisodeStats = ({
-  playback_count: playback,
-  favoritings_count: favoritings,
-  reposts_count: reposts,
-  comment_count: comment,
-  download_count: download,
-}) => {
+const EpisodeStats = ({ episode }) => {
+  const { frontmatter: {
+    playback_count: playback,
+    favoritings_count: favoritings,
+    reposts_count: reposts,
+    comment_count: comment,
+    download_count: download,
+  } } = episode
   return (
     <div className={ [
       EpisodeStatsCSSModule.stats_wrapper,
       'test--episode_stats_wrapper'
     ].join(' ') }>
-      <FiPlay/>{playback}
-      <FiHeart/>{favoritings}
-      <FiShare2/>{reposts}
-      <FiMessageSquare/>{comment}
-      <FiDownload/>{download}
+      <div className={[
+        EpisodeStatsCSSModule.stat_wrapper,
+        'test--episode_stat_wrapper'
+      ].join(' ')}>
+        <FiPlay
+          className={[
+            EpisodeStatsCSSModule.stat_icon,
+            'test--episode_stat_icon'
+          ].join(' ')}
+        />{playback}
+      </div>
+      <div className={[
+        EpisodeStatsCSSModule.stat_wrapper,
+        'test--episode_stat_wrapper'
+      ].join(' ')}>
+        <FiHeart
+          className={[
+            EpisodeStatsCSSModule.stat_icon,
+            'test--episode_stat_icon'
+          ].join(' ')}
+        />{favoritings}
+      </div>
+      <div className={[
+        EpisodeStatsCSSModule.stat_wrapper,
+        'test--episode_stat_wrapper'
+      ].join(' ')}>
+        <Link
+          className={[
+            EpisodeStatsCSSModule.stat_link,
+            'test--episode_stat_link'
+          ].join(' ')}
+          to={episode.fields.slug + '#share'}>
+          <FiShare2
+            className={[
+              EpisodeStatsCSSModule.stat_icon,
+              'test--episode_stat_icon'
+            ].join(' ')}
+          />{reposts}
+        </Link>
+      </div>
+      <div className={[
+        EpisodeStatsCSSModule.stat_wrapper,
+        'test--episode_stat_wrapper'
+      ].join(' ')}>
+        <Link
+          className={[
+            EpisodeStatsCSSModule.stat_link,
+            'test--episode_stat_link'
+          ].join(' ')}
+          to={episode.fields.slug + '#comments'}>
+          <FiMessageSquare
+            className={[
+              EpisodeStatsCSSModule.stat_icon,
+              'test--episode_stat_icon'
+            ].join(' ')}
+          />{comment}
+        </Link>
+      </div>
+      <div className={[
+        EpisodeStatsCSSModule.stat_wrapper,
+        'test--episode_stat_wrapper'
+      ].join(' ')}>
+        <a
+          className={[
+            EpisodeStatsCSSModule.stat_link,
+            'test--episode_stat_link'
+          ].join(' ')}
+          download={true}
+          target="_blank"
+          href={episode.frontmatter.podcastUrl}>
+          <FiDownload
+            className={[
+              EpisodeStatsCSSModule.stat_icon,
+              'test--episode_stat_icon'
+            ].join(' ')}
+          />{download}
+        </a>
+      </div>
     </div>
   )
 }

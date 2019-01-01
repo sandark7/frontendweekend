@@ -50,9 +50,11 @@ class Episode extends Component {
         <div className={[
           EpisodeCSSModule.stats_wrapper,
           'test--stats_wrapper',
-        ].join(' ')}><EpisodeStats
-            {...episode.frontmatter}
-          /></div>
+        ].join(' ')}>
+          <EpisodeStats
+            episode={episode}
+          />
+        </div>
         <AudioContext.Provider value={{
           getAudioRef: this.getAudioRef.bind(this),
           onTimecodeClick
@@ -113,8 +115,10 @@ class Episode extends Component {
               'test--text_wraper'
             ].join(' ')}
           >{renderAst(episode.htmlAst)}</div>
-          <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
-          <h3 className={[
+          <div id={'share'}>
+            <Share t={t} url={`${ siteUrl }${ lng }${ episode.fields.slug }`}/>
+          </div>
+          <h3 id={'comments'} className={[
             EpisodeCSSModule.comment_block_title,
             'test--comment_block_title',
           ].join(' ')}>
