@@ -16,8 +16,9 @@
     color: black;
 }
 
-.archive_link:before {
-    content: '<- ';
+.archive_link_arrow_back {
+    position: relative;
+    top: 2px;
 }
 
 @media all and (max-width: 481px) {
