@@ -37,14 +37,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/content/`,
+        path: `${ __dirname }/content/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `locale`,
-        path: `${__dirname}/locale`,
+        path: `${ __dirname }/locale`,
       },
     },
     `gatsby-transformer-yaml`,
@@ -52,7 +52,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `comment`,
-        path: `${__dirname}/content/comment`,
+        path: `${ __dirname }/content/comment`,
       },
     },
     `gatsby-plugin-netlify-cms`,
@@ -76,4 +76,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`
   ]
-};
+}

@@ -61,7 +61,6 @@ async function getApiInfo (feedItem) {
     feedItem.reposts_count = reposts_count
     feedItem.comment_count = comment_count
     feedItem.waveform_url = waveform_url
-
   } catch (e) {
     console.error(e)
   }
@@ -142,7 +141,7 @@ function sanitizeDescr (description) {
 }
 
 function constructSubtitle (description, subtitle) {
-  var matched
+  let matched
   try {
     matched = description.match(/(.+)\r/)[1]
   } catch (e) {

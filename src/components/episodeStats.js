@@ -90,7 +90,6 @@ const EpisodeStats = ({ episode }) => {
             'test--episode_stat_link'
           ].join(' ')}
           download={true}
-          target="_blank"
           href={episode.frontmatter.podcastUrl}>
           <FiDownload
             className={[
