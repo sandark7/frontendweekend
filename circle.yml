@@ -210,7 +210,9 @@ workflows:
                 - master
     jobs:
       - sc-import
-      - sc-comment-import
+      - sc-comment-import:
+          requires:
+            - sc-import
       - commit-to-master:
           requires:
             - sc-import
