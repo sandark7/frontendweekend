@@ -18,7 +18,7 @@ const EpisodeStats = ({
   return (
     <div className={ [
       EpisodeStatsCSSModule.stats_wrapper,
-      'test--podcast_link'
+      'test--episode_stats_wrapper'
     ].join(' ') }>
       <FiPlay/>{playback}
       <FiHeart/>{favoritings}
