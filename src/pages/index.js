@@ -6,8 +6,8 @@ import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import Episode from '../components/episode'
 import RandomEpisodes from '../components/randomEpisodes'
+import SubscribeBtn from '../components/subscribeBtn'
 import Support from '../components/support'
-import LayoutCSSModule from '../components/layout.module.css'
 import uniqueRandomArray from 'unique-random-array'
 
 class IndexPage extends Component {
@@ -66,14 +66,7 @@ class IndexPage extends Component {
                 'test--title_wrapper'
               ].join(' ')}>
                 <h3>{t('latest_episode_title')}</h3>
-                <Link className={[
-                  LayoutCSSModule.nav_item,
-                  LayoutCSSModule.nav_item_subscribe,
-                  'test--header_nav-subscribe',
-                  'gtm--subscribe_link',
-                ].join(' ')} to={`/subscribe/`}>
-                  <span>{t('subscribe_podcast_link_text')}</span>
-                </Link>
+                <SubscribeBtn t={t} />
               </div>
               <div>
                 <div className={[
