@@ -37,3 +37,5 @@ See LICENCE.md file for more details
 # Tech status
 [![CircleCI](https://circleci.com/gh/nuxdie/frontendweekend.svg?style=svg)](https://circleci.com/gh/nuxdie/frontendweekend)
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=nuxdie_frontendweekend&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxdie_frontendweekend)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/maintainability)](https://codeclimate.com/github/nuxdie/frontendweekend/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/test_coverage)](https://codeclimate.com/github/nuxdie/frontendweekend/test_coverage)
