@@ -9,6 +9,7 @@ import uniqueRandomArray from 'unique-random-array'
 import SubscribeBtn from '../components/subscribeBtn'
 import Support from '../components/support'
 import EpisodeTmplCSSModule from './episodeTmpl.module.css'
+import { FiChevronLeft } from 'react-icons/fi'
 
 class EpisodeTmpl extends Component {
   render () {
@@ -56,6 +57,10 @@ class EpisodeTmpl extends Component {
                   EpisodeTmplCSSModule.archive_link,
                   'test--header_nav-archive',
                 ].join(' ')} to={`/archive/#${ episode.frontmatter.name }`}>
+                  <FiChevronLeft className={[
+                    EpisodeTmplCSSModule.archive_link_arrow_back,
+                    'test--header_nav_archive_link_arrow_back',
+                  ].join(' ')}/>
                   <span>{t('archive_link_text_back')}</span>
                 </Link>
                 <SubscribeBtn t={t} />
