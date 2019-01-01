@@ -2,40 +2,6 @@
     max-width: 450px;
 }
 
-.random_episode_wrapper {
-
-}
-
-.random_episode_item {
-
-}
-
-.random_episode_link {
-    text-decoration: none;
-}
-
-.random_episode_title {
-    text-decoration: underline;
-}
-
-.random_episode_subtitle {
-    margin-bottom: 10px;
-}
-
-.random_episode_footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: baseline;
-    margin-bottom: 20px;
-}
-
-
-.random_episode_btn {
-    text-decoration: underline;
-    display: inline-block;
-}
-
 @media all and (max-width: 481px) {
     .main_wrapper {
         padding-left: 3px;

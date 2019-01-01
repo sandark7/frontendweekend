@@ -48,7 +48,8 @@ class Episode extends Component {
             'test--episode_title'
           }>{episode.frontmatter.title}</h1>
         <div className={[
-          EpisodeCSSModule.stats_wrapper
+          EpisodeCSSModule.stats_wrapper,
+          'test--stats_wrapper',
         ].join(' ')}><EpisodeStats
             {...episode.frontmatter}
           /></div>

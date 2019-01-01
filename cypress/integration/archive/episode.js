@@ -19,6 +19,12 @@ describe('main content', () => {
       .find('.test--episode_title')
   })
 
+
+  it('should have stats', () => {
+    cy.get('.test--episode_wrapper')
+      .find('.test--stats_wrapper')
+  })
+
   it('should have audio', () => {
     cy.get('.test--episode_wrapper')
       .find('.test--audio')
