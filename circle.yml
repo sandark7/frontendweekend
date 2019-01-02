@@ -73,7 +73,7 @@ jobs:
       - store_test_results:
           path: results
 
-  eslint:
+  csslint:
     executor: node
     steps:
       - checkout
@@ -81,12 +81,19 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - run:
-          name: "JavaScript Linter"
-          command: yarn eslint-junit
-      - store_test_results:
-          path: reports/junit
-      - store_artifacts:
-          path: reports/junit
+          name: "CSS Linter"
+          command: yarn csslint
+
+  stylelint:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run:
+          name: "Style Linter"
+          command: yarn stylelint
 
   eslint-all:
     executor: node
@@ -140,26 +147,6 @@ jobs:
       - store_artifacts:
           path: cypress/screenshots
 
-  deploy:
-    executor: node
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *persist_cache
-      - <<: *attach_to_build
-      - run: yarn deploy
-
-  deploy-stage:
-    executor: node
-    steps:
-      - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *persist_cache
-      - <<: *attach_to_build
-      - run: yarn deploy-stage
-
   test-lh:
     docker:
       - image: circleci/node:11-browsers
@@ -209,6 +196,8 @@ workflows:
           requires:
             - sc-import
       - eslint-all
+      - csslint
+      - stylelint
       - test
       - codacy-coverage
       - sonarqube-code-analyze
