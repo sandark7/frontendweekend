@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: 'node',
   reporters: ['default', 'jest-junit'],
-  'transform': { '.*': '<rootDir>/node_modules/jest-css-modules' },
+  transform: { '.*': '<rootDir>/node_modules/jest-css-modules' },
   modulePathIgnorePatterns: [
     '.cache/',
     'public/',

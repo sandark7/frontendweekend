@@ -7,7 +7,7 @@
     "start": "live-server public",
     "deploy": "surge ./public https://frontendweekend.ml",
     "deploy-stage": "surge ./public https://stage.frontendweekend.ml",
-    "test": "jest",
+    "test": "JEST_JUNIT_OUTPUT=./results/junit.xml jest --runInBand --ci --reporters=default --reporters=jest-junit",
     "codacy-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "csslint": "csslint src",
     "stylelint": "stylelint src/**/*.css",
@@ -19,7 +19,7 @@
     "eslint-fix": "eslint --fix src",
     "eslint-fix-all": "eslint --fix .",
     "e2e-test": "start-server-and-test start http://localhost:8080 cy:run",
-    "test-lh": "JEST_JUNIT_OUTPUT=./results/junit.xml jest --runInBand --ci --reporters=default --reporters=jest-junit lighthouse.test.js",
+    "test-lh": "JEST_JUNIT_OUTPUT=./results/junit.xml jest --runInBand --ci --reporters=default --reporters=jest-junit --config ./lighthouse.jest.config.js --testNamePattern lighthouse.test.js",
     "cy:run": "cypress run --record --key 7368ff41-1746-43fd-acc5-f6aa54b67f97 --reporter junit --reporter-options \"mochaFile=results/my-test-output.xml\"",
     "cypress-open": "cypress open",
     "gatsby-develop": "gatsby develop",
@@ -47,6 +47,7 @@
     "react-dom": "16.6.3"
   },
   "devDependencies": {
+    "babel-core": "^7.0.0-0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-env": "1.7.0",

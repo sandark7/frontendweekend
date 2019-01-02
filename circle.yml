@@ -70,6 +70,8 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - run: yarn test
+      - store_test_results:
+          path: results
 
   eslint:
     executor: node
