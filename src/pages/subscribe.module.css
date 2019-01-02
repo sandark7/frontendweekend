@@ -1,21 +1,43 @@
 .content_wrapper {
-    max-width: 450px;
+  max-width: 450px;
 }
 
 .list {
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style: none;
+  margin: 0 0 20px;
+}
+
+.list_item {
+  margin: 0;
+  padding: 0;
 }
 
 .link {
-    color: black;
-    font-size: large;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  padding: 20px;
+  text-align: center;
+}
+
+.icon_wrapper svg {
+  height: 50px;
+  width: 100%;
 }
 
 @media all and (max-width: 481px) {
-    .content_wrapper {
-        padding: 0 3px;
-    }
-    .podcast_description {
-        font-size: large;
-    }
+  .content_wrapper {
+    padding: 0 3px;
+  }
+
+  .podcast_description {
+    font-size: large;
+  }
+
+  .list {
+    grid-template-columns: auto auto;
+  }
 }

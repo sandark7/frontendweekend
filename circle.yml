@@ -71,7 +71,7 @@ jobs:
       - <<: *persist_cache
       - run: yarn test
 
-  lint:
+  eslint:
     executor: node
     steps:
       - checkout
@@ -80,7 +80,7 @@ jobs:
       - <<: *persist_cache
       - run:
           name: "JavaScript Linter"
-          command: yarn lint
+          command: yarn eslint
       - store_test_results:
           path: reports/junit
       - store_artifacts:
@@ -176,7 +176,7 @@ workflows:
       - build:
           requires:
             - sc-import
-      - lint
+      - eslint
       - test
       - sonarqube-code-analyze
       - wait-for-netlify-build
