@@ -1,70 +1,70 @@
 body {
-    background-color: #f7df1d;
+  background-color: #f7df1d;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 0;
-    width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 450px;
 }
 
 .logo {
-    display: block;
-    background-image: url("/img/safari-pinned-tab.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: content-box;
-    width: 9em;
-    height: 4em;
+  display: block;
+  background-image: url("/img/safari-pinned-tab.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  width: 9em;
+  height: 4em;
 }
 
 .nav_item {
-    text-decoration: none;
-    display: block;
-    color: black;
-    margin: 8px;
-    padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  margin: 8px;
+  padding: 10px 20px;
 }
 
 .nav_item_subscribe {
-    border: 2px solid black;
-    padding: 8px 20px;
+  border: 2px solid black;
+  padding: 8px 20px;
 }
 
 .footer {
-    text-align: center;
-    max-width: 450px;
-    margin: 0 auto 20px;
-    border-top: 2px solid black;
-    padding-top: 20px;
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto 20px;
+  border-top: 2px solid black;
+  padding-top: 20px;
 }
 
 @media all and (max-width: 481px) {
-    .footer {
-        width: 100%;
-        text-align: left;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
+  .footer {
+    width: 100%;
+    text-align: left;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
 
-    .nav {
-        justify-content: space-around;
-        width: 100%;
-    }
+  .nav {
+    justify-content: space-around;
+    width: 100%;
+  }
 }

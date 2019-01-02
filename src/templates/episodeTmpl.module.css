@@ -1,28 +1,28 @@
 .wrapper {
-    max-width: 450px;
+  max-width: 450px;
 }
 
 .header_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .archive_link {
-    display: inline-block;
-    margin: 3px;
-    margin-bottom: 20px;
-    color: black;
+  display: inline-block;
+  margin: 3px;
+  margin-bottom: 20px;
+  color: black;
 }
 
 .archive_link_arrow_back {
-    position: relative;
-    top: 2px;
+  position: relative;
+  top: 2px;
 }
 
 @media all and (max-width: 481px) {
-    .wrapper {
-        width: 100%;
-    }
+  .wrapper {
+    width: 100%;
+  }
 }
