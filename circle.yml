@@ -80,7 +80,7 @@ jobs:
       - <<: *persist_cache
       - run:
           name: "JavaScript Linter"
-          command: yarn eslint
+          command: yarn eslint-junit
       - store_test_results:
           path: reports/junit
       - store_artifacts:

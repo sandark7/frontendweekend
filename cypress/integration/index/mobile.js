@@ -1,3 +1,4 @@
+/* global describe, before, cy, it */
 describe('mobile version', () => {
   before(() => {
     cy.visit('http://127.0.0.1:8080/en/')

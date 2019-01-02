@@ -41,26 +41,28 @@ async function getApiInfo (feedItem) {
   const { enclosures: [{ url: podcastUrl }] } = feedItem
   const scTrackId = getScTrackId(podcastUrl)
   try {
-    const apiResponse = await (fetch(`https://api.soundcloud.com/tracks/${ scTrackId }?client_id=${ CLIENT_ID }`)
+    const apiUrl = `https://api.soundcloud.com/tracks/` +
+      `${ scTrackId }?client_id=${ CLIENT_ID }`
+    const apiResponse = await (fetch(apiUrl)
       .then(res => res.json()))
     const {
-      tag_list,
+      tag_list: tagList,
       license,
-      playback_count,
-      download_count,
-      favoritings_count,
-      reposts_count,
-      comment_count,
-      waveform_url,
+      playback_count: playbackCount,
+      download_count: downloadCount,
+      favoritings_count: favoritingsCount,
+      reposts_count: repostsCount,
+      comment_count: commentCount,
+      waveform_url: waveformUrl,
     } = apiResponse
-    feedItem.tag_list = tag_list
+    feedItem.tag_list = tagList
     feedItem.license = license
-    feedItem.playback_count = playback_count
-    feedItem.download_count = download_count
-    feedItem.favoritings_count = favoritings_count
-    feedItem.reposts_count = reposts_count
-    feedItem.comment_count = comment_count
-    feedItem.waveform_url = waveform_url
+    feedItem.playback_count = playbackCount
+    feedItem.download_count = downloadCount
+    feedItem.favoritings_count = favoritingsCount
+    feedItem.reposts_count = repostsCount
+    feedItem.comment_count = commentCount
+    feedItem.waveform_url = waveformUrl
   } catch (e) {
     console.error(e)
   }
@@ -73,22 +75,19 @@ function template (feedItem) {
     title,
     description,
     date,
-    pubdate,
     link: scLink,
-    guid,
     author,
     scTrackId,
-    tag_list,
+    tag_list: tagList,
     license,
-    playback_count,
-    download_count,
-    favoritings_count,
-    reposts_count,
-    comment_count,
-    waveform_url,
+    playback_count: playbackCount,
+    download_count: downloadCount,
+    favoritings_count: favoritingsCount,
+    reposts_count: repostsCount,
+    comment_count: commentCount,
+    waveform_url: waveformUrl,
     image: { url: image },
-    enclosures: [{ url: podcastUrl, type: podcastType, length: podcastLength }],
-    'itunes:duration': { '#': duration },
+    enclosures: [{ url: podcastUrl }],
     'itunes:explicit': { '#': explicit },
     'itunes:subtitle': { '#': subtitle },
   } = feedItem
@@ -112,14 +111,14 @@ image: '${ image }'
 podcastUrl: '${ podcastUrl }'
 scTrackId: '${ scTrackId }'
 explicit: ${ explicit }
-tag_list: '${ tag_list }'
+tag_list: '${ tagList }'
 license: '${ license }'
-playback_count: '${ playback_count }'
-download_count: '${ download_count }'
-favoritings_count: '${ favoritings_count }'
-reposts_count: '${ reposts_count }'
-comment_count: '${ comment_count }'
-waveform_url: '${ waveform_url }'
+playback_count: '${ playbackCount }'
+download_count: '${ downloadCount }'
+favoritings_count: '${ favoritingsCount }'
+reposts_count: '${ repostsCount }'
+comment_count: '${ commentCount }'
+waveform_url: '${ waveformUrl }'
 subtitle: ${ JSON.stringify(subtitle) }
 ---
 ${ description }`
@@ -131,8 +130,10 @@ function getScTrackId (link) {
 }
 
 function sanitizeDescr (description) {
+  const bannerText = 'Хочешь поддержать Frontend Weekend, ' +
+    'переходи на http://frontendweekend.ml ;)'
   return description
-    .replace('Хочешь поддержать Frontend Weekend, переходи на http://frontendweekend.ml ;)', '')
+    .replace(bannerText, '')
     .replace(/\d*:?\d\d:\d\d/gm, time => {
       let [, hours, minutes, seconds] = time.match(/(\d?\d?):?(\d\d):(\d\d)/)
       let sec = moment.duration({ hours, minutes, seconds }).asSeconds()

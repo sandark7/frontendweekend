@@ -1,5 +1,5 @@
 import ENlang from '../../../locale/en/messages.json'
-
+/* global describe, before, cy, it */
 describe('main content', () => {
   before(() => {
     cy.visit('http://127.0.0.1:8080/en/')
@@ -25,7 +25,10 @@ describe('main content', () => {
   it('should have host info', () => {
     cy.get('.test--host_photo')
       .should('have.attr', 'src')
-      .and('equal', 'https://avatars0.githubusercontent.com/u/13529513?s=460&v=4')
+      .and(
+        'equal',
+        'https://avatars0.githubusercontent.com/u/13529513?s=460&v=4'
+      )
   })
 
   it('should have footer', () => {

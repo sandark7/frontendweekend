@@ -1,5 +1,5 @@
 import ENlang from '../../../locale/en/messages.json'
-
+/* global describe, before, cy, it */
 describe('main content', () => {
   before(() => {
     cy.visit('http://127.0.0.1:8080/en/archive/')
