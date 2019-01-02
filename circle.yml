@@ -86,6 +86,36 @@ jobs:
       - store_artifacts:
           path: reports/junit
 
+  eslint-all:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run:
+          name: "JavaScript Linter all files"
+          command: yarn eslint-all-junit
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
+
+  codacy-coverage:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run:
+          name: "JavaScript Coverage report for Codacy"
+          command: yarn codacy-coverage
+      - store_test_results:
+          path: coverage
+      - store_artifacts:
+          path: coverage
+
   test-e2e:
     docker:
       - image: cypress/base:8
@@ -176,8 +206,9 @@ workflows:
       - build:
           requires:
             - sc-import
-      - eslint
+      - eslint-all
       - test
+      - codacy-coverage
       - sonarqube-code-analyze
       - wait-for-netlify-build
       - test-e2e:

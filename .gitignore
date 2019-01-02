@@ -112,3 +112,5 @@ results/
 public/
 reports/
 .DS_Store
+coverage/
+junit.xml
