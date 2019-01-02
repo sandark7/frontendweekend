@@ -1,31 +1,32 @@
 ---
 title: "#4 – Дарья Пушкарская учит как стать звездой frontend'а за год"
-name: 'fw-4'
-num: '4'
-date: '2017-05-28T09:39:57+00:00'
-scLink: 'https://soundcloud.com/frontend-weekend/fw-4'
-author: 'Андрей Смирнов'
-image: 'https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg'
-podcastUrl: 'https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a'
-scTrackId: '324812846'
+name: "fw-4"
+num: "4"
+date: "2017-05-28T11:39:57+02:00"
+scLink: "https://soundcloud.com/frontend-weekend/fw-4"
+author: "Андрей Смирнов"
+image: "https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg"
+podcastUrl: "https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a"
+scTrackId: "324812846"
 explicit: false
-tag_list: 'podcast frontend javascript'
-license: 'all-rights-reserved'
-playback_count: '16056'
-download_count: '297'
-favoritings_count: '187'
-reposts_count: '8'
-comment_count: '8'
-waveform_url: 'https://w1.sndcdn.com/zfVgQp2Zk0rR_m.png'
+tag_list: "podcast frontend javascript"
+license: "all-rights-reserved"
+playback_count: "16056"
+download_count: "297"
+favoritings_count: "187"
+reposts_count: "8"
+comment_count: "8"
+waveform_url: "https://w1.sndcdn.com/zfVgQp2Zk0rR_m.png"
 subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
+
 Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
-Обучись frontend'у у Даши по ссылке – http://webheroschool.ru/?gcpc=6c5a0
+Обучись frontend'у у Даши по ссылке – <http://webheroschool.ru/?gcpc=6c5a0>
 
 - В каких олимпиадах по программированию участвовала? <timecode sec="93">01:33</timecode>
 - Что повлияло на желание заниматься образовательными проектами? <timecode sec="281">04:41</timecode>
-- Прием "уточки" https://css-tricks.com/designing-debugging-ducks-web-projects <timecode sec="405">06:45</timecode>
+- Прием "уточки" <https://css-tricks.com/designing-debugging-ducks-web-projects> <timecode sec="405">06:45</timecode>
 - Почему "напрашивалась" быть тимлидом в LoftSchool? <timecode sec="460">07:40</timecode>
 - Что бы делала, если бы не заметил 2ГИС? <timecode sec="566">09:26</timecode>
 - Что дается тяжело в жизни? <timecode sec="817">13:37</timecode>
@@ -33,7 +34,7 @@ subtitle: "Дарья Пушкарская, frontend-разработчик в T
 - Как удалось провести вебинар вместе с HR из HeadHunter? <timecode sec="1210">20:10</timecode>
 - Насколько важно для продукта иметь хайповые технологии? <timecode sec="1357">22:37</timecode>
 - Что самое важное в составлении резюме? <timecode sec="1510">25:10</timecode>
-- Как пришла идея проекта Твой Ментор https://instagr.am/yourmentor.ru? <timecode sec="1615">26:55</timecode>
+- Как пришла идея проекта Твой Ментор <https://instagr.am/yourmentor.ru?> <timecode sec="1615">26:55</timecode>
 - Есть ли проблемы масштабирования такого проекта? <timecode sec="1857">30:57</timecode>
 - Чем занимается прогресс-менеджер в проекте? <timecode sec="2020">33:40</timecode>
 - Есть ли планы по введению новых должностей и оптимизации? <timecode sec="2220">37:00</timecode>
@@ -53,8 +54,9 @@ subtitle: "Дарья Пушкарская, frontend-разработчик в T
 - Готовим вместе с frontend-разработчиком <timecode sec="4030">1:07:10</timecode>
 
 Пики <timecode sec="4238">1:10:38</timecode>
-- Отображение тестов в виде нян-кэтов https://github.com/calvinmetcalf/tap-nyan
-- Исправление консольных команд https://github.com/nvbn/thefuck
-- История Ады Лавлейс https://habrahabr.ru/company/wolfram/blog/303552/
+
+- Отображение тестов в виде нян-кэтов <https://github.com/calvinmetcalf/tap-nyan>
+- Исправление консольных команд <https://github.com/nvbn/thefuck>
+- История Ады Лавлейс <https://habrahabr.ru/company/wolfram/blog/303552/>
 
 Frontend Weekend Patreon – patreon.com/frontendweekend

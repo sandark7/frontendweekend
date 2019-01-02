@@ -1,24 +1,25 @@
 ---
 title: "#3 – Сергей Попов про стоимость организации митапов и преподавание"
-name: 'fw-3'
-num: '3'
-date: '2017-05-22T06:58:59+00:00'
-scLink: 'https://soundcloud.com/frontend-weekend/fw-3'
-author: 'Андрей Смирнов'
-image: 'https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg'
-podcastUrl: 'https://feeds.soundcloud.com/stream/323850168-frontend-weekend-fw-3.m4a'
-scTrackId: '323850168'
+name: "fw-3"
+num: "3"
+date: "2017-05-22T08:58:59+02:00"
+scLink: "https://soundcloud.com/frontend-weekend/fw-3"
+author: "Андрей Смирнов"
+image: "https://i1.sndcdn.com/artworks-000223703448-ue0j47-original.jpg"
+podcastUrl: "https://feeds.soundcloud.com/stream/323850168-frontend-weekend-fw-3.m4a"
+scTrackId: "323850168"
 explicit: false
-tag_list: 'podcast frontend javascript moscowcss'
-license: 'all-rights-reserved'
-playback_count: '9097'
-download_count: '148'
-favoritings_count: '83'
-reposts_count: '6'
-comment_count: '4'
-waveform_url: 'https://w1.sndcdn.com/XrPkInnEUx0h_m.png'
+tag_list: "podcast frontend javascript moscowcss"
+license: "all-rights-reserved"
+playback_count: "9097"
+download_count: "148"
+favoritings_count: "83"
+reposts_count: "6"
+comment_count: "4"
+waveform_url: "https://w1.sndcdn.com/XrPkInnEUx0h_m.png"
 subtitle: "Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
+
 Сергей Попов, frontend-разработчик в Setka, основатель MoscowCSS и куратор образовательных программ в Moscow Coding School, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
 - Как организовывается MoscowCSS? 0:36
@@ -40,10 +41,11 @@ subtitle: "Сергей Попов, frontend-разработчик в Setka, о
 - Готовим вместе с frontend-разработчиком <timecode sec="4842">1:20:42</timecode>
 
 Пики <timecode sec="5010">1:23:30</timecode>
-- Visual Studio Code https://code.visualstudio.com
-- Записи докладов с JSConf EU 2017 https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_
-- FONTend Optimization http://telegra.ph/fontend-optimization-05-16
+
+- Visual Studio Code <https://code.visualstudio.com>
+- Записи докладов с JSConf EU 2017 [https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs\_](https://www.youtube.com/playlist?list=PL37ZVnwpeshFmAPr65sU2O5WMs7_CGjs_)
+- FONTend Optimization <http://telegra.ph/fontend-optimization-05-16>
 
 MoscowCSS
-https://vk.com/css_moscow
-https://twitter.com/css_moscow
+<https://vk.com/css_moscow>
+<https://twitter.com/css_moscow>
