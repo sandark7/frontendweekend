@@ -42,7 +42,9 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
-      - run: yarn sc-import && yarn sc-comment-import
+      - run: yarn sc-import
+      - run: yarn prettier-md-fix
+      - run: yarn sc-comment-import
       - persist_to_workspace:
           root: content
           paths:
