@@ -1,24 +1,25 @@
 ---
 title: "#6 – Андрей Яманов про организацию MoscowJS, зарплаты и DevConf"
-name: 'fw-6'
-num: '6'
-date: '2017-06-11T09:18:43+00:00'
-scLink: 'https://soundcloud.com/frontend-weekend/fw-6'
-author: 'Андрей Смирнов'
-image: 'https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg'
-podcastUrl: 'https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a'
-scTrackId: '327444300'
+name: "fw-6"
+num: "6"
+date: "2017-06-11T09:18:43+00:00"
+scLink: "https://soundcloud.com/frontend-weekend/fw-6"
+author: "Андрей Смирнов"
+image: "https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg"
+podcastUrl: "https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a"
+scTrackId: "327444300"
 explicit: false
-tag_list: 'podcast frontend javascript moscowjs devconf'
-license: 'cc-by-nc-nd'
-playback_count: '8487'
-download_count: '138'
-favoritings_count: '79'
-reposts_count: '6'
-comment_count: '3'
-waveform_url: 'https://w1.sndcdn.com/lft9BxFnRMyV_m.png'
+tag_list: "podcast frontend javascript moscowjs devconf"
+license: "cc-by-nc-nd"
+playback_count: "8487"
+download_count: "138"
+favoritings_count: "79"
+reposts_count: "6"
+comment_count: "3"
+waveform_url: "https://w1.sndcdn.com/lft9BxFnRMyV_m.png"
 subtitle: "Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
+
 Андрей Яманов, fullstack-разработчик в компании Skyeng и организатор MoscowJS, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
 - Каково организовывать Frontend Conf? <timecode sec="92">01:32</timecode>
@@ -38,6 +39,7 @@ subtitle: "Андрей Яманов, fullstack-разработчик в ком
 - Готовим вместе с frontend-разработчиком (добавьте слой сыра) <timecode sec="2883">48:03</timecode>
 
 Пики <timecode sec="3096">51:36</timecode>
+
 - Как правильно дышать http://health4ever.org/ozdorovitelnye-praktiki/kak-pravilno-dyshat
 - Доступен npm canary http://blog.npmjs.org/post/161370331310/v502-2017-06-02
 

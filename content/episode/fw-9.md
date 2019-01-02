@@ -1,24 +1,25 @@
 ---
 title: "#9 – Денис Иогансен учит как стать крутым разработчиком без профильного образования"
-name: 'fw-9'
-num: '9'
-date: '2017-07-02T16:07:38+00:00'
-scLink: 'https://soundcloud.com/frontend-weekend/fw-9'
-author: 'Андрей Смирнов'
-image: 'https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg'
-podcastUrl: 'https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a'
-scTrackId: '331102863'
+name: "fw-9"
+num: "9"
+date: "2017-07-02T16:07:38+00:00"
+scLink: "https://soundcloud.com/frontend-weekend/fw-9"
+author: "Андрей Смирнов"
+image: "https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg"
+podcastUrl: "https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a"
+scTrackId: "331102863"
 explicit: false
-tag_list: 'podcast frontend javascript'
-license: 'cc-by-nc-nd'
-playback_count: '10749'
-download_count: '204'
-favoritings_count: '112'
-reposts_count: '10'
-comment_count: '6'
-waveform_url: 'https://w1.sndcdn.com/gFNbpTjNB426_m.png'
+tag_list: "podcast frontend javascript"
+license: "cc-by-nc-nd"
+playback_count: "10749"
+download_count: "204"
+favoritings_count: "112"
+reposts_count: "10"
+comment_count: "6"
+waveform_url: "https://w1.sndcdn.com/gFNbpTjNB426_m.png"
 subtitle: "Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
+
 Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
 - Почему LiveJournal такой сложный и комплексный проект? <timecode sec="15">00:15</timecode>
@@ -37,9 +38,10 @@ subtitle: "Денис Иогансен, ведущий frontend-разработ
 - Какое отношение к TypeScript? <timecode sec="1488">24:48</timecode>
 - Какими социальными сетями пользоваться для потребления информации? <timecode sec="1588">26:28</timecode>
 - Как разработчик LiveJournal может не пользоваться своим сервисом? <timecode sec="1660">27:40</timecode>
- - Готовим вместе с frontend-разработчиком (омлет) <timecode sec="1746">29:06</timecode>
+   - Готовим вместе с frontend-разработчиком (омлет) <timecode sec="1746">29:06</timecode>
 
 Пики <timecode sec="1851">30:51</timecode>
+
 - Service Workers https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
 - Курсы по Machine Learning http://course.fast.ai
 
