@@ -1,25 +1,24 @@
 ---
 title: "#4 – Дарья Пушкарская учит как стать звездой frontend'а за год"
-name: "fw-4"
-num: "4"
-date: "2017-05-28T09:39:57+00:00"
-scLink: "https://soundcloud.com/frontend-weekend/fw-4"
-author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg"
-podcastUrl: "https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a"
-scTrackId: "324812846"
+name: 'fw-4'
+num: '4'
+date: '2017-05-28T09:39:57+00:00'
+scLink: 'https://soundcloud.com/frontend-weekend/fw-4'
+author: 'Андрей Смирнов'
+image: 'https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg'
+podcastUrl: 'https://feeds.soundcloud.com/stream/324812846-frontend-weekend-fw-4.m4a'
+scTrackId: '324812846'
 explicit: false
-tag_list: "podcast frontend javascript"
-license: "all-rights-reserved"
-playback_count: "16054"
-download_count: "297"
-favoritings_count: "187"
-reposts_count: "8"
-comment_count: "8"
-waveform_url: "https://w1.sndcdn.com/zfVgQp2Zk0rR_m.png"
+tag_list: 'podcast frontend javascript'
+license: 'all-rights-reserved'
+playback_count: '16054'
+download_count: '297'
+favoritings_count: '187'
+reposts_count: '8'
+comment_count: '8'
+waveform_url: 'https://w1.sndcdn.com/zfVgQp2Zk0rR_m.png'
 subtitle: "Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend."
 ---
-
 Дарья Пушкарская, frontend-разработчик в Tinkoff и автор образовательного проекта Твой Ментор, в гостях у Андрея Смирнова и Артема Цацина из Frontend Weekend.
 
 Обучись frontend'у у Даши по ссылке – http://webheroschool.ru/?gcpc=6c5a0
@@ -54,7 +53,6 @@ subtitle: "Дарья Пушкарская, frontend-разработчик в T
 - Готовим вместе с frontend-разработчиком <timecode sec="4030">1:07:10</timecode>
 
 Пики <timecode sec="4238">1:10:38</timecode>
-
 - Отображение тестов в виде нян-кэтов https://github.com/calvinmetcalf/tap-nyan
 - Исправление консольных команд https://github.com/nvbn/thefuck
 - История Ады Лавлейс https://habrahabr.ru/company/wolfram/blog/303552/
