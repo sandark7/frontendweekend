@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const cp = require('child_process')
 const { readEpisodeFile } = require('./import/helpers')
+/* global URL */
 
 const EPISODE_MD_DIR = path.join(__dirname, './content/episode')
 const ASSET_FILE_DIR = path.join(__dirname, './static/assets')
