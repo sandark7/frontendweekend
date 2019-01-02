@@ -844,6 +844,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
   integrity sha512-rLu3wcBWH4P5q1CGoSSH/i9hrXs7SlbRLkoq9IGuoPYNGQvDJ3pt/wmOM+XgYjIDRMVIdkUWt0RsfzF50JfnCw==
 
+"@jxnblk/simple-icons@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jxnblk/simple-icons/-/simple-icons-1.0.0.tgz#7c8e3c6b55b5b3fb8b2c693398b8680b70650c75"
+  integrity sha1-fI48a1W1s/uLLGkzmLhoC3BlDHU=
+
 "@mapbox/hast-util-table-cell-style@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.1.3.tgz#5b7166ae01297d72216932b245e4b2f0b642dca6"
@@ -11646,6 +11651,13 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
+react-simple-icons@1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/react-simple-icons/-/react-simple-icons-1.0.0-beta.5.tgz#b022badb6bd8060ab3ed6cf3ce503e300a706356"
+  integrity sha1-sCK622vYBgqz7WzzzlA+MApwY1Y=
+  dependencies:
+    "@jxnblk/simple-icons" "^1.0.0"
+
 react-sortable-hoc@^0.6.8:
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/react-sortable-hoc/-/react-sortable-hoc-0.6.8.tgz#b08562f570d7c41f6e393fca52879d2ebb9118e9"
@@ -12944,6 +12956,11 @@ simple-get@^3.0.3:
     decompress-response "^3.3.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
+
+simple-icons@1.9.17:
+  version "1.9.17"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-1.9.17.tgz#2b430f1942850febae3fd229bf3e87bbefadc051"
+  integrity sha512-KZX7XY/nfXs6NguLtCG3prlF7YALvP4JNVWHY1domUUsiqfS0x4ercpzhtL3DGQeuYre+mu0M4S6paXH2y+3VA==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

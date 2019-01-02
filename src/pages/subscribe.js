@@ -4,19 +4,20 @@ import Layout from '../components/layout'
 import SubscribeCSSModule from './subscribe.module.css'
 import { I18n } from 'react-i18next'
 import { withI18next } from 'gatsby-plugin-i18next'
+import SocialIcons from 'simple-icons'
 
 class SubscribePage extends Component {
   render () {
     const networks = [
-      'soundcloud',
-      'itunes',
-      'rss',
-      'vk',
-      'fb',
-      'twitter',
-      'telegram',
-      'instagram',
-      'patreon',
+      { network: 'rss', icon: 'RSS' },
+      { network: 'soundcloud', icon: 'SoundCloud' },
+      { network: 'itunes', icon: 'Apple Music' },
+      { network: 'vk', icon: 'VK' },
+      { network: 'fb', icon: 'Facebook' },
+      { network: 'twitter', icon: 'Twitter' },
+      { network: 'telegram', icon: 'Telegram' },
+      { network: 'instagram', icon: 'Instagram' },
+      { network: 'patreon', icon: 'Patreon' },
     ]
     return (
       <I18n>
@@ -45,7 +46,7 @@ class SubscribePage extends Component {
                 SubscribeCSSModule.list,
                 'test--list'
               ].join(' ')}>
-                {networks.map(network => (
+                {networks.map(({ network, icon }) => (
                   <li className={[
                     SubscribeCSSModule.list_item,
                     'list_item-' + network,
@@ -58,6 +59,16 @@ class SubscribePage extends Component {
                       'test--link'
                     ].join(' ')}
                     href={t(network + '_link')}>
+                      {(SocialIcons[icon] && <span
+                        className={[
+                          SubscribeCSSModule.icon_wrapper,
+                          'test--icon_wrapper',
+                        ].join(' ')}
+                        style={{ fill: `#${ SocialIcons[icon].hex }` }}
+                        dangerouslySetInnerHTML={
+                          { __html: SocialIcons[icon].svg }
+                        }
+                      ></span>)}
                       {t('subscribe_link_' + network)}
                     </a>
                   </li>
