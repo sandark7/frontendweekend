@@ -8,7 +8,7 @@ unzip -d $HOME $HOME/$SONAR_VERSION.zip
 
 echo ${CIRCLE_PULL_REQUEST}
 
-PR_NUMBER=$(echo ${CIRCLE_PULL_REQUEST##*/})
+PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}
 
 DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
                       -Dsonar.projectKey=nuxdie_frontendweekend \
