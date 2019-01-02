@@ -20,8 +20,8 @@ async function init () {
     return f
   })
     .map(async ({ file, contents }) => {
-      const scTrackId = contents.match(/scTrackId: '(.+)'/)[1]
-      const name = contents.match(/name: '(.+)'/)[1]
+      const scTrackId = contents.match(/scTrackId: "(.+)"/)[1]
+      const name = contents.match(/name: "(.+)"/)[1]
       let comments
       try {
         comments = await getComments(scTrackId)
@@ -51,7 +51,7 @@ function template (slug, {
 slug: ${ slug }
 message: ${ JSON.stringify(message) }
 timestamp: ${ (timestamp / 1000 | 0) }
-created_at: '${ createdAt }'
+created_at: "${ createdAt }"
 date: ${ date }
 username: ${ username }
 avatar: ${ avatarUrl }
