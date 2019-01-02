@@ -3,7 +3,7 @@
 if [[ "$CIRCLE_BRANCH" == "master" ]]; then
     SITE_URL="https://frontendweekend.ml"
 else
-    PR_NUMBER=`echo ${CIRCLE_PULL_REQUEST##*/}`
+    PR_NUMBER=${CIRCLE_PULL_REQUEST##*/}
     SITE_URL="https://deploy-preview-${PR_NUMBER}--frontendweekend.netlify.com"
 fi
 
