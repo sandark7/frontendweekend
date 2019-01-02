@@ -27,17 +27,22 @@
 
 ## About
 
-[Frontend Weekend podcast](https://frontendweekend.ml/) -- The most honest interviews with famous people from the web development community. Impressive success stories, funny life moments and useful tips - we show the human face of the frontend and more.
+[Frontend Weekend podcast](https://frontendweekend.ml/) -- The most honest
+interviews with famous people from the web development community. Impressive
+success stories, funny life moments and useful tips - we show the human face of
+the frontend and more.
 
 ## Tech details
 
-The project builds automatically on each commit to `master` branch by circle.ci (see circle.yml and package.json for config)
+The project builds automatically on each commit to `master` branch by circle.ci
+(see circle.yml and package.json for config)
 
 ## Contributions
 
 ### Non code
 
-You're very welcome to [support our project on Patreon](https://www.patreon.com/frontendweekend).
+You're very welcome to
+[support our project on Patreon](https://www.patreon.com/frontendweekend).
 
 ### Code related
 
