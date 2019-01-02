@@ -9,6 +9,7 @@
     "deploy-stage": "surge ./public https://stage.frontendweekend.ml",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint-md": "remark .",
+    "lint-md-fix": "remark . --output",
     "prettier-md": "prettier ./**/*.md",
     "prettier-md-fix": "prettier --write ./**/*.md",
     "csslint": "csslint src",
