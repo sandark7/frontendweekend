@@ -36,30 +36,32 @@ async function init () {
 
 function template (slug, {
   id,
-  created_at,
+  created_at: createdAt,
   timestamp,
-  track_id,
+  track_id: trackId,
   body: message,
   user: {
     username,
-    avatar_url
+    avatar_url: avatarUrl
   }
 }) {
-  const date = moment(created_at, 'YYYY/MM/DD HH:mm:ss Z').unix()
+  const date = moment(createdAt, 'YYYY/MM/DD HH:mm:ss Z').unix()
   return { file: `sc-entry${ date }.yml`,
     body: `_id: '${ id }'
 slug: ${ slug }
 message: ${ JSON.stringify(message) }
 timestamp: ${ (timestamp / 1000 | 0) }
-created_at: '${ created_at }'
+created_at: '${ createdAt }'
 date: ${ date }
 username: ${ username }
-avatar: ${ avatar_url }
+avatar: ${ avatarUrl }
 ` }
 }
 
 function getComments (scTrackId) {
-  return fetch(`https://api.soundcloud.com/tracks/${ scTrackId }/comments?client_id=${ CLIENT_ID }`)
+  const apiUrl = `https://api.soundcloud.com/tracks/` +
+    `${ scTrackId }/comments?client_id=${ CLIENT_ID }`
+  return fetch(apiUrl)
     .then(res => res.json())
 }
 
