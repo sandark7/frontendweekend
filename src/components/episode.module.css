@@ -23,17 +23,17 @@
 }
 
 .controls_title {
+  font-weight: normal;
   line-height: 1;
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 .x_speed_control {
-  line-height: 1;
-  cursor: pointer;
-  margin-left: 10px;
   border-bottom: 1px dotted black;
+  cursor: pointer;
+  line-height: 1;
+  margin-left: 10px;
 }
 
 .comment_wrapper {
@@ -53,9 +53,9 @@
 }
 
 .comment_form {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .comment_form_name_input {
@@ -64,21 +64,21 @@
 }
 
 .comment_form_message_input {
-  width: 100%;
   min-height: 100px;
+  width: 100%;
 }
 
 .comment_form_submit_btn {
-  padding: 10px 40px;
-  border: 2px solid black;
   background-color: #f7df1d;
+  border: 2px solid black;
   margin: 10px 0;
+  padding: 10px 40px;
 }
 
 @media all and (max-width: 481px) {
   .wrapper {
-    width: 100%;
     padding: 0 3px;
+    width: 100%;
   }
 
   .x_speed_control {

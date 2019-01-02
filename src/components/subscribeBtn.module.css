@@ -1,10 +1,10 @@
 .subscribe_wrapper {
-  text-decoration: none;
-  display: block;
-  color: black;
-  margin: 8px;
   border: 2px solid black;
+  color: black;
+  display: block;
+  margin: 8px;
   padding: 8px 20px;
+  text-decoration: none;
 }
 
 .nav_item_subscribe_icon {

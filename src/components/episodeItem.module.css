@@ -1,6 +1,6 @@
 .link {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 .title {
@@ -12,14 +12,14 @@
 }
 
 .footer {
+  align-content: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: baseline;
   margin-bottom: 20px;
 }
 
 .listen_cta_btn {
-  text-decoration: underline;
   display: inline-block;
+  text-decoration: underline;
 }

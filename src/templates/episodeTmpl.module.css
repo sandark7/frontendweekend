@@ -3,17 +3,17 @@
 }
 
 .header_nav {
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
 }
 
 .archive_link {
+  color: black;
   display: inline-block;
   margin: 3px;
   margin-bottom: 20px;
-  color: black;
 }
 
 .archive_link_arrow_back {

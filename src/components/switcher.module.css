@@ -1,16 +1,16 @@
 .lang_list {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin: 0;
   margin-right: 10px;
   padding-top: 3px;
-  cursor: pointer;
 }
 
 .lang_item {
-  margin: 0;
-  list-style: none;
   font-size: larger;
+  list-style: none;
+  margin: 0;
 }
 
 .lang_item:first-child {
