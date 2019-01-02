@@ -7,7 +7,7 @@
     margin-bottom: 20px;
     list-style: none;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
 }
 
 .list_item {
@@ -35,5 +35,9 @@
     }
     .podcast_description {
         font-size: large;
+    }
+
+    .list {
+        grid-template-columns: auto auto;
     }
 }
