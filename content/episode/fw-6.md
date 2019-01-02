@@ -2,7 +2,7 @@
 title: "#6 – Андрей Яманов про организацию MoscowJS, зарплаты и DevConf"
 name: "fw-6"
 num: "6"
-date: "2017-06-11T11:18:43+02:00"
+date: "2017-06-11T09:18:43+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-6"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/artworks-000227793416-dxmblh-original.jpg"

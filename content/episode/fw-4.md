@@ -2,7 +2,7 @@
 title: "#4 – Дарья Пушкарская учит как стать звездой frontend'а за год"
 name: "fw-4"
 num: "4"
-date: "2017-05-28T11:39:57+02:00"
+date: "2017-05-28T09:39:57+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-4"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/artworks-000224657938-49vmrc-original.jpg"
