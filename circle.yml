@@ -43,6 +43,7 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - run: yarn sc-import
+      - run: yarn lint-md-fix
       - run: yarn prettier-md-fix
       - run: yarn sc-comment-import
       - persist_to_workspace:

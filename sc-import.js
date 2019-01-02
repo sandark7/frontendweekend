@@ -102,23 +102,23 @@ function template (feedItem) {
     filename: `${ name }.md`,
     body: `---
 title: ${ JSON.stringify(title) }
-name: '${ name }'
-num: '${ num }'
-date: '${ date }'
-scLink: '${ scLink }'
-author: '${ author }'
-image: '${ image }'
-podcastUrl: '${ podcastUrl }'
-scTrackId: '${ scTrackId }'
+name: "${ name }"
+num: "${ num }"
+date: "${ date }"
+scLink: "${ scLink }"
+author: "${ author }"
+image: "${ image }"
+podcastUrl: "${ podcastUrl }"
+scTrackId: "${ scTrackId }"
 explicit: ${ explicit }
-tag_list: '${ tagList }'
-license: '${ license }'
-playback_count: '${ playbackCount }'
-download_count: '${ downloadCount }'
-favoritings_count: '${ favoritingsCount }'
-reposts_count: '${ repostsCount }'
-comment_count: '${ commentCount }'
-waveform_url: '${ waveformUrl }'
+tag_list: "${ tagList }"
+license: "${ license }"
+playback_count: "${ playbackCount }"
+download_count: "${ downloadCount }"
+favoritings_count: "${ favoritingsCount }"
+reposts_count: "${ repostsCount }"
+comment_count: "${ commentCount }"
+waveform_url: "${ waveformUrl }"
 subtitle: ${ JSON.stringify(subtitle) }
 ---
 ${ description }`
