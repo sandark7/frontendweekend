@@ -17,8 +17,6 @@ DEFAULT_SONAR_PARAMS="-Dsonar.login=$SONARQUBE_LOGIN \
                       -Dsonar.host.url=https://sonarcloud.io"
 
 if [[ ! -z $CIRCLE_PULL_REQUEST ]]; then
-  SONAR_PROJECT_KEY=$CIRCLE_PROJECT_USERNAME:$CIRCLE_PROJECT_REPONAME
-
   echo "Preview analyzing ${CIRCLE_PULL_REQUEST} by SonarQube Github Plugin"
   $HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS \
     -Dsonar.pullrequest.base=master \
