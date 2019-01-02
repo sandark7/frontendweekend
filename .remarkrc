@@ -1,9 +1,13 @@
 {
     "plugins": [
+        "remark-lint",
         "remark-frontmatter",
         "remark-preset-lint-recommended",
         ["remark-lint-list-item-indent", "space"],
         ["remark-lint-no-literal-urls", false],
         ["remark-lint-maximum-line-length", 80]
-    ]
+    ],
+    "settings": {
+        "listItemIndent": 1
+    }
 }
