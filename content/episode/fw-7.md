@@ -1,24 +1,25 @@
 ---
 title: "#7 – Григорий Петров про React VR, технический евангелизм и маркетинг"
-name: 'fw-7'
-num: '7'
-date: '2017-06-20T00:51:48+00:00'
-scLink: 'https://soundcloud.com/frontend-weekend/fw-7'
-author: 'Андрей Смирнов'
-image: 'https://i1.sndcdn.com/artworks-000229338392-w2f5dt-original.jpg'
-podcastUrl: 'https://feeds.soundcloud.com/stream/328898232-frontend-weekend-fw-7.m4a'
-scTrackId: '328898232'
+name: "fw-7"
+num: "7"
+date: "2017-06-20T02:51:48+02:00"
+scLink: "https://soundcloud.com/frontend-weekend/fw-7"
+author: "Андрей Смирнов"
+image: "https://i1.sndcdn.com/artworks-000229338392-w2f5dt-original.jpg"
+podcastUrl: "https://feeds.soundcloud.com/stream/328898232-frontend-weekend-fw-7.m4a"
+scTrackId: "328898232"
 explicit: false
-tag_list: 'podcast frontend javascript react'
-license: 'cc-by-nc-nd'
-playback_count: '8395'
-download_count: '147'
-favoritings_count: '86'
-reposts_count: '5'
-comment_count: '6'
-waveform_url: 'https://w1.sndcdn.com/GGfmvAfLl9eQ_m.png'
+tag_list: "podcast frontend javascript react"
+license: "cc-by-nc-nd"
+playback_count: "8395"
+download_count: "147"
+favoritings_count: "86"
+reposts_count: "5"
+comment_count: "6"
+waveform_url: "https://w1.sndcdn.com/GGfmvAfLl9eQ_m.png"
 subtitle: "Григорий Петров, технический евангелист компании Voximplant, в гостях у Андрея Смирнова из Frontend Weekend. Мой соведущий Артем приболел, его подменяет гость пилотного выпуска Павел Кондратенко."
 ---
+
 Григорий Петров, технический евангелист компании Voximplant, в гостях у Андрея Смирнова из Frontend Weekend. Мой соведущий Артем приболел, его подменяет гость пилотного выпуска Павел Кондратенко.
 
 - В каком проценте соотносятся frontend и backend? <timecode sec="56">00:56</timecode>
@@ -43,11 +44,12 @@ subtitle: "Григорий Петров, технический евангел�
 - Готовим вместе с frontend-разработчиком (глинтвейн) <timecode sec="3852">1:04:12</timecode>
 
 Пики <timecode sec="4105">1:08:25</timecode>
-- ReactVR: как пообщаться голосом в виртуальном пространстве https://devconf.ru/ru/offers/offer/265
-- Универсальные приложения на Vue.js https://nuxtjs.org
-- Где кончается React Native? http://frontendconf.ru/2017/abstracts/2496
-- Интернет вещей http://espruino.com
 
-Друзья, мы набрали 500 подписчиков, в связи с чем объявляем розыгрыш! Победитель получит любой курс на выбор от LoftSchool, а также 200 долларов на счет https://voximplant.ru. Подробности в видео по ссылке – https://youtu.be/f_7TSstGrpg. 
+- ReactVR: как пообщаться голосом в виртуальном пространстве <https://devconf.ru/ru/offers/offer/265>
+- Универсальные приложения на Vue.js <https://nuxtjs.org>
+- Где кончается React Native? <http://frontendconf.ru/2017/abstracts/2496>
+- Интернет вещей <http://espruino.com>
 
-Покупайте курсы на https://loftschool.com со скидкой 5% по промокоду frontendweekend!
+Друзья, мы набрали 500 подписчиков, в связи с чем объявляем розыгрыш! Победитель получит любой курс на выбор от LoftSchool, а также 200 долларов на счет <https://voximplant.ru>. Подробности в видео по ссылке – <https://youtu.be/f_7TSstGrpg>.
+
+Покупайте курсы на <https://loftschool.com> со скидкой 5% по промокоду frontendweekend!
