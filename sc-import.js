@@ -24,6 +24,8 @@ async function init () {
       .map(getApiInfo)
   ).catch(console.error.bind(console))
   fullFeedInfo
+    .map(normalize)
+    .map(sanitize)
     .map(template)
     .map(save)
 }
@@ -43,26 +45,11 @@ async function getApiInfo (feedItem) {
   try {
     const apiUrl = `https://api.soundcloud.com/tracks/` +
       `${ scTrackId }?client_id=${ CLIENT_ID }`
-    const apiResponse = await (fetch(apiUrl)
-      .then(res => res.json()))
-    const {
-      tag_list: tagList,
-      license,
-      playback_count: playbackCount,
-      download_count: downloadCount,
-      favoritings_count: favoritingsCount,
-      reposts_count: repostsCount,
-      comment_count: commentCount,
-      waveform_url: waveformUrl,
-    } = apiResponse
-    feedItem.tag_list = tagList
-    feedItem.license = license
-    feedItem.playback_count = playbackCount
-    feedItem.download_count = downloadCount
-    feedItem.favoritings_count = favoritingsCount
-    feedItem.reposts_count = repostsCount
-    feedItem.comment_count = commentCount
-    feedItem.waveform_url = waveformUrl
+    await (
+      fetch(apiUrl)
+        .then(res => res.json())
+        .then(parseApiResponse.bind(null, feedItem))
+    )
   } catch (e) {
     console.error(e)
   }
@@ -70,34 +57,103 @@ async function getApiInfo (feedItem) {
   return feedItem
 }
 
-function template (feedItem) {
-  let {
+function parseApiResponse (feedItem, {
+  tag_list: tagList,
+  license,
+  playback_count: playbackCount,
+  download_count: downloadCount,
+  favoritings_count: favoritingsCount,
+  reposts_count: repostsCount,
+  comment_count: commentCount,
+  waveform_url: waveformUrl,
+}) {
+  feedItem.tag_list = tagList
+  feedItem.license = license
+  feedItem.playback_count = playbackCount
+  feedItem.download_count = downloadCount
+  feedItem.favoritings_count = favoritingsCount
+  feedItem.reposts_count = repostsCount
+  feedItem.comment_count = commentCount
+  feedItem.waveform_url = waveformUrl
+}
+
+function normalize ({
+  title,
+  description,
+  date,
+  link: scLink,
+  author,
+  scTrackId,
+  tag_list: tagList,
+  license,
+  playback_count: playbackCount,
+  download_count: downloadCount,
+  favoritings_count: favoritingsCount,
+  reposts_count: repostsCount,
+  comment_count: commentCount,
+  waveform_url: waveformUrl,
+  image: { url: image },
+  enclosures: [{ url: podcastUrl }],
+  'itunes:explicit': { '#': explicit },
+  'itunes:subtitle': { '#': subtitle },
+}) {
+  return {
     title,
     description,
     date,
-    link: scLink,
+    scLink,
     author,
     scTrackId,
-    tag_list: tagList,
+    tagList,
     license,
-    playback_count: playbackCount,
-    download_count: downloadCount,
-    favoritings_count: favoritingsCount,
-    reposts_count: repostsCount,
-    comment_count: commentCount,
-    waveform_url: waveformUrl,
-    image: { url: image },
-    enclosures: [{ url: podcastUrl }],
-    'itunes:explicit': { '#': explicit },
-    'itunes:subtitle': { '#': subtitle },
-  } = feedItem
-  const { name, num } = parseSCLink(scLink)
-  image = https(image)
-  podcastUrl = https(podcastUrl)
-  explicit = explicit === 'no' ? 'false' : 'true'
-  date = parseDate(date)
-  description = sanitizeDescr(description)
-  subtitle = constructSubtitle(description, subtitle)
+    playbackCount,
+    downloadCount,
+    favoritingsCount,
+    repostsCount,
+    commentCount,
+    waveformUrl,
+    image,
+    podcastUrl,
+    explicit,
+    subtitle,
+  }
+}
+
+function sanitize (item) {
+  const { name, num } = parseSCLink(item.scLink)
+  item.image = https(item.image)
+  item.podcastUrl = https(item.podcastUrl)
+  item.explicit = item.explicit === 'no' ? 'false' : 'true'
+  item.date = parseDate(item.date)
+  item.description = sanitizeDescr(item.description)
+  item.subtitle = constructSubtitle(item.description, item.subtitle)
+  item.name = name
+  item.num = num
+  return item
+}
+
+function template ({
+  name,
+  num,
+  title,
+  description,
+  date,
+  scLink,
+  author,
+  scTrackId,
+  tagList,
+  license,
+  playbackCount,
+  downloadCount,
+  favoritingsCount,
+  repostsCount,
+  commentCount,
+  waveformUrl,
+  image,
+  podcastUrl,
+  explicit,
+  subtitle,
+}) {
   return {
     filename: `${ name }.md`,
     body: `---
