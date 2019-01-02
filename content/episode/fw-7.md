@@ -11,7 +11,7 @@ scTrackId: '328898232'
 explicit: false
 tag_list: 'podcast frontend javascript react'
 license: 'cc-by-nc-nd'
-playback_count: '8394'
+playback_count: '8395'
 download_count: '147'
 favoritings_count: '86'
 reposts_count: '5'
