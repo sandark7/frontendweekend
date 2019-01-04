@@ -12,7 +12,7 @@ explicit: false
 tag_list: "podcast frontend javascript"
 license: "all-rights-reserved"
 playback_count: "16063"
-download_count: "297"
+download_count: "298"
 favoritings_count: "187"
 reposts_count: "8"
 comment_count: "8"
