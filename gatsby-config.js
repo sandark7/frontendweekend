@@ -9,7 +9,7 @@ module.exports = {
       options: {
         id: 'GTM-T93788N',
         // Include GTM in development.
-        includeInDevelopment: true,
+        includeInDevelopment: false,
       },
     },
     `gatsby-plugin-react-helmet`,
