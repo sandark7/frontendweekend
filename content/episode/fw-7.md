@@ -12,7 +12,7 @@ explicit: false
 tag_list: "podcast frontend javascript react"
 license: "cc-by-nc-nd"
 playback_count: "8405"
-download_count: "147"
+download_count: "148"
 favoritings_count: "86"
 reposts_count: "5"
 comment_count: "6"
