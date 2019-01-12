@@ -11,7 +11,7 @@ scTrackId: "325878838"
 explicit: false
 tag_list: "podcast frontend conference javascript"
 license: "all-rights-reserved"
-playback_count: "7991"
+playback_count: "7993"
 download_count: "120"
 favoritings_count: "78"
 reposts_count: "5"
