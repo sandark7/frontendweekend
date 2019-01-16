@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TimecodeCSSModule from './timecode.module.css'
-import { AudioContext } from './episode'
+import { AudioContext } from './episode/episode'
 
 class Timecode extends Component {
   seek (context, sec) {
