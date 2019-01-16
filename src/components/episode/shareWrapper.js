@@ -1,5 +1,5 @@
 import React from 'react'
-import * as PropTypes from 'prop-types'
+import { func, string } from 'prop-types'
 import Share from '../share'
 
 export default function ShareWrapper ({ t, siteUrl, lng, slug }) {
@@ -9,9 +9,4 @@ export default function ShareWrapper ({ t, siteUrl, lng, slug }) {
   </div>
 }
 
-ShareWrapper.propTypes = {
-  t: PropTypes.func,
-  siteUrl: PropTypes.string,
-  lng: PropTypes.string,
-  slug: PropTypes.string
-}
+ShareWrapper.propTypes = { t: func, siteUrl: string, lng: string, slug: string }

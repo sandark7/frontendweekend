@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as PropTypes from 'prop-types'
+import { string, number, func } from 'prop-types'
 import EpisodeCSSModule from './episode.module.css'
 
 export function SpeedControl ({ name, speed, title, setSpeed }) {
@@ -17,16 +17,16 @@ export function SpeedControl ({ name, speed, title, setSpeed }) {
 }
 
 SpeedControl.propTypes = {
-  name: PropTypes.string,
-  title: PropTypes.string,
-  speed: PropTypes.number,
-  setSpeed: PropTypes.func,
+  name: string,
+  title: string,
+  speed: number,
+  setSpeed: func,
 }
 
 export default class SpeedControls extends Component {
   static propTypes = {
-    t: PropTypes.func,
-    getAudioRef: PropTypes.func,
+    t: func,
+    getAudioRef: func,
   }
 
   constructor (props) {
