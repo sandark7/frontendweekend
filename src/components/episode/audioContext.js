@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as PropTypes from 'prop-types'
+import { episodePropTypes } from './episode'
 
 import ShareWrapper from './shareWrapper'
 import Comments from './comments'
@@ -11,13 +11,7 @@ export const AudioContext = React.createContext()
 
 export default class EpisodeAudioContext extends Component {
   static propTypes = {
-    episode: PropTypes.any,
-    siteUrl: PropTypes.string,
-    t: PropTypes.func,
-    lng: PropTypes.string,
-    comments: PropTypes.array,
-    onTimecodeClick: PropTypes.func,
-    onDescriptionClick: PropTypes.func,
+    ...episodePropTypes,
   }
 
   static defaultProps = {

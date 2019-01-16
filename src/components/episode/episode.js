@@ -7,8 +7,8 @@ import StatsWrapper from './statsWrapper'
 import CommentForm from './commentForm'
 import AudioContext from './audioContext'
 
-export default function Episode ({ episode, siteUrl, t, lng, comments,
-  onTimecodeClick, onDescriptionClick }) {
+export default function Episode (props) {
+  const { episode, siteUrl, t } = props
   return (
     <div className={ [
       EpisodeCSSModule.wrapper,
@@ -16,18 +16,14 @@ export default function Episode ({ episode, siteUrl, t, lng, comments,
     ].join(' ') }>
       <Header title={ episode.frontmatter.title }/>
       <StatsWrapper episode={ episode }/>
-      <AudioContext lng={lng}
-        comments={comments} t={t}
-        episode={episode}
-        onTimecodeClick={onTimecodeClick}
-        onDescriptionClick={onDescriptionClick}/>
+      <AudioContext { ...props } />
       <CommentForm episode={ episode }
         t={ t } returnUrl={ `${ siteUrl }${ episode.fields.slug }` }/>
     </div>
   )
 }
 
-Episode.propTypes = {
+export const episodePropTypes = {
   episode: PropTypes.any,
   siteUrl: PropTypes.string,
   t: PropTypes.func,
@@ -36,3 +32,5 @@ Episode.propTypes = {
   onTimecodeClick: PropTypes.func,
   onDescriptionClick: PropTypes.func,
 }
+
+Episode.propTypes = episodePropTypes
