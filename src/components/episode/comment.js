@@ -2,6 +2,7 @@ import React from 'react'
 import * as PropTypes from 'prop-types'
 import EpisodeCSSModule from './episode.module.css'
 import moment from 'moment'
+import Timecode from '../timecode'
 
 export default function Comment ({ comment }) {
   return <div className={ [
