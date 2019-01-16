@@ -206,13 +206,13 @@ EpisodeCommentsTitle.propTypes = {
 }
 
 function EpisodeComments ({ t, comments }) {
-  return (<>
+  return (<div>
     <EpisodeCommentsTitle hasComments={ comments.length }
       t={ t }/>
     { comments.map(({ node: comment }) => (
       <EpisodeComment comment={ comment }/>
     )) }
-  </>)
+  </div>)
 }
 
 EpisodeComments.propTypes = {
