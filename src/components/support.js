@@ -18,7 +18,7 @@ function SupportIFrame ({ t }) {
 
 SupportIFrame.propTypes = { t: func }
 
-function SupportDonateText ({children}) {
+function SupportDonateText ({ children }) {
   return <p className={[
     SupportCSSModule.donate_text,
     'test--donate_text'
