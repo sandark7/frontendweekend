@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Share from './share'
 import SupportCSSModule from './support.module.css'
 import { func } from 'prop-types'
