@@ -36,7 +36,7 @@ function EpisodeStatsWrapper ({ episode }) {
 
 EpisodeStatsWrapper.propTypes = { episode: PropTypes.any }
 
-function EpisodeShareWrapper ({t, siteUrl, lng, slug}) {
+function EpisodeShareWrapper ({ t, siteUrl, lng, slug }) {
   return <div id='share'>
     <Share t={ t }
       url={ `${ siteUrl }${ lng }${ slug }` }/>
@@ -50,13 +50,13 @@ EpisodeShareWrapper.propTypes = {
   slug: PropTypes.string
 }
 
-function EpisodeCommentForm ({ t, episode }) {
+function EpisodeCommentForm ({ t, episode, returnUrl }) {
   const INPUTS = [
     {
       tag: 'input',
       name: 'options[redirect]',
       type: 'hidden',
-      value: 'https://frontendweekend.ml' // TODO: use siteUrl
+      value: returnUrl
     },
     {
       tag: 'input',
@@ -135,7 +135,8 @@ function EpisodeCommentForm ({ t, episode }) {
 
 EpisodeCommentForm.propTypes = {
   episode: PropTypes.any,
-  t: PropTypes.func
+  t: PropTypes.func,
+  returnUrl: PropTypes.string
 }
 
 function EpisodeComment ({ comment }) {
@@ -205,13 +206,13 @@ EpisodeCommentsTitle.propTypes = {
 }
 
 function EpisodeComments ({ t, comments }) {
-  return <>
+  return (<>
     <EpisodeCommentsTitle hasComments={ comments.length }
       t={ t }/>
     { comments.map(({ node: comment }) => (
       <EpisodeComment comment={ comment }/>
     )) }
-  </>
+  </>)
 }
 
 EpisodeComments.propTypes = {
@@ -343,7 +344,7 @@ class Episode extends Component {
           <EpisodeComments comments={ comments } t={ t }/>
         </AudioContext.Provider>
         <EpisodeCommentForm episode={ episode }
-          t={ t }/>
+          t={ t } returnUrl={ `${ siteUrl }${ episode.fields.slug }` }/>
       </div>
     )
   }
