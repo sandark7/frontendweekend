@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Episode from '../components/episode'
+import Episode from '../components/episode/episode'
 import { I18n } from 'react-i18next'
 import { Link, withI18next } from 'gatsby-plugin-i18next'
 import RandomEpisodes from '../components/randomEpisodes'
