@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as PropTypes from 'prop-types'
 import EpisodeCSSModule from './episode.module.css'
 
-export function SpeedControl ({ name, speed, setSpeed }) {
+export function SpeedControl ({ name, speed, title, setSpeed }) {
   return (
     <span
       onClick={ () => setSpeed(speed) }
@@ -11,13 +11,14 @@ export function SpeedControl ({ name, speed, setSpeed }) {
         `gtm--${ name }speed`,
         `test--${ name }speed`
       ].join(' ') }>
-      { name }
+      { title }
     </span>
   )
 }
 
 SpeedControl.propTypes = {
   name: PropTypes.string,
+  title: PropTypes.string,
   speed: PropTypes.number,
   setSpeed: PropTypes.func,
 }
@@ -58,7 +59,7 @@ export default class SpeedControls extends Component {
         { t('controls_title_speed') }
       </h4>
       {this.SPEEDS.map(({ speed, name }) => (
-        <SpeedControl name={t(name + 'speed')} speed={speed}
+        <SpeedControl name={name} title={t(name + 'speed')} speed={speed}
           setSpeed={this.setSpeed.bind(this)} />
       ))}
     </div>
