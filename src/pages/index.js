@@ -85,6 +85,7 @@ class EpisodeWrapper extends Component {
     )
   }
 }
+
 function IndexPageArchiveLink ({ t }) {
   return (
     <Link className={[
@@ -99,7 +100,8 @@ function IndexPageArchiveLink ({ t }) {
 IndexPageArchiveLink.propTypes = {
   t: func
 }
-function getRandomEpisodes(allEpisodes) {
+
+function getRandomEpisodes (allEpisodes) {
   allEpisodes.pop()
   const getRandomEpisode = uniqueRandomArray(allEpisodes)
   return [
@@ -107,6 +109,7 @@ function getRandomEpisodes(allEpisodes) {
     getRandomEpisode()
   ]
 }
+
 function IndexPage ({
   lng,
   data: {
