@@ -2,7 +2,7 @@ import React from 'react'
 import EpisodeItemCSSModule from './episodeItem.module.css'
 import { Link } from 'gatsby-plugin-i18next'
 import EpisodeStats from './episodeStats'
-import { func, any } from "prop-types";
+import { func, any } from 'prop-types'
 
 function EpisodeItemFooterWrapper ({ t, episode }) {
   return <div className={[
