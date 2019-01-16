@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Episode from '../components/episode/episode'
@@ -10,83 +10,77 @@ import SubscribeBtn from '../components/subscribeBtn'
 import Support from '../components/support'
 import EpisodeTmplCSSModule from './episodeTmpl.module.css'
 import { FiChevronLeft } from 'react-icons/fi'
+import { func, any } from 'prop-types'
 
-class EpisodeTmpl extends Component {
-  render () {
-    let {
-      lng,
-      data: {
-        currentEpisode: episode,
-        site: {
-          siteMetadata: { siteUrl },
-        },
-        allEpisodes: { edges: allEpisodes },
-        allCommentYaml: { edges: comments },
+function EpisodeTmplTitle ({ episode, t }) {
+  return (
+    <div className={[
+      EpisodeTmplCSSModule.header_nav,
+      'test--header_nav'
+    ].join(' ')}>
+      <Link
+        className={[
+          EpisodeTmplCSSModule.archive_link,
+          'test--header_nav-archive'
+        ].join(' ')}
+        to={`/archive/#${ episode.frontmatter.name }`}
+      >
+        <FiChevronLeft className={[
+          EpisodeTmplCSSModule.archive_link_arrow_back,
+          'test--header_nav_archive_link_arrow_back'
+        ].join(' ')} />
+        <span>{t('archive_link_text_back')}</span>
+      </Link>
+      <SubscribeBtn t={t} />
+    </div>
+  )
+}
+
+EpisodeTmplTitle.propTypes = {
+  t: func, episode: any
+}
+
+function EpisodeTmpl ({
+  lng,
+  data: {
+    currentEpisode: episode,
+    site: {
+      siteMetadata: {
+        siteUrl
       }
-    } = this.props
-    comments = comments.filter(
-      ({ node: comment }) => (comment.slug === episode.frontmatter.name)
-    )
-    allEpisodes = allEpisodes.filter(({ node }) => (node.id !== episode.id))
-    const getRandomEpisode = uniqueRandomArray(allEpisodes)
-    const randomEpisodes = [
-      getRandomEpisode(),
-      getRandomEpisode()
-    ]
-    return (
-      <I18n>
-        {t => (
-          <Layout title={[
-            episode.frontmatter.title,
-            '–',
-            t('site_title'),
-          ].join(' ')}
-          description={episode.frontmatter.subtitle}
-          >
-            <div
-              className={[
-                EpisodeTmplCSSModule.wrapper,
-                'test--wrapper',
-              ].join(' ')}
-            >
-              <div className={[
-                EpisodeTmplCSSModule.header_nav,
-                'test--header_nav',
-              ].join(' ')}>
-                <Link className={[
-                  EpisodeTmplCSSModule.archive_link,
-                  'test--header_nav-archive',
-                ].join(' ')} to={`/archive/#${ episode.frontmatter.name }`}>
-                  <FiChevronLeft className={[
-                    EpisodeTmplCSSModule.archive_link_arrow_back,
-                    'test--header_nav_archive_link_arrow_back',
-                  ].join(' ')}/>
-                  <span>{t('archive_link_text_back')}</span>
-                </Link>
-                <SubscribeBtn t={t} />
-              </div>
-              <Episode
-                episode={episode}
-                t={t}
-                lng={'/' + lng}
-                siteUrl={siteUrl}
-                comments={comments}
-              />
-              <RandomEpisodes
-                t={t}
-                randomEpisodes={randomEpisodes}
-              />
-              <Support
-                t={t}
-                siteUrl={siteUrl}
-                lng={lng}
-              />
-            </div>
-          </Layout>
-        )}
-      </I18n>
-    )
+    },
+    allEpisodes: {
+      edges: allEpisodes
+    },
+    allCommentYaml: {
+      edges: comments
+    }
   }
+}) {
+  comments = comments.filter(({
+    node: comment
+  }) => comment.slug === episode.frontmatter.name)
+  allEpisodes = allEpisodes.filter(({ node }) => node.id !== episode.id)
+  const getRandomEpisode = uniqueRandomArray(allEpisodes)
+  const randomEpisodes = [getRandomEpisode(), getRandomEpisode()]
+  return <I18n>
+    {t =>
+      <Layout
+        title={[episode.frontmatter.title, '–', t('site_title')].join(' ')}
+        description={episode.frontmatter.subtitle}
+      >
+        <div className={[
+          EpisodeTmplCSSModule.wrapper,
+          'test--wrapper'
+        ].join(' ')}>
+          <EpisodeTmplTitle episode={ episode } t={t} />
+          <Episode episode={episode} t={t} lng={'/' + lng}
+            siteUrl={siteUrl} comments={comments} />
+          <RandomEpisodes t={t} randomEpisodes={randomEpisodes} />
+          <Support t={t} siteUrl={siteUrl} lng={lng} />
+        </div>
+      </Layout>}
+  </I18n>
 }
 
 export default withI18next()(EpisodeTmpl)
