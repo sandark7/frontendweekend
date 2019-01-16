@@ -111,4 +111,5 @@ cypress/videos/
 results/
 public/
 reports/
+coverage/
 .DS_Store
