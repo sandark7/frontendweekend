@@ -28,5 +28,6 @@ fi
 
 if [[ "$CIRCLE_BRANCH" == "master" ]]; then
     echo "Analyzing ${CIRCLE_BRANCH} branch to push issues to SonarQube server"
+    echo "$HOME/$SONAR_DIR/bin/sonar-scanner $DEFAULT_SONAR_PARAMS";
     "$HOME"/"$SONAR_DIR"/bin/sonar-scanner "$DEFAULT_SONAR_PARAMS";
 fi
