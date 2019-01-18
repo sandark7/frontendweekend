@@ -3,7 +3,7 @@ const path = require('path')
 const fetch = require('node-fetch')
 const fs = require('fs')
 const moment = require('moment')
-
+/* global URL */
 const FEED_URL = 'https://feeds.feedburner.com/frontendweekend'
 const TIMEOUT = 30
 const EPISODE_DIR = 'content/episode'
