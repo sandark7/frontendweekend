@@ -8,7 +8,7 @@ else
 fi
 
 echo "Waiting for $SITE_URL to come alive"
-until $(curl --output /dev/null --silent --head --fail $SITE_URL); do
+until curl --output /dev/null --silent --head --fail "$SITE_URL"; do
     printf '.'
     sleep 5
 done
