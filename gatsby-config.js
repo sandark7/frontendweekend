@@ -74,6 +74,6 @@ module.exports = {
         icon: `static/img/android-chrome-384x384.png`,
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-remove-serviceworker`
   ]
 }
