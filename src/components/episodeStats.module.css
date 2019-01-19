@@ -20,3 +20,11 @@
   color: black;
   text-decoration: none;
 }
+
+.stat_link_none {
+    border-bottom: none;
+}
+
+.download_link {
+    border-bottom: 1px solid
+}

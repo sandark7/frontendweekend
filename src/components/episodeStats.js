@@ -9,7 +9,7 @@ import {
 import EpisodeStatsCSSModule from './episodeStats.module.css'
 import { Link } from 'gatsby-plugin-i18next'
 
-const EpisodeStats = ({ episode }) => {
+const EpisodeStats = ({ episode, t, downloadText = false }) => {
   const { frontmatter: {
     playback_count: playback,
     favoritings_count: favoritings,
@@ -87,16 +87,19 @@ const EpisodeStats = ({ episode }) => {
         <a
           className={[
             EpisodeStatsCSSModule.stat_link,
+            EpisodeStatsCSSModule.stat_link_none,
+            downloadText && EpisodeStatsCSSModule.download_link,
             'test--episode_stat_link'
           ].join(' ')}
           download={true}
           href={episode.frontmatter.podcastUrl}>
-          <FiDownload
+          { downloadText && t('episode_download_text') }
+      { !downloadText && <FiDownload
             className={[
               EpisodeStatsCSSModule.stat_icon,
               'test--episode_stat_icon'
             ].join(' ')}
-          />{download}
+          />}{!downloadText && download}
         </a>
       </div>
     </div>

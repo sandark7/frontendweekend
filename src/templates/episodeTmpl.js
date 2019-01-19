@@ -114,6 +114,7 @@ export const query = graphql`
                 title
                 name
                 podcastUrl
+                scLink
                 subtitle
                 playback_count
                 download_count

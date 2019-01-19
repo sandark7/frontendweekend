@@ -11,6 +11,17 @@
   margin-bottom: 20px;
 }
 
+.sc_link_text {
+    display: inline-block;
+    float: right;
+    width: 100%;
+    padding-right: 3px;
+    margin-bottom: 20px;
+}
+.sc_link_text svg {
+    margin-left: 2px;
+}
+
 .text_wraper div > p {
   font-size: large;
 }
