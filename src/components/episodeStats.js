@@ -94,7 +94,7 @@ const EpisodeStats = ({ episode, t, downloadText = false }) => {
           download={true}
           href={episode.frontmatter.podcastUrl}>
           { downloadText && t('episode_download_text') }
-      { !downloadText && <FiDownload
+          { !downloadText && <FiDownload
             className={[
               EpisodeStatsCSSModule.stat_icon,
               'test--episode_stat_icon'

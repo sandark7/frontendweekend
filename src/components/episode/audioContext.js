@@ -47,8 +47,8 @@ export default class EpisodeAudioContext extends Component {
         <SpeedControls t={ t }
           getAudioRef={ this.getAudioRef.bind(this) }/>
         <a className={[
-            EpisodeCSSModule.sc_link_text,
-            'test--sc_link_text',
+          EpisodeCSSModule.sc_link_text,
+          'test--sc_link_text',
         ].join(' ')} href={episode.frontmatter.scLink}
         >{ t('listen_on_sc_link_text') } <FiExternalLink /></a>
         <Description onClick={ () => onDescriptionClick() }
