@@ -15,7 +15,7 @@ export default function Episode (props) {
       'test--episode_wrapper'
     ].join(' ') }>
       <Header title={ episode.frontmatter.title }/>
-      <StatsWrapper episode={ episode }/>
+      <StatsWrapper t={ t } episode={ episode } downloadText={ true }/>
       <AudioContext { ...props } />
       <CommentForm episode={ episode }
         t={ t } returnUrl={ `${ siteUrl }${ episode.fields.slug }` }/>

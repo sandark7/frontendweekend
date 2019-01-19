@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { episodePropTypes } from './episode'
+import EpisodeCSSModule from './episode.module.css'
+import {
+  FiExternalLink
+} from 'react-icons/fi'
 
 import ShareWrapper from './shareWrapper'
 import Comments from './comments'
@@ -42,6 +46,11 @@ export default class EpisodeAudioContext extends Component {
           podcastUrl={ episode.frontmatter.podcastUrl }/>
         <SpeedControls t={ t }
           getAudioRef={ this.getAudioRef.bind(this) }/>
+        <a className={[
+          EpisodeCSSModule.sc_link_text,
+          'test--sc_link_text',
+        ].join(' ')} href={episode.frontmatter.scLink}
+        >{ t('listen_on_sc_link_text') } <FiExternalLink /></a>
         <Description onClick={ () => onDescriptionClick() }
           htmlAst={ episode.htmlAst }/>
         <ShareWrapper t={ t } siteUrl={ siteUrl } lng={ lng }
