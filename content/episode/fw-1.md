@@ -9,14 +9,14 @@ image: "https://i1.sndcdn.com/artworks-000349294878-wg8bx0-original.jpg"
 podcastUrl: "https://feeds.soundcloud.com/stream/322263705-frontend-weekend-fw-1.m4a"
 scTrackId: "322263705"
 explicit: false
-tag_list: "undefined"
-license: "undefined"
-playback_count: "undefined"
-download_count: "undefined"
-favoritings_count: "undefined"
-reposts_count: "undefined"
-comment_count: "undefined"
-waveform_url: "undefined"
+tag_list: "podcast frontend javascript"
+license: "all-rights-reserved"
+playback_count: "15098"
+download_count: "282"
+favoritings_count: "202"
+reposts_count: "12"
+comment_count: "9"
+waveform_url: "https://w1.sndcdn.com/M6HVBg8KvWbs_m.png"
 subtitle:
   "Павел Кондратенко, руководитель группы клиентской разработки в Rambler
   Digital Solutions и организатор внутренних и внешних митапов RDSFront&, в
