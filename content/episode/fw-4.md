@@ -14,7 +14,7 @@ license: "all-rights-reserved"
 playback_count: "16694"
 download_count: "300"
 favoritings_count: "194"
-reposts_count: "8"
+reposts_count: "9"
 comment_count: "8"
 waveform_url: "https://w1.sndcdn.com/zfVgQp2Zk0rR_m.png"
 subtitle:
