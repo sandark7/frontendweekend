@@ -62,6 +62,7 @@ export default function CommentForm ({ t, episode, returnUrl }) {
       aria-label={ariaLabel}
       placeholder={placeholder}
       required={required}
+      disabled={true}
     ></TagName>
   }
   return <form
