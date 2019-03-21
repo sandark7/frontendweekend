@@ -1,3 +1,13 @@
-<h1>{{.Title}}</h1>
-<audio controls src="{{.Params.PodcastUrl}}"></audio>
-{{.Content}}
+<!doctype html>
+<html lang="ru">
+    <head>
+        <title>{{.Title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="alternate" type="application/rss+xml" href="{{.Params.Rss}}" />
+    </head>
+    <body>
+        <h1>{{.Title}}</h1>
+        <audio controls src="{{.Params.PodcastUrl}}"></audio>
+        {{.Content}}
+    </body>
+</html>
