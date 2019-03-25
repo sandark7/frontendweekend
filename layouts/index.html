@@ -7,37 +7,10 @@
         <link rel="alternate" type="application/rss+xml" href="{{.Params.Rss}}" />
     </head>
     <body>
-        <h1>{{.Title}}</h1>
-        <p>{{.Description}}</p>
         <ul>
             {{ range .Pages }}
             <li><p><a href="{{.Permalink}}">{{.Title}}</a></p></li>
             {{ end }}
         </ul>
-        <hr>
-        <h2>Поддержать подкаст</h2>
-        <p>Наши слушатели поддерживают создание этого подкаста. Если вам нравится то,
-        что мы делаем, <a href="https://www.patreon.com/frontendweekend">поддержите
-            подкаст</a> постоянной подпиской на
-        <a href="https://www.patreon.com/frontendweekend">Патреоне</a>.</p>
-        <h3>Подпишитесь, чтобы получать новые эпизоды подкаста</h3>
-        <p>Вы можете подписаться, используя один из следующих методов:</p>
-        <ul>
-            <li><a href="https://feeds.feedburner.com/frontendweekend">RSS</a></li>
-            <li><a href="https://soundcloud.com/frontend-weekend">SoundCloud</a></li>
-            <li><a href="https://itunes.apple.com/ru/podcast/frontend-weekend/id1233996390">iTunes</a></li>
-            <li><a href="https://vk.com/frontendweekend">ВКонтакте</a></li>
-            <li><a href="https://www.facebook.com/frontendweekend">Facebook</a></li>
-            <li><a href="https://twitter.com/frontendweekend">Twitter</a></li>
-            <li><a href="https://t.me/frontendweekend">Telegram</a></li>
-            <li><a href="https://www.instagram.com/frontendweekend/">Instagram</a></li>
-            <li><a href="https://www.patreon.com/frontendweekend">Patreon</a></li>
-        </ul>
-        <hr>
-        <p>Нашли ошибку на сайте и нужно что-то исправить? Пожалуйста,
-        <a href="https://github.com/frontendweekend/issues">заведите issue</a> на
-        <a href="https://github.com/frontendweekend/issues">frontendweekend/issues</a>.</p>
-        <p>По вопросам сотрудничества пишите на
-        <a href="mailto:pr@frontendweekend.ml">pr@frontendweekend.ml</a></p>
     </body>
 </html>
