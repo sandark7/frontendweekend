@@ -3,11 +3,22 @@
     <head>
         <title>{{.Title}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="alternate" type="application/rss+xml" href="{{.Params.Rss}}" />
+        <style> timecode { border-bottom: 1px dashed } </style>
     </head>
     <body>
         <h1>{{.Title}}</h1>
         <audio controls src="{{.Params.PodcastUrl}}"></audio>
         {{.Content}}
+        <script type="text/javascript">
+var audio = document.querySelectorAll('audio')[0];
+document
+    .querySelectorAll('timecode')
+    .forEach(el =>
+        el.addEventListener('click', e => {
+            audio.currentTime = parseInt(e.target.attributes.sec.value)
+            audio.play()
+        })
+    )
+        </script>
     </body>
 </html>
