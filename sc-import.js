@@ -188,14 +188,21 @@ function getScTrackId (link) {
 function sanitizeDescr (description) {
   const bannerText = 'Хочешь поддержать Frontend Weekend, ' +
     'переходи на http://frontendweekend.ml ;)'
-  return description
+  description = description
     .replace(bannerText, '')
     .replace(/\d*:?\d\d:\d\d/gm, time => {
       let [, hours, minutes, seconds] = time.match(/(\d?\d?):?(\d\d):(\d\d)/)
       let sec = moment.duration({ hours, minutes, seconds }).asSeconds()
       return `<timecode sec="${ sec }">${ time }</timecode>`
     })
+    if (description.match(/^<timecode/mg)) {
+        description = description // fix YouTube style list codes
+            .replace(/<timecode/gm, '<br><timecode')
+            .replace('<br>', '') // remove 1st br tag
+    }
+  return description
 }
+
 
 function constructSubtitle (description, subtitle) {
   let matched
