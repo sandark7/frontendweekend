@@ -17,23 +17,35 @@ favoritings_count: "undefined"
 reposts_count: "undefined"
 comment_count: "undefined"
 waveform_url: "undefined"
-subtitle: "На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:"
+subtitle:
+  "На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое
+  количество вопросов на тему современной frontend-разработки:"
 ---
-На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое количество вопросов на тему современной frontend-разработки:
+
+На этот раз мы обошлись без гостей, но зато смогли подробно обсудить большое
+количество вопросов на тему современной frontend-разработки:
 
 - Становится ли frontend слишком сложным? <timecode sec="31">00:31</timecode>
-- Какие плюсы и минусы в быстром развитии frontend'а? <timecode sec="554">09:14</timecode>
+- Какие плюсы и минусы в быстром развитии frontend'а?
+  <timecode sec="554">09:14</timecode>
 - Куда идти, если frontend надоел? <timecode sec="785">13:05</timecode>
-- Корпоративная разработка или атмосфера стартапа? <timecode sec="1007">16:47</timecode>
-- Применимы ли навыки frontend-разработчика на хакатоне? <timecode sec="1201">20:01</timecode>
-- Почему люди приходят в IT и не могут уйти? <timecode sec="1378">22:58</timecode>
-- Какие зарплаты сейчас во frontend-разработке? <timecode sec="1929">32:09</timecode>
-- Стоит ли уезжать за границу и какие там зарплаты? <timecode sec="2334">38:54</timecode>
-- Культура корпоративной разработки за рубежом <timecode sec="2936">48:56</timecode>
+- Корпоративная разработка или атмосфера стартапа?
+  <timecode sec="1007">16:47</timecode>
+- Применимы ли навыки frontend-разработчика на хакатоне?
+  <timecode sec="1201">20:01</timecode>
+- Почему люди приходят в IT и не могут уйти?
+  <timecode sec="1378">22:58</timecode>
+- Какие зарплаты сейчас во frontend-разработке?
+  <timecode sec="1929">32:09</timecode>
+- Стоит ли уезжать за границу и какие там зарплаты?
+  <timecode sec="2334">38:54</timecode>
+- Культура корпоративной разработки за рубежом
+  <timecode sec="2936">48:56</timecode>
 - Готовим вместе с frontend-разработчиком <timecode sec="3227">53:47</timecode>
 
 Пики <timecode sec="3414">56:54</timecode>
-- Регулярно применяйте новые технологии на https://github.com
-- Сериал Stranger Things http://www.imdb.com/title/tt4574334
+
+- Регулярно применяйте новые технологии на <https://github.com>
+- Сериал Stranger Things <http://www.imdb.com/title/tt4574334>
 
 Frontend Weekend Patreon – patreon.com/frontendweekend
