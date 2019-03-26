@@ -2,7 +2,7 @@
 title: "#1 – Павел Кондратенко о том, как стать frontend-разработчиком"
 name: "fw-1"
 num: "1"
-date: "2017-05-12T14:59:59+02:00"
+date: "2017-05-12T12:59:59+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-1"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/artworks-000349294878-wg8bx0-original.jpg"

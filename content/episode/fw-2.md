@@ -2,7 +2,7 @@
 title: "#2 – Зарплаты и первые шаги frontend-разработчика"
 name: "fw-2"
 num: "2"
-date: "2017-05-15T12:32:34+02:00"
+date: "2017-05-15T10:32:34+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-2"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/artworks-000222635482-yy16i6-original.jpg"

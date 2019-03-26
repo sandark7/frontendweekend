@@ -2,7 +2,7 @@
 title: "#7 – Григорий Петров про React VR, технический евангелизм и маркетинг"
 name: "fw-7"
 num: "7"
-date: "2017-06-20T02:51:48+02:00"
+date: "2017-06-20T00:51:48+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-7"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/artworks-000229338392-w2f5dt-original.jpg"
