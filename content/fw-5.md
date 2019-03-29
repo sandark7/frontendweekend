@@ -9,14 +9,6 @@ image: "https://i1.sndcdn.com/artworks-000225988180-01bv2p-original.jpg"
 podcastUrl: "https://feeds.soundcloud.com/stream/325878838-frontend-weekend-fw-5.m4a"
 scTrackId: "325878838"
 explicit: false
-tag_list: "undefined"
-license: "undefined"
-playback_count: "undefined"
-download_count: "undefined"
-favoritings_count: "undefined"
-reposts_count: "undefined"
-comment_count: "undefined"
-waveform_url: "undefined"
 subtitle:
   "Алексей Охрименко, frontend-разработчик в компании IPONWEB и популярный
   докладчик на многочисленных конференциях, в гостях у Андрея Смирнова и Артема

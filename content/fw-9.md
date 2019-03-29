@@ -11,14 +11,6 @@ image: "https://i1.sndcdn.com/artworks-000231561206-limwln-original.jpg"
 podcastUrl: "https://feeds.soundcloud.com/stream/331102863-frontend-weekend-fw-9.m4a"
 scTrackId: "331102863"
 explicit: false
-tag_list: "undefined"
-license: "undefined"
-playback_count: "undefined"
-download_count: "undefined"
-favoritings_count: "undefined"
-reposts_count: "undefined"
-comment_count: "undefined"
-waveform_url: "undefined"
 subtitle:
   "Денис Иогансен, ведущий frontend-разработчик в LiveJournal, в гостях у Андрея
   Смирнова и Артема Цацина из Frontend Weekend."

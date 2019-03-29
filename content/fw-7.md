@@ -9,14 +9,6 @@ image: "https://i1.sndcdn.com/artworks-000229338392-w2f5dt-original.jpg"
 podcastUrl: "https://feeds.soundcloud.com/stream/328898232-frontend-weekend-fw-7.m4a"
 scTrackId: "328898232"
 explicit: false
-tag_list: "undefined"
-license: "undefined"
-playback_count: "undefined"
-download_count: "undefined"
-favoritings_count: "undefined"
-reposts_count: "undefined"
-comment_count: "undefined"
-waveform_url: "undefined"
 subtitle:
   "Григорий Петров, технический евангелист компании Voximplant, в гостях у
   Андрея Смирнова из Frontend Weekend. Мой соведущий Артем приболел, его

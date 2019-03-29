@@ -1,0 +1,36 @@
+{
+    "name": "frontendweekend",
+    "version": "1.0.0",
+    "description": "podcast homepage",
+    "main": "index.js",
+    "scripts": {
+        "predeploy": "yarn run import",
+        "deploy": "rm -fr public; hugo && surge public https://m.frontendweekend.ml && surge public https://lite.frontendweekend.ml",
+        "import": "node ./sc-import.js && remark . -o && prettier --write content/fw-*.md",
+        "local": "hugo server -D"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nuxdie/frontendweekend.git"
+    },
+    "keywords": [],
+    "author": "Artem Tsatsin <nuxdie@gmail.com> (https://github.com/nuxdie)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nuxdie/frontendweekend/issues"
+    },
+    "homepage": "https://github.com/nuxdie/frontendweekend#readme",
+    "devDependencies": {
+        "davefeedread": "0.4.14",
+        "markdownlint-cli": "0.13.0",
+        "moment": "2.23.0",
+        "node-fetch": "2.3.0",
+        "prettier": "1.15.3",
+        "remark-cli": "6.0.1",
+        "remark-frontmatter": "1.3.1",
+        "remark-lint": "6.0.4",
+        "remark-lint-maximum-line-length": "1.1.0",
+        "remark-preset-lint-recommended": "3.0.2",
+        "surge": "0.20.1"
+    }
+}
