@@ -15,7 +15,6 @@ function EpisodeItemFooterWrapper ({ t, episode }) {
     ].join(' ')}>
       {t('episode_listen_cta')}
     </span>
-    <EpisodeStats t={ t } episode={episode} />
   </div>
 }
 

@@ -68,6 +68,7 @@ function EpisodeTmpl ({
       <Layout
         title={[episode.frontmatter.title, '–', t('site_title')].join(' ')}
         description={episode.frontmatter.subtitle}
+        newLogo={episode.frontmatter.name === 'fw-90'} // easter egg
       >
         <div className={[
           EpisodeTmplCSSModule.wrapper,

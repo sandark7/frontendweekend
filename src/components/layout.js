@@ -5,8 +5,8 @@ import { translate } from 'react-i18next'
 import { Head, Link } from 'gatsby-plugin-i18next'
 import Switcher from './switcher.js'
 
-const Layout = ({ children, data, t, title, description }) => (
-  <>
+const Layout = ({ children, data, newLogo, t, title, description }) => (
+  <article className={newLogo ? LayoutCSSModule.globalWrapper : ''}>
     <StaticQuery
       query={query}
       render={({
@@ -32,12 +32,16 @@ const Layout = ({ children, data, t, title, description }) => (
           </Head>)
       }}
     />
-    <header className={LayoutCSSModule.header}>
+    <header className={[
+      LayoutCSSModule.header,
+      newLogo ? LayoutCSSModule.newLogoAdded : '',
+    ].join(' ')}>
       <nav className={[LayoutCSSModule.nav, 'test--header-nav'].join(' ')}>
         <Link to={`/`}>
           <div aria-label={t('main_page_logo_aria_label')}
             className={[
               LayoutCSSModule.logo,
+              newLogo ? LayoutCSSModule.newLogo : '',
               'test--header_nav-logo'
             ].join(' ')}></div>
         </Link>
@@ -50,10 +54,17 @@ const Layout = ({ children, data, t, title, description }) => (
         <Switcher/>
       </nav>
     </header>
-    <main className={LayoutCSSModule.wrapper + ' test--wrapper'}>
+    <main className={[
+      LayoutCSSModule.wrapper + ' test--wrapper',
+      newLogo ? LayoutCSSModule.newLogoAdded : '',
+      ].join(' ')}>
       {children}
     </main>
-    <footer className={[LayoutCSSModule.footer, 'test--footer'].join(' ')}>
+    <footer className={[
+      LayoutCSSModule.footer,
+      newLogo ? LayoutCSSModule.newLogoAdded : '',
+      'test--footer'
+    ].join(' ')}>
       <p className={'test--footer-gh_text'}>
         {t('gh_footer_text')}&nbsp;<a
           className={'test--gh-link gtm--gh-link'}
@@ -66,7 +77,7 @@ const Layout = ({ children, data, t, title, description }) => (
           href="mailto:pr@frontendweekend.ml">{t('email_footer_link_text')}</a>
       </p>
     </footer>
-  </>
+  </article>
 )
 
 export default translate()(Layout)
