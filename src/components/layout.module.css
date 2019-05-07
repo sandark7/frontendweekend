@@ -9,6 +9,16 @@ body {
   justify-content: center;
 }
 
+.globalWrapper {
+  background-image: url("/img/newLogo.png");
+  background-repeat: repeat;
+  background-size: 4em;
+}
+
+.newLogoAdded {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -32,6 +42,12 @@ body {
   display: block;
   height: 4em;
   width: 9em;
+}
+
+.newLogo {
+  background-image: url("/img/newLogo.png");
+  height: 20em;
+  width: 20em;
 }
 
 .nav_item {
@@ -66,5 +82,10 @@ body {
   .nav {
     justify-content: space-around;
     width: 100%;
+  }
+
+  .newLogo {
+    height: 10em;
+    width: 10em;
   }
 }

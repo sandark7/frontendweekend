@@ -26,64 +26,6 @@ const EpisodeStats = ({ episode, t, downloadText = false }) => {
         EpisodeStatsCSSModule.stat_wrapper,
         'test--episode_stat_wrapper'
       ].join(' ')}>
-        <FiPlay
-          className={[
-            EpisodeStatsCSSModule.stat_icon,
-            'test--episode_stat_icon'
-          ].join(' ')}
-        />{playback}
-      </div>
-      <div className={[
-        EpisodeStatsCSSModule.stat_wrapper,
-        'test--episode_stat_wrapper'
-      ].join(' ')}>
-        <FiHeart
-          className={[
-            EpisodeStatsCSSModule.stat_icon,
-            'test--episode_stat_icon'
-          ].join(' ')}
-        />{favoritings}
-      </div>
-      <div className={[
-        EpisodeStatsCSSModule.stat_wrapper,
-        'test--episode_stat_wrapper'
-      ].join(' ')}>
-        <Link
-          className={[
-            EpisodeStatsCSSModule.stat_link,
-            'test--episode_stat_link'
-          ].join(' ')}
-          to={episode.fields.slug + '#share'}>
-          <FiShare2
-            className={[
-              EpisodeStatsCSSModule.stat_icon,
-              'test--episode_stat_icon'
-            ].join(' ')}
-          />{reposts}
-        </Link>
-      </div>
-      <div className={[
-        EpisodeStatsCSSModule.stat_wrapper,
-        'test--episode_stat_wrapper'
-      ].join(' ')}>
-        <Link
-          className={[
-            EpisodeStatsCSSModule.stat_link,
-            'test--episode_stat_link'
-          ].join(' ')}
-          to={episode.fields.slug + '#comments'}>
-          <FiMessageSquare
-            className={[
-              EpisodeStatsCSSModule.stat_icon,
-              'test--episode_stat_icon'
-            ].join(' ')}
-          />{comment}
-        </Link>
-      </div>
-      <div className={[
-        EpisodeStatsCSSModule.stat_wrapper,
-        'test--episode_stat_wrapper'
-      ].join(' ')}>
         <a
           className={[
             EpisodeStatsCSSModule.stat_link,
