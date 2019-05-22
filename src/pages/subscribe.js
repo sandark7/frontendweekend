@@ -10,6 +10,7 @@ const networks = [
   { network: 'rss', icon: 'RSS' },
   { network: 'soundcloud', icon: 'SoundCloud' },
   { network: 'itunes', icon: 'Apple Music' },
+  { network: 'youtube', icon: 'YouTube' },
   { network: 'vk', icon: 'VK' },
   { network: 'fb', icon: 'Facebook' },
   { network: 'twitter', icon: 'Twitter' },

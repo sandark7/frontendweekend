@@ -4,7 +4,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   list-style: none;
   margin: 0 0 20px;
 }
