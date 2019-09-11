@@ -4,7 +4,7 @@ title:
   докладов)"
 name: "fwr-1"
 num: "1"
-date: "2019-08-25T16:21:10+02:00"
+date: "2019-08-25T14:21:10+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fwr-1"
 author: "Андрей Смирнов"
 image: "https://i1.sndcdn.com/avatars-000358703579-bnobxj-original.jpg"
