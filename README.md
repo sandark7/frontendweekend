@@ -1,7 +1,7 @@
 # Frontend Weekend podcast
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b579593d93f04df79b4dae39cfdb9c4d)](https://app.codacy.com/app/nuxdie/frontendweekend?utm_source=github.com&utm_medium=referral&utm_content=nuxdie/frontendweekend&utm_campaign=Badge_Grade_Dashboard)
-[![CircleCI](https://circleci.com/gh/nuxdie/frontendweekend.svg?style=svg)](https://circleci.com/gh/nuxdie/frontendweekend)
+[![CircleCI](https://circleci.com/gh/sandark7/frontendweekend.svg?style=svg)](https://circleci.com/gh/sandark7/frontendweekend)
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=nuxdie_frontendweekend&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxdie_frontendweekend)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/maintainability)](https://codeclimate.com/github/nuxdie/frontendweekend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/test_coverage)](https://codeclimate.com/github/nuxdie/frontendweekend/test_coverage)
