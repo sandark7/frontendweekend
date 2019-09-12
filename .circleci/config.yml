@@ -179,13 +179,13 @@ workflows:
       - build:
           requires:
             - sc-import
-      - eslint
+#       - eslint
       - test
       - sonarqube-code-analyze
       - wait-for-netlify-build
-      - test-e2e:
-          requires:
-            - build
+#       - test-e2e:
+#           requires:
+#             - build
       - test-lh:
           requires:
             - wait-for-netlify-build
