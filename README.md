@@ -5,6 +5,7 @@
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=nuxdie_frontendweekend&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxdie_frontendweekend)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/maintainability)](https://codeclimate.com/github/nuxdie/frontendweekend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e88b5960142fb1493971/test_coverage)](https://codeclimate.com/github/nuxdie/frontendweekend/test_coverage)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b971fc35-ef92-42e9-8366-27a1a8d650af/deploy-status)](https://app.netlify.com/sites/frontendweekend/deploys)
 
 ![Frontend Weekend podcast logo](https://user-images.githubusercontent.com/3918844/50121260-7f70fe80-0258-11e9-8050-a8dca666a34c.png)
 
