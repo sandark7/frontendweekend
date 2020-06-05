@@ -5,7 +5,7 @@ num: "6"
 date: "2017-06-11T09:18:43+00:00"
 scLink: "https://soundcloud.com/frontend-weekend/fw-6"
 author: "Андрей Смирнов"
-image: "https://i1.sndcdn.com/artworks-000227793416-dxmblh-t500x500.jpg"
+image: "https://i1.sndcdn.com/artworks-000227793416-dxmblh-t3000x3000.jpg"
 podcastUrl: "https://feeds.soundcloud.com/stream/327444300-frontend-weekend-fw-6.m4a"
 scTrackId: "327444300"
 explicit: false
