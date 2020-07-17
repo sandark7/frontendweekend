@@ -26,7 +26,7 @@ subtitle:
 Digital Solutions, в гостях у Андрея Смирнова из Frontend Weekend.
 
 - Розыгрыш призов <https://youtu.be/f_7TSstGrpg>
-  <timecode sec="54">00:54</timecode>  - Конференция Konnect
+  <timecode sec="54">00:54</timecode>  \- Конференция Konnect
   <https://konnect.loftblog.ru> <timecode sec="90">01:30</timecode>
 - Из чего состоит собеседование для переезда в Амстердам?
   <timecode sec="131">02:11</timecode>

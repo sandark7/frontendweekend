@@ -54,7 +54,7 @@ subtitle:
 - Какими социальными сетями пользоваться для потребления информации?
   <timecode sec="1588">26:28</timecode>
 - Как разработчик LiveJournal может не пользоваться своим сервисом?
-  <timecode sec="1660">27:40</timecode>  - Готовим вместе с
+  <timecode sec="1660">27:40</timecode>  \- Готовим вместе с
   frontend-разработчиком (омлет) <timecode sec="1746">29:06</timecode>
 
 Пики <timecode sec="1851">30:51</timecode>
